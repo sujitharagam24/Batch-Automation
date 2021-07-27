@@ -1,9 +1,9 @@
 # Introduction 
 The modpims-testing repo contains the modPIMS Test Team Code that includes:
-#Katalon 
-#Selenium
-#Java
-# Any other code that the modPIMS Test Team authors
+* Katalon 
+* Selenium
+* Java
+* Any other code that the modPIMS Test Team authors
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
