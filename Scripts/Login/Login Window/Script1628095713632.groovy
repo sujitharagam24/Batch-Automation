@@ -33,5 +33,7 @@ Windows.verifyElementPresent(findWindowsObject('Object Repository/Login/ButtonOK
 
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Login/ButtonCancel'), 10)
 
+Windows.closeApplication()
+
 
 

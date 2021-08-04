@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>Edit</name>
+   <name>Window</name>
    <tag></tag>
-   <locator>//Window/Window[1]/Edit[3]</locator>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locator>San Bernardino County - Property Information Management System</locator>
+   <locatorStrategy>NAME</locatorStrategy>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>CanMinimize</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ItemStatus</name>
       <type>Main</type>
       <value></value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>CanRotate</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>WindowVisualState</name>
+      <type>Main</type>
+      <value>Normal</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -24,21 +45,42 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value></value>
+      <value>San Bernardino County - Property Information Management System</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>CanMaximize</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsTopmost</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsModal</name>
+      <type>Main</type>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>IsPassword</name>
       <type>Main</type>
-      <value>True</value>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value>ThunderRT6TextBox</value>
+      <value>ThunderRT6FormDC</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -57,6 +99,13 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>CanMove</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>IsKeyboardFocusable</name>
       <type>Main</type>
       <value>True</value>
@@ -66,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.812312</value>
+      <value>42.680762</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -78,16 +127,23 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>CanResize</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>19</value>
+      <value>397</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>IsEnabled</name>
       <type>Main</type>
-      <value>True</value>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -106,6 +162,13 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>WindowInteractionState</name>
+      <type>Main</type>
+      <value>BlockedByModalWindow</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>HelpText</name>
       <type>Main</type>
       <value></value>
@@ -115,7 +178,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>7</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -136,28 +199,35 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>edit</value>
+      <value>window</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsAvailable</name>
+      <type>Main</type>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>109</value>
+      <value>636</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>296</value>
+      <value>0</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>159</value>
+      <value>0</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

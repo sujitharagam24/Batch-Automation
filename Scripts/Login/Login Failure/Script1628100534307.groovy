@@ -17,19 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'InquiryMAKE')
+Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'Inquiry')
 
-Windows.click(findWindowsObject('Object Repository/Login/Edit'))
+def titleSBC = Windows.getText(findWindowsObject('Object Repository/Login/Window'))
 
-Windows.setText(findWindowsObject('Object Repository/Login/Edit'), 'Bilguun1')
+assert titleSBC == 'San Bernardino County - Property Information Management System'
+
+Windows.setText(findWindowsObject('Object Repository/Login/Edit'), '123456')
 
 Windows.click(findWindowsObject('Object Repository/Login/Button'))
 
-assert Windows.waitForElementPresent(findWindowsObject('Object Repository/Login/TitleBarSBC'), 10)
+def alertMSG = Windows.getText(findWindowsObject('Object Repository/Login/UserIDField'))
 
-def title = Windows.getText(findWindowsObject("Object Repository/Login/TitleBarLogon"))
+assert alertMSG == 'XARTE'
 
-assert title == 'Inquiry Driver at NPDB2T'
-
-Windows.closeApplication()
+Windows.click(findWindowsObject('Object Repository/Login/ButtonCancel'))
 
