@@ -23,13 +23,7 @@ Windows.click(findWindowsObject('Object Repository/Login/Edit'))
 
 Windows.setText(findWindowsObject('Object Repository/Login/Edit'), 'Bilguun1')
 
-Windows.click(findWindowsObject('Object Repository/Login/Button'))
-
-assert Windows.waitForElementPresent(findWindowsObject('Object Repository/Login/TitleBarSBC'), 10)
-
-def title = Windows.getText(findWindowsObject("Object Repository/Login/TitleBarLogon"))
-
-assert title == 'Inquiry Driver at NPDB2T'
+Windows.click(findWindowsObject('Object Repository/Login/ButtonOK'))
 
 Windows.closeApplication()
 

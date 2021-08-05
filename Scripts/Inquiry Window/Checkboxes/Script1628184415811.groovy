@@ -16,18 +16,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.Point as Point
 
-Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'Inquiry')
+Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'InquiryMAKE')
 
-def userID = Windows.getText(findWindowsObject("Object Repository/Login/userIDField"))
+Windows.click(findWindowsObject('Object Repository/Login/Edit'))
 
-assert userID == 'XARTE'
+Windows.setText(findWindowsObject('Object Repository/Login/Edit'), 'Bilguun1')
 
-def logonTitle = Windows.getText(findWindowsObject("Object Repository/Login/TitleBarLogon"))
+Windows.click(findWindowsObject('Object Repository/Login/ButtonOK'))
 
-assert logonTitle == 'Logon'
+def notPresent = Windows.waitForElementNotPresent(findWindowsObject('Object Repository/Login/Edit'), 25)
+
+assert notPresent
+
+
+
+Windows.click(findWindowsObject('Object Repository/Dashboard/parcelField'))
 
 Windows.closeApplication()
-
-
 

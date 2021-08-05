@@ -1,0 +1,27 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Legacy - Inquiry - Login Test Suite,,,,2021-08-05 09:30:54,2021-08-05 09:31:29,34.307s,FAILED
+,,,,,,,
+Test Cases/Login/Login Failure,,,,2021-08-05 09:30:55,2021-08-05 09:31:02,7.159s,PASSED
+"startApplicationWithTitle(""C:\Program Files\PIMS\Inquiry\Inquiry.exe"", ""Inquiry"")",,,,2021-08-05 09:30:55,2021-08-05 09:30:59,3.290s,PASSED
+"titleSBC = getText(findWindowsObject(""Object Repository/Login/Window""))",,,,2021-08-05 09:30:59,2021-08-05 09:30:59,0.292s,PASSED
+"assert titleSBC == ""San Bernardino County - Property Information Management System""",,,,2021-08-05 09:30:59,2021-08-05 09:30:59,0.002s,PASSED
+"setText(findWindowsObject(""Object Repository/Login/Edit""), ""123456"")",,,,2021-08-05 09:30:59,2021-08-05 09:31:00,1.561s,PASSED
+"click(findWindowsObject(""Object Repository/Login/ButtonOK""))",,,,2021-08-05 09:31:00,2021-08-05 09:31:01,0.535s,PASSED
+"alertMSG = getText(findWindowsObject(""Object Repository/Login/UserIDField""))",,,,2021-08-05 09:31:01,2021-08-05 09:31:01,0.498s,PASSED
+"assert alertMSG == ""XARTE""",,,,2021-08-05 09:31:01,2021-08-05 09:31:01,0.001s,PASSED
+"click(findWindowsObject(""Object Repository/Login/ButtonCancel""))",,,,2021-08-05 09:31:01,2021-08-05 09:31:02,0.505s,PASSED
+,,,,,,,
+Test Cases/Login/Login Success,,,,2021-08-05 09:31:02,2021-08-05 09:31:16,14.225s,PASSED
+"startApplicationWithTitle(""C:\Program Files\PIMS\Inquiry\Inquiry.exe"", ""InquiryMAKE"")",,,,2021-08-05 09:31:02,2021-08-05 09:31:03,0.875s,PASSED
+"click(findWindowsObject(""Object Repository/Login/Edit""))",,,,2021-08-05 09:31:03,2021-08-05 09:31:04,0.623s,PASSED
+"setText(findWindowsObject(""Object Repository/Login/Edit""), ""Bilguun1"")",,,,2021-08-05 09:31:04,2021-08-05 09:31:05,1.453s,PASSED
+"click(findWindowsObject(""Object Repository/Login/ButtonOK""))",,,,2021-08-05 09:31:05,2021-08-05 09:31:06,0.481s,PASSED
+closeApplication(),,,,2021-08-05 09:31:06,2021-08-05 09:31:16,10.402s,PASSED
+,,,,,,,
+Test Cases/Login/Login Window,,,,2021-08-05 09:31:16,2021-08-05 09:31:29,12.574s,FAILED
+"startApplicationWithTitle(""C:\Program Files\PIMS\Inquiry\Inquiry.exe"", ""Inquiry"")",,,,2021-08-05 09:31:17,2021-08-05 09:31:18,1.212s,PASSED
+"userID = getText(findWindowsObject(""Object Repository/Login/userIDField""))",,,,2021-08-05 09:31:18,2021-08-05 09:31:18,0.369s,PASSED
+"assert userID == ""XARTE""",,,,2021-08-05 09:31:18,2021-08-05 09:31:18,0.001s,PASSED
+"logonTitle = getText(findWindowsObject(""Object Repository/Login/TitleBarLogon""))",,,,2021-08-05 09:31:18,2021-08-05 09:31:18,0.372s,PASSED
+"assert logonTitle == ""Logon""",,,,2021-08-05 09:31:18,2021-08-05 09:31:18,0.000s,PASSED
+"verifyElementPresent(findWindowsObject(""Object Repository/Login/CheckBox""), 10)",,,,2021-08-05 09:31:18,2021-08-05 09:31:29,10.262s,FAILED

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Legacy - Inquiry - Login Test Suite" time="35.076" tests="3" failures="1" errors="0">
+   <testsuite name="Legacy - Inquiry - Login Test Suite" tests="3" failures="1" errors="0" time="35.076" skipped="0" timestamp="2021-08-05 09:30:54" hostname="XARTE - ARC-VPMODPIMS.sbcounty.gov" id="Test Suites/Legacy - Inquiry - Login Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\XARTE\\git\\modpims-testing\\Reports\\20210805_093046\\Legacy - Inquiry - Login Test Suite\\20210805_093046"/>
+         <property name="logFiles" value="C:\\Users\\XARTE\\git\\modpims-testing\\Reports\\20210805_093046\\Legacy - Inquiry - Login Test Suite\\20210805_093046\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="XARTE - ARC-VPMODPIMS.sbcounty.gov"/>
+         <property name="hostAddress" value="192.168.116.94"/>
+         <property name="desiredCapabilities" value="{}"/>
+         <property name="os" value="Windows Server 2016 64bit"/>
+         <property name="katalonVersion" value="8.0.5.208"/>
+      </properties>
+      <testcase name="Test Cases/Login/Login Failure" time="7.159" classname="Test Cases/Login/Login Failure" status="PASSED">
+         <system-out><![CDATA[2021-08-05 09:30:55 - [TEST_CASE][PASSED] - Test Cases/Login/Login Failure: Test Cases/Login/Login Failure
+
+2021-08-05 09:30:55 - [TEST_STEP][PASSED] - startApplicationWithTitle("C:\Program Files\PIMS\Inquiry\Inquiry.exe", "Inquiry"): The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:30:55 - [MESSAGE][INFO] - Starting application C:\Program Files\PIMS\Inquiry\Inquiry.exe on the local machine at address http://127.0.0.1:4723
+
+2021-08-05 09:30:59 - [MESSAGE][PASSED] - The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:30:59 - [TEST_STEP][PASSED] - titleSBC = getText(findWindowsObject("Object Repository/Login/Window")): Text of test object: Object Repository/Login/Window is: San Bernardino County - Property Information Management System
+
+2021-08-05 09:30:59 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/Window is: San Bernardino County - Property Information Management System
+
+2021-08-05 09:30:59 - [TEST_STEP][PASSED] - assert titleSBC == "San Bernardino County - Property Information Management System": null
+
+2021-08-05 09:30:59 - [TEST_STEP][PASSED] - setText(findWindowsObject("Object Repository/Login/Edit"), "123456"): Text 123456 is set
+
+2021-08-05 09:31:00 - [MESSAGE][PASSED] - Text 123456 is set
+
+2021-08-05 09:31:00 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/ButtonOK")): Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:31:01 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/ButtonOK
+
+2021-08-05 09:31:01 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:31:01 - [TEST_STEP][PASSED] - alertMSG = getText(findWindowsObject("Object Repository/Login/UserIDField")): Text of test object: Object Repository/Login/UserIDField is: XARTE
+
+2021-08-05 09:31:01 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/UserIDField is: XARTE
+
+2021-08-05 09:31:01 - [TEST_STEP][PASSED] - assert alertMSG == "XARTE": null
+
+2021-08-05 09:31:01 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/ButtonCancel")): Click on element: Object Repository/Login/ButtonCancel succesfully
+
+2021-08-05 09:31:02 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/ButtonCancel
+
+2021-08-05 09:31:02 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/ButtonCancel succesfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Login/Login Success" time="14.225" classname="Test Cases/Login/Login Success" status="PASSED">
+         <system-out><![CDATA[2021-08-05 09:31:02 - [TEST_CASE][PASSED] - Test Cases/Login/Login Success: Test Cases/Login/Login Success
+
+2021-08-05 09:31:02 - [TEST_STEP][PASSED] - startApplicationWithTitle("C:\Program Files\PIMS\Inquiry\Inquiry.exe", "InquiryMAKE"): The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:31:02 - [MESSAGE][INFO] - Starting application C:\Program Files\PIMS\Inquiry\Inquiry.exe on the local machine at address http://127.0.0.1:4723
+
+2021-08-05 09:31:03 - [MESSAGE][PASSED] - The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:31:03 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/Edit")): Click on element: Object Repository/Login/Edit succesfully
+
+2021-08-05 09:31:04 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/Edit
+
+2021-08-05 09:31:04 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/Edit succesfully
+
+2021-08-05 09:31:04 - [TEST_STEP][PASSED] - setText(findWindowsObject("Object Repository/Login/Edit"), "Bilguun1"): Text Bilguun1 is set
+
+2021-08-05 09:31:05 - [MESSAGE][PASSED] - Text Bilguun1 is set
+
+2021-08-05 09:31:05 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/ButtonOK")): Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:31:05 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/ButtonOK
+
+2021-08-05 09:31:06 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:31:06 - [TEST_STEP][PASSED] - closeApplication(): Fire Close event sucessfully.
+
+2021-08-05 09:31:16 - [MESSAGE][PASSED] - Fire Close event sucessfully.]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Login/Login Window" time="12.574" classname="Test Cases/Login/Login Window" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Login/Login Window FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)
+"/>
+         <system-out><![CDATA[2021-08-05 09:31:16 - [TEST_CASE][FAILED] - Test Cases/Login/Login Window: Test Cases/Login/Login Window FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)
+
+
+2021-08-05 09:31:17 - [TEST_STEP][PASSED] - startApplicationWithTitle("C:\Program Files\PIMS\Inquiry\Inquiry.exe", "Inquiry"): The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:31:17 - [MESSAGE][INFO] - Starting application C:\Program Files\PIMS\Inquiry\Inquiry.exe on the local machine at address http://127.0.0.1:4723
+
+2021-08-05 09:31:18 - [MESSAGE][PASSED] - The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:31:18 - [TEST_STEP][PASSED] - userID = getText(findWindowsObject("Object Repository/Login/userIDField")): Text of test object: Object Repository/Login/userIDField is: XARTE
+
+2021-08-05 09:31:18 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/userIDField is: XARTE
+
+2021-08-05 09:31:18 - [TEST_STEP][PASSED] - assert userID == "XARTE": null
+
+2021-08-05 09:31:18 - [TEST_STEP][PASSED] - logonTitle = getText(findWindowsObject("Object Repository/Login/TitleBarLogon")): Text of test object: Object Repository/Login/TitleBarLogon is: Logon
+
+2021-08-05 09:31:18 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/TitleBarLogon is: Logon
+
+2021-08-05 09:31:18 - [TEST_STEP][PASSED] - assert logonTitle == "Logon": null
+
+2021-08-05 09:31:18 - [TEST_STEP][FAILED] - verifyElementPresent(findWindowsObject("Object Repository/Login/CheckBox"), 10): Unable to verify object 'Object Repository/Login/CheckBox'' is present (Root cause: com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)
+)
+
+2021-08-05 09:31:29 - [MESSAGE][FAILED] - Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+
+2021-08-05 09:31:29 - [MESSAGE][FAILED] - Unable to verify object 'Object Repository/Login/CheckBox'' is present (Root cause: com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)
+)]]></system-out>
+         <system-err><![CDATA[2021-08-05 09:31:16 - [TEST_CASE][FAILED] - Test Cases/Login/Login Window: Test Cases/Login/Login Window FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-08-05 09:30:54 - [TEST_SUITE][FAILED] - Legacy - Inquiry - Login Test Suite: Test Cases/Login/Login Window FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)]]></system-out>
+      <system-err><![CDATA[2021-08-05 09:30:54 - [TEST_SUITE][FAILED] - Legacy - Inquiry - Login Test Suite: Test Cases/Login/Login Window FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Object 'Object Repository/Login/CheckBox' is not present within 10 second(s)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:23)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$stepFailed$1.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy:84)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$_verifyElementPresent_closure1.doCall(VerifyElementPresentKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:68)
+	at com.kms.katalon.core.keyword.internal.KeywordMain$runKeyword$0.call(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.verifyElementPresent(VerifyElementPresentKeyword.groovy:87)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword$verifyElementPresent.callCurrent(Unknown Source)
+	at com.kms.katalon.core.windows.keyword.builtin.VerifyElementPresentKeyword.execute(VerifyElementPresentKeyword.groovy:63)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords.verifyElementPresent(WindowsBuiltinKeywords.java:1209)
+	at com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords$verifyElementPresent$4.call(Unknown Source)
+	at Login Window.run(Login Window:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:369)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:339)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:248)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:191)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:140)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:89)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1628181046463.run(TempTestSuite1628181046463.groovy:39)]]></system-err>
+   </testsuite>
+</testsuites>

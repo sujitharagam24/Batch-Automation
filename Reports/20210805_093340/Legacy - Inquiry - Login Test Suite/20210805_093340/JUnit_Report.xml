@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Legacy - Inquiry - Login Test Suite" time="32.224" tests="3" failures="0" errors="0">
+   <testsuite name="Legacy - Inquiry - Login Test Suite" tests="3" failures="0" errors="0" time="32.224" skipped="0" timestamp="2021-08-05 09:33:43" hostname="XARTE - ARC-VPMODPIMS.sbcounty.gov" id="Test Suites/Legacy - Inquiry - Login Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\XARTE\\git\\modpims-testing\\Reports\\20210805_093340\\Legacy - Inquiry - Login Test Suite\\20210805_093340"/>
+         <property name="logFiles" value="C:\\Users\\XARTE\\git\\modpims-testing\\Reports\\20210805_093340\\Legacy - Inquiry - Login Test Suite\\20210805_093340\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="XARTE - ARC-VPMODPIMS.sbcounty.gov"/>
+         <property name="hostAddress" value="192.168.116.94"/>
+         <property name="desiredCapabilities" value="{}"/>
+         <property name="os" value="Windows Server 2016 64bit"/>
+         <property name="katalonVersion" value="8.0.5.208"/>
+      </properties>
+      <testcase name="Test Cases/Login/Login Failure" time="5.36" classname="Test Cases/Login/Login Failure" status="PASSED">
+         <system-out><![CDATA[2021-08-05 09:33:43 - [TEST_CASE][PASSED] - Test Cases/Login/Login Failure: Test Cases/Login/Login Failure
+
+2021-08-05 09:33:44 - [TEST_STEP][PASSED] - startApplicationWithTitle("C:\Program Files\PIMS\Inquiry\Inquiry.exe", "Inquiry"): The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:33:44 - [MESSAGE][INFO] - Starting application C:\Program Files\PIMS\Inquiry\Inquiry.exe on the local machine at address http://127.0.0.1:4723
+
+2021-08-05 09:33:45 - [MESSAGE][PASSED] - The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:33:45 - [TEST_STEP][PASSED] - titleSBC = getText(findWindowsObject("Object Repository/Login/Window")): Text of test object: Object Repository/Login/Window is: San Bernardino County - Property Information Management System
+
+2021-08-05 09:33:46 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/Window is: San Bernardino County - Property Information Management System
+
+2021-08-05 09:33:46 - [TEST_STEP][PASSED] - assert titleSBC == "San Bernardino County - Property Information Management System": null
+
+2021-08-05 09:33:46 - [TEST_STEP][PASSED] - setText(findWindowsObject("Object Repository/Login/Edit"), "123456"): Text 123456 is set
+
+2021-08-05 09:33:47 - [MESSAGE][PASSED] - Text 123456 is set
+
+2021-08-05 09:33:47 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/ButtonOK")): Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:33:47 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/ButtonOK
+
+2021-08-05 09:33:48 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:33:48 - [TEST_STEP][PASSED] - alertMSG = getText(findWindowsObject("Object Repository/Login/UserIDField")): Text of test object: Object Repository/Login/UserIDField is: XARTE
+
+2021-08-05 09:33:48 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/UserIDField is: XARTE
+
+2021-08-05 09:33:48 - [TEST_STEP][PASSED] - assert alertMSG == "XARTE": null
+
+2021-08-05 09:33:48 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/ButtonCancel")): Click on element: Object Repository/Login/ButtonCancel succesfully
+
+2021-08-05 09:33:48 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/ButtonCancel
+
+2021-08-05 09:33:49 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/ButtonCancel succesfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Login/Login Success" time="18.443" classname="Test Cases/Login/Login Success" status="PASSED">
+         <system-out><![CDATA[2021-08-05 09:33:49 - [TEST_CASE][PASSED] - Test Cases/Login/Login Success: Test Cases/Login/Login Success
+
+2021-08-05 09:33:49 - [TEST_STEP][PASSED] - startApplicationWithTitle("C:\Program Files\PIMS\Inquiry\Inquiry.exe", "InquiryMAKE"): The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:33:49 - [MESSAGE][INFO] - Starting application C:\Program Files\PIMS\Inquiry\Inquiry.exe on the local machine at address http://127.0.0.1:4723
+
+2021-08-05 09:33:50 - [MESSAGE][PASSED] - The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:33:50 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/Edit")): Click on element: Object Repository/Login/Edit succesfully
+
+2021-08-05 09:33:50 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/Edit
+
+2021-08-05 09:33:50 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/Edit succesfully
+
+2021-08-05 09:33:50 - [TEST_STEP][PASSED] - setText(findWindowsObject("Object Repository/Login/Edit"), "Bilguun1"): Text Bilguun1 is set
+
+2021-08-05 09:33:52 - [MESSAGE][PASSED] - Text Bilguun1 is set
+
+2021-08-05 09:33:52 - [TEST_STEP][PASSED] - click(findWindowsObject("Object Repository/Login/ButtonOK")): Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:33:52 - [MESSAGE][INFO] - Clicking on element: Object Repository/Login/ButtonOK
+
+2021-08-05 09:33:52 - [MESSAGE][PASSED] - Click on element: Object Repository/Login/ButtonOK succesfully
+
+2021-08-05 09:33:52 - [TEST_STEP][PASSED] - closeApplication(): Fire Close event sucessfully.
+
+2021-08-05 09:34:07 - [MESSAGE][PASSED] - Fire Close event sucessfully.]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Login/Login Window" time="7.408" classname="Test Cases/Login/Login Window" status="PASSED">
+         <system-out><![CDATA[2021-08-05 09:34:07 - [TEST_CASE][PASSED] - Test Cases/Login/Login Window: Test Cases/Login/Login Window
+
+2021-08-05 09:34:07 - [TEST_STEP][PASSED] - startApplicationWithTitle("C:\Program Files\PIMS\Inquiry\Inquiry.exe", "Inquiry"): The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:34:07 - [MESSAGE][INFO] - Starting application C:\Program Files\PIMS\Inquiry\Inquiry.exe on the local machine at address http://127.0.0.1:4723
+
+2021-08-05 09:34:09 - [MESSAGE][PASSED] - The application at location: C:\Program Files\PIMS\Inquiry\Inquiry.exe started.
+
+2021-08-05 09:34:09 - [TEST_STEP][PASSED] - userID = getText(findWindowsObject("Object Repository/Login/userIDField")): Text of test object: Object Repository/Login/userIDField is: XARTE
+
+2021-08-05 09:34:09 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/userIDField is: XARTE
+
+2021-08-05 09:34:09 - [TEST_STEP][PASSED] - assert userID == "XARTE": null
+
+2021-08-05 09:34:09 - [TEST_STEP][PASSED] - logonTitle = getText(findWindowsObject("Object Repository/Login/TitleBarLogon")): Text of test object: Object Repository/Login/TitleBarLogon is: Logon
+
+2021-08-05 09:34:09 - [MESSAGE][PASSED] - Text of test object: Object Repository/Login/TitleBarLogon is: Logon
+
+2021-08-05 09:34:09 - [TEST_STEP][PASSED] - assert logonTitle == "Logon": null
+
+2021-08-05 09:34:09 - [TEST_STEP][PASSED] - closeApplication(): Fire Close event sucessfully.
+
+2021-08-05 09:34:14 - [MESSAGE][PASSED] - Fire Close event sucessfully.]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-08-05 09:33:43 - [TEST_SUITE][PASSED] - Legacy - Inquiry - Login Test Suite: Test Cases/Login/Login Window]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -25,9 +25,11 @@ assert titleSBC == 'San Bernardino County - Property Information Management Syst
 
 Windows.setText(findWindowsObject('Object Repository/Login/Edit'), '123456')
 
-Windows.click(findWindowsObject('Object Repository/Login/Button'))
+Windows.click(findWindowsObject('Object Repository/Login/ButtonOK'))
 
 def alertMSG = Windows.getText(findWindowsObject('Object Repository/Login/UserIDField'))
+
+assert titleSBC == 'San Bernardino County - Property Information Management System'
 
 assert alertMSG == 'XARTE'
 

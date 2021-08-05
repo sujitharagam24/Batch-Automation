@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>Button</name>
+   <name>Button(1)</name>
    <tag></tag>
-   <locator>/Window/Window[1]/Button[2]</locator>
+   <locator>/Window/Button[2]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -17,7 +17,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42,744608</value>
+      <value>42,226092</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -66,7 +66,7 @@
       <matchCondition>equals</matchCondition>
       <name>NativeWindowHandle</name>
       <type>Main</type>
-      <value>744608</value>
+      <value>226092</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>6</value>
+      <value>3</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>BoundingRectangle</name>
       <type>Main</type>
-      <value>878,599,81,25</value>
+      <value>1608,440,81,25</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -143,7 +143,7 @@
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>Alt+o</value>
+      <value>Alt+n</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -157,7 +157,7 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>OK</value>
+      <value>Cancel</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -178,6 +178,6 @@
       <matchCondition>equals</matchCondition>
       <name>XPath</name>
       <type>Main</type>
-      <value>/Window/Window[1]/Button[2]</value>
+      <value>/Window/Button[2]</value>
    </properties>
 </WindowsElementEntity>
