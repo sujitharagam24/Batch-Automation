@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>parcelField</name>
+   <name>downArrowButton</name>
    <tag></tag>
-   <locator>/Window/Window/Edit[1]</locator>
+   <locator>/Window/Button[1]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -17,7 +17,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42,1080862</value>
+      <value>42,98600</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -59,21 +59,21 @@
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>19108</value>
+      <value>13592</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>NativeWindowHandle</name>
       <type>Main</type>
-      <value>1080862</value>
+      <value>98600</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value>MSMaskWndClass</value>
+      <value>ThunderRT6CommandButton</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value></value>
+      <value>1</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>BoundingRectangle</name>
       <type>Main</type>
-      <value>1640,48,121,17</value>
+      <value>1764,56,24,20</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -157,14 +157,14 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Components</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>edit</value>
+      <value>button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -178,6 +178,6 @@
       <matchCondition>equals</matchCondition>
       <name>XPath</name>
       <type>Main</type>
-      <value>/Window/Edit[1]</value>
+      <value>/Window/Button[1]</value>
    </properties>
 </WindowsElementEntity>

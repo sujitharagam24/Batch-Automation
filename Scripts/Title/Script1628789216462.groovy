@@ -16,23 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.Point as Point
 
-WebUI.callTestCase(findTestCase('Login/Login Success'), [('userID') : 'XARTE', ('password') : 'Bilguun1\r\n', ('inquirySubsystem') : 'C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe'
-        , ('titleSubsystem') : 'C:\\Program Files\\PIMS\\Title\\title.exe', ('securitySubsystem') : 'C:\\Program Files\\PIMS\\Security\\npsecuritymgr.exe'
-        , ('utilitySubsystem') : 'C:\\Program Files\\PIMS\\Utility\\Utility.exe'], FailureHandling.STOP_ON_FAILURE)
+Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Title\\title.exe', 'Title')
 
-def notPresent = Windows.waitForElementNotPresent(findWindowsObject('Object Repository/Login/Edit'), 25)
+Windows.setText(findWindowsObject('Object Repository/Title/Edit'), 'Bilguun1')
 
-assert notPresent
+Windows.click(findWindowsObject('Object Repository/Title/Button'))
 
-Windows.switchToWindow(findWindowsObject('Object Repository/Title/Window'))
+Windows.getDriver()
 
-Windows.click(findWindowsObject('Object Repository/Title/downArrowButton'))
-
-Windows.sendKeys(findWindowsObject('Object Repository/Dashboard/parcelField'), '010830101')
-
-Windows.setText(findWindowsObject('Object Repository/Dashboard/parcelField', [('xpath') : '//Edit[1]']), '010830101')
-
-Windows.closeApplication()
-
+Windows.click(findWindowsObject('Object Repository/Title/New Title Event button'))

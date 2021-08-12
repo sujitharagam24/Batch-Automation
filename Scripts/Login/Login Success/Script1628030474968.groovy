@@ -17,13 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'InquiryMAKE')
+Windows.startApplicationWithTitle(inquirySubsystem, 'Inquiry')
 
 Windows.click(findWindowsObject('Object Repository/Login/Edit'))
 
-Windows.setText(findWindowsObject('Object Repository/Login/Edit'), 'Bilguun1')
+Windows.setText(findWindowsObject('Object Repository/Login/Edit'), password)
 
 Windows.click(findWindowsObject('Object Repository/Login/ButtonOK'))
 
-Windows.closeApplication()
+
 

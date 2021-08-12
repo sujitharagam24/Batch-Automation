@@ -19,15 +19,13 @@ import org.openqa.selenium.Keys as Keys
 
 Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'Inquiry')
 
-def userID = Windows.getText(findWindowsObject("Object Repository/Login/userIDField"))
+def userID = Windows.getText(findWindowsObject('Object Repository/Login/userIDField'))
 
 assert userID == 'XARTE'
 
-def logonTitle = Windows.getText(findWindowsObject("Object Repository/Login/TitleBarLogon"))
+def logonTitle = Windows.getText(findWindowsObject('Object Repository/Login/TitleBarLogon'))
 
 assert logonTitle == 'Logon'
 
 Windows.closeApplication()
-
-
 

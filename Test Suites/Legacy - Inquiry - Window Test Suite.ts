@@ -16,5 +16,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Inquiry Window/Checkboxes</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b54e887f-27dd-48bd-acdb-ff4046eca57e</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

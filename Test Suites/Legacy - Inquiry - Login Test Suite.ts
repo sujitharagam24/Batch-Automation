@@ -22,6 +22,42 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Login/Login Success</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>1b6a1acd-21c9-441d-8342-abe38c7cb187</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>f845c3ff-1c2d-4256-aebc-b32dec638b43</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>38b33116-0df2-4f78-bbbe-1558557446be</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>9e9f8363-2fa6-4043-a167-b1b049c4f79c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>48ac1daa-ff1f-4fb6-806b-212624ba9355</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>412b71c1-795a-4a05-aae1-018dd7d9b829</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>6e6204c1-c70a-4551-9e9e-00d16d0a19ad</guid>

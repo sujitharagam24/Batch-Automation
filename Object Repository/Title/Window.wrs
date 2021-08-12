@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>parcelField</name>
+   <name>Window</name>
    <tag></tag>
-   <locator>/Window/Window/Edit[1]</locator>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locator>Inquiry Driver at NPDB2T</locator>
+   <locatorStrategy>NAME</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ElementIndex</name>
       <type>Main</type>
-      <value>1</value>
+      <value>2</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42,1080862</value>
+      <value>42,101032</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -59,21 +59,21 @@
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>19108</value>
+      <value>10824</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>NativeWindowHandle</name>
       <type>Main</type>
-      <value>1080862</value>
+      <value>101032</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value>MSMaskWndClass</value>
+      <value>ThunderRT6FormDC</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>BoundingRectangle</name>
       <type>Main</type>
-      <value>1640,48,121,17</value>
+      <value>1589,10,322,510</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -157,14 +157,14 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Components</value>
+      <value>Inquiry Driver at NPDB2T</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>edit</value>
+      <value>window</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -178,6 +178,6 @@
       <matchCondition>equals</matchCondition>
       <name>XPath</name>
       <type>Main</type>
-      <value>/Window/Edit[1]</value>
+      <value>//Window</value>
    </properties>
 </WindowsElementEntity>

@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>6e314701-8bd1-4e6e-aa61-ff2f02c587ca</testCaseGuid>
+   <variable>
+      <defaultValue>findTestObject(null)</defaultValue>
+      <description></description>
+      <id>b54e887f-27dd-48bd-acdb-ff4046eca57e</id>
+      <masked>false</masked>
+      <name>parcelField</name>
+   </variable>
 </TestCaseEntity>

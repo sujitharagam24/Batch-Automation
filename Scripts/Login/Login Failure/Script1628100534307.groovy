@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Windows.startApplicationWithTitle('C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe', 'Inquiry')
+Windows.startApplicationWithTitle(C:\Program Files\PIMS\Inquiry\Inquiry.exe, 'Inquiry')
 
 def titleSBC = Windows.getText(findWindowsObject('Object Repository/Login/Window'))
 

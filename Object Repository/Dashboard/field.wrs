@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>parcelField</name>
+   <name>field</name>
    <tag></tag>
-   <locator>/Window/Window/Edit[1]</locator>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locator>42,88474</locator>
+   <locatorStrategy>ID</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
@@ -17,7 +17,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42,1080862</value>
+      <value>42,88474</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -59,14 +59,14 @@
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>19108</value>
+      <value>18652</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>NativeWindowHandle</name>
       <type>Main</type>
-      <value>1080862</value>
+      <value>88474</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>BoundingRectangle</name>
       <type>Main</type>
-      <value>1640,48,121,17</value>
+      <value>1640,56,121,17</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

@@ -5,4 +5,46 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>daa2cb0b-f4d3-43c1-9336-f483236001dd</testCaseGuid>
+   <variable>
+      <defaultValue>'XARTE'</defaultValue>
+      <description></description>
+      <id>412b71c1-795a-4a05-aae1-018dd7d9b829</id>
+      <masked>false</masked>
+      <name>userID</name>
+   </variable>
+   <variable>
+      <defaultValue>'Bilguun1\r\n'</defaultValue>
+      <description></description>
+      <id>f845c3ff-1c2d-4256-aebc-b32dec638b43</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'C:\\Program Files\\PIMS\\Inquiry\\Inquiry.exe'</defaultValue>
+      <description></description>
+      <id>1b6a1acd-21c9-441d-8342-abe38c7cb187</id>
+      <masked>false</masked>
+      <name>inquirySubsystem</name>
+   </variable>
+   <variable>
+      <defaultValue>'C:\\Program Files\\PIMS\\Title\\title.exe'</defaultValue>
+      <description></description>
+      <id>38b33116-0df2-4f78-bbbe-1558557446be</id>
+      <masked>false</masked>
+      <name>titleSubsystem</name>
+   </variable>
+   <variable>
+      <defaultValue>'C:\\Program Files\\PIMS\\Security\\npsecuritymgr.exe'</defaultValue>
+      <description></description>
+      <id>9e9f8363-2fa6-4043-a167-b1b049c4f79c</id>
+      <masked>false</masked>
+      <name>securitySubsystem</name>
+   </variable>
+   <variable>
+      <defaultValue>'C:\\Program Files\\PIMS\\Utility\\Utility.exe'</defaultValue>
+      <description></description>
+      <id>48ac1daa-ff1f-4fb6-806b-212624ba9355</id>
+      <masked>false</masked>
+      <name>utilitySubsystem</name>
+   </variable>
 </TestCaseEntity>
