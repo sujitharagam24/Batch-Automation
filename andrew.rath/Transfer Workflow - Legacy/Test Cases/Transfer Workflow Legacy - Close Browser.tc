@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Close the Browser during Transfer Workflow testing</description>
+   <name>Transfer Workflow Legacy - Close Browser</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ce9cf94a-9f31-4c15-a2a9-4a212e07aed6</testCaseGuid>
+</TestCaseEntity>
