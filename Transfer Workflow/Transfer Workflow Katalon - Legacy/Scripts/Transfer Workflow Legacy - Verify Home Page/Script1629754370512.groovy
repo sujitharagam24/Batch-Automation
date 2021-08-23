@@ -35,6 +35,10 @@ WebUI.openBrowser('https://www.google.com/')
 def driver = DriverFactory.getWebDriver()
 String baseUrl = "https://www.google.com/"
 selenium = new WebDriverBackedSelenium(driver, baseUrl)
-selenium.click("xpath=//div[@id='OB_Folder1']/div/center/div/img")
-selenium.click("id=Submit")
-/* selenium.() */
+selenium.open("http://ecm-asr-qa/trnf/default.asp?ACTION=Logon")
+assertEquals("My Work", selenium.getValue("id=OB_Button2"));
+softAssertion.assertEquals("Work Queues", selenium.getValue("id=OB_Button3"))
+softAssertion.assertEquals("Search", selenium.getValue("id=OB_Button4"))
+softAssertion.assertEquals("Reports", selenium.getValue("id=OB_Button5"))
+softAssertion.assertEquals("Home", selenium.getValue("id=OB_Button1"))
+softAssertion.assertEquals("Assessor Transfer Workflow", selenium.getTitle())
