@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>TransferWorkflowLegacy</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TransferWorkflowLegacy-Login</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://ecm-asr-qa/trnf/<datalist><option>http://ecm-asr-qa/trnf/</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=txtUserID<datalist><option>id=txtUserID</option><option>name=txtUserID</option><option>xpath=//input[@id='txtUserID']</option><option>xpath=//form[@id='frmLogon']/input</option><option>xpath=//input</option><option>css=#txtUserID</option></datalist></td><td>XAC70</td>
+</tr>
+<tr><td>type</td><td>id=txtPassword<datalist><option>id=txtPassword</option><option>name=txtPassword</option><option>xpath=//input[@id='txtPassword']</option><option>xpath=//form[@id='frmLogon']/input[2]</option><option>xpath=//input[2]</option><option>css=#txtPassword</option></datalist></td><td>OBMatr1x</td>
+</tr>
+<tr><td>click</td><td>id=1<datalist><option>id=1</option><option>name=1</option><option>xpath=//input[@id='1']</option><option>xpath=//form[@id='frmLogon']/input[3]</option><option>xpath=//input[3]</option><option>css=#1</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>xpath=//div[@id='divError']/font/i<datalist><option>xpath=//div[@id='divError']/font/i</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Change Password'])[1]/following::i[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/preceding::i[1]</option><option>xpath=//i</option><option>css=i</option></datalist></td><td>ANDREW RATH</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TransferWorkflow-VerifyHomePage</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://ecm-asr-qa/trnf/default.asp?ACTION=Logon<datalist><option>http://ecm-asr-qa/trnf/default.asp?ACTION=Logon</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=OB_Button2<datalist><option>id=OB_Button2</option><option>xpath=//input[@id='OB_Button2']</option><option>xpath=//div[@id='OutlookLikeBar']/input[4]</option><option>xpath=//input[4]</option><option>css=#OB_Button2</option></datalist></td><td>My Work</td>
+</tr>
+<tr><td>verifyValue</td><td>id=OB_Button3<datalist><option>id=OB_Button3</option><option>xpath=//input[@id='OB_Button3']</option><option>xpath=//div[@id='OutlookLikeBar']/input[3]</option><option>xpath=//input[3]</option><option>css=#OB_Button3</option></datalist></td><td>Work Queues</td>
+</tr>
+<tr><td>verifyValue</td><td>id=OB_Button4<datalist><option>id=OB_Button4</option><option>xpath=//input[@id='OB_Button4']</option><option>xpath=//div[@id='OutlookLikeBar']/input[2]</option><option>xpath=//input[2]</option><option>css=#OB_Button4</option></datalist></td><td>Search</td>
+</tr>
+<tr><td>verifyValue</td><td>id=OB_Button5<datalist><option>id=OB_Button5</option><option>xpath=//input[@id='OB_Button5']</option><option>xpath=//div[@id='OutlookLikeBar']/input</option><option>xpath=//input</option><option>css=#OB_Button5</option></datalist></td><td>Reports</td>
+</tr>
+<tr><td>verifyValue</td><td>id=OB_Button1<datalist><option>id=OB_Button1</option><option>xpath=//input[@id='OB_Button1']</option><option>xpath=//div[@id='OutlookLikeBar']/input[5]</option><option>xpath=//input[5]</option><option>css=#OB_Button1</option></datalist></td><td>Home</td>
+</tr>
+<tr><td>verifyTitle</td><td>Assessor Transfer Workflow<datalist><option>Assessor Transfer Workflow</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TransferWorkflowLegacy-Logout2</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://ecm-asr-qa/trnf/default.asp?ACTION=Logon<datalist><option>http://ecm-asr-qa/trnf/default.asp?ACTION=Logon</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>link=Change Password<datalist><option>link=Change Password</option><option>xpath=//a[contains(text(),'Change Password')]</option><option>xpath=//form[@id='frmLogon']/center[2]/a</option><option>xpath=//*/text()[normalize-space(.)='Change Password']/parent::*</option><option>xpath=//a[@href='http://countyline/racf/']</option><option>xpath=//center[2]/a</option><option>css=a.textmenu</option></datalist></td><td>Change Password</td>
+</tr>
+<tr><td>click</td><td>id=Submit<datalist><option>id=Submit</option><option>name=Submit</option><option>xpath=//img[@alt='Submit']</option><option>xpath=//img[@id='Submit']</option><option>xpath=//form[@id='frmLogon']/center/a/img</option><option>xpath=//a/img</option><option>css=#Submit</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Close Browser</td></tr>
+</thead>
+<tbody>
+<tr><td>close</td><td><datalist><option></option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
