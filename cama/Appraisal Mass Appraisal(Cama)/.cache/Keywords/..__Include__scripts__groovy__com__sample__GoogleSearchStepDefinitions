@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "F146D7DEC2EFAC6A1F972BB57CF1905B",
+  "keywordClasses": [
+    {
+      "name": "com.sample.GoogleSearchStepDefinitions",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": false
+}

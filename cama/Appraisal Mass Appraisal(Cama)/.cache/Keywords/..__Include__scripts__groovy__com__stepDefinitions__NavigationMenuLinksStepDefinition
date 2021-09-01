@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "6C0A19C910C9146CDA8A34CE3D491855",
+  "keywordClasses": [
+    {
+      "name": "com.stepDefinitions.NavigationMenuLinksStepDefinition",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}
