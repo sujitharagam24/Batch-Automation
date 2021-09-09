@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login Success</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e519ddf6-26f3-403d-a6c0-be1f4b5067f6</testCaseGuid>
+   <variable>
+      <defaultValue>'https://devmodpimsapptransferworkflow.azurewebsites.net/'</defaultValue>
+      <description></description>
+      <id>2fec3cbd-1c2b-4891-80a3-ee891bd829a9</id>
+      <masked>false</masked>
+      <name>baseURL</name>
+   </variable>
+</TestCaseEntity>
