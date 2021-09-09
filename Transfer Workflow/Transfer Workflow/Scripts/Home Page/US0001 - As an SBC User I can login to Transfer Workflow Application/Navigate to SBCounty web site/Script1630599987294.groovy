@@ -37,4 +37,3 @@ currentURL = WebUI.getUrl()
 //WebUI.verify(currentURL.contains(sbcountyLink), false)
 
 WebUI.closeBrowser()
-
