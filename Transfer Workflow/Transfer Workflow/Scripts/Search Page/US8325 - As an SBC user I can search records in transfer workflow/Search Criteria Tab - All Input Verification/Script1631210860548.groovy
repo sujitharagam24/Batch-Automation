@@ -37,8 +37,7 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://devmodpimsapptransferworkflow.azurewebsites.net/search')
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'),
-	'111111')
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
 selenium.type('xpath=(//input[@type="text"])[2]', '222222')
 
@@ -65,8 +64,4 @@ selenium.type('xpath=(//input[@type="text"])[12]', '12')
 selenium.type('xpath=(//input[@type="text"])[13]', '13')
 
 selenium.type('xpath=(//input[@type="text"])[14]', '14')
-
-
-
-
 
