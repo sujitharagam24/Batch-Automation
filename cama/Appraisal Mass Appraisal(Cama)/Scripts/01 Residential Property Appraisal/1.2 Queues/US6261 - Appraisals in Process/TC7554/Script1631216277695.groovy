@@ -1,5 +1,4 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -13,7 +12,6 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
@@ -27,11 +25,11 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert
 
-/** As an Appraiser, I want to see all the new parcels that need appraisals in the New Queue - Queues - CAMA */
+/*As an Appraiser, I want to see all of the appraisals I have started but not completed under My Work-In Process queue - Queues - CAMA*/
 
 WebUI.openBrowser(GlobalVariable.Url, FailureHandling.STOP_ON_FAILURE );
 WebUI.click(findTestObject('01 Residential Property Appraisal/1 Navigation Page Elements/div_Dashboard'));
-WebUI.click(findTestObject('01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/NewTab'));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/InProcessTab'));
 
 WebDriver driver = DriverFactory.getWebDriver();
 
