@@ -16,34 +16,41 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
 
-/** [US7871] As an Appraiser, I should be able to see specific columns in all of the Queues  - Queues - CAMA */
-
+/*As an Appraiser, I want the ability to select what valuation I want to perform on a subject property*/
 
 WebUI.openBrowser(GlobalVariable.Url, FailureHandling.STOP_ON_FAILURE);
+
+WebUI.maximizeWindow();
+
+WebUI.waitForPageLoad(20);
+
 WebUI.click(findTestObject('01 Residential Property Appraisal/1 Navigation Page Elements/div_Dashboard'));
-WebUI.click(findTestObject('01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/NewTab'));
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/InProcessTab'));
 
-WebElement newQueueHeaders = driver.findElement(By.xpath("(//table[@class='mud-table-root'])[1]/thead/tr"));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/2 Queue Page Elements/Queue Grid Column Elements/Parcel Number'));
 
+WebUI.waitForPageLoad(20)
 
-Iterator<WebElement> it = newQueueHeaders.iterator();
-while(it.hasNext()) {
-	WebElement column = it.next();
-	String columnText = column.getText();
-	System.out.println(columnText);
-    column.click();
-	
-}
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/3 Appraisal Wizard/Select Valuation Tab/Select Valuation Tab'));
 
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/3 Appraisal Wizard/Select Valuation Tab/Valuation Type Drop Down Arrow'));
+
+WebUI.verifyElementText(findTestObject('Object Repository/01 Residential Property Appraisal/3 Appraisal Wizard/Select Valuation Tab/Apartments Income'), "Dpartments Income");
 
 
 WebUI.closeBrowser();
+	
+
+	
+
+
+

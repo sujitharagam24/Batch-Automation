@@ -80,16 +80,16 @@ class CommonMethods {
 		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
 		return selectedRows
 	}
-	
-	
-	 /**
-	  * Print all from an array
-	  * @param ar
-	  */
-     @Keyword
-	 def static void print(String[] ar) {
-		 for(int i = 0; i < ar.length; i++) {
-			 System.out.println(ar[i]);
-		 }
-	 }
+
+
+	/**
+	 * Print all from an array
+	 * @param ar
+	 */
+	@Keyword
+	def static void print(String[] ar) {
+		for(int i = 0; i < ar.length; i++) {
+			System.out.println(ar[i]);
+		}
+	}
 }

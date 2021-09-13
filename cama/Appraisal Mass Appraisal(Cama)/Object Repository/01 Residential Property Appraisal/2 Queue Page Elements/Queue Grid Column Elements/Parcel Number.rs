@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Parcel Number</name>
+   <tag></tag>
+   <elementGuidId>018edffa-e9e4-4b50-8655-cc7e7260220b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>a.mud-typography.mud-link.mud-primary-text.mud-link-underline-always.mud-typography-body1</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//a[@class='mud-typography mud-link mud-primary-text mud-link-underline-always mud-typography-body1'])[3]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mud-typography mud-link mud-primary-text mud-link-underline-always mud-typography-body1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>2350052170000</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-open-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-false py-8&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-12 mud-grid-item-sm-12 mud-grid-item-md-10&quot;]/div[@class=&quot;mud-paper mud-elevation-25 mud-card&quot;]/div[@class=&quot;mud-card-header&quot;]/div[@class=&quot;mud-card-header-content&quot;]/div[@class=&quot;mud-tabs mud-tabs-rounded mud-elevation-2&quot;]/div[@class=&quot;mud-tabs-panels&quot;]/div[@class=&quot;mud-table mud-xs-table mud-table-dense mud-table-hover mud-elevation-1&quot;]/div[@class=&quot;mud-table-container&quot;]/table[@class=&quot;mud-table-root&quot;]/tbody[@class=&quot;mud-table-body&quot;]/tr[@class=&quot;mud-table-row&quot;]/td[@class=&quot;mud-table-cell&quot;]/a[@class=&quot;mud-typography mud-link mud-primary-text mud-link-underline-always mud-typography-body1&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app']/div[3]/div/div/div/div[5]/div/div/div/div/div[2]/div/div[2]/table/tbody/tr/td[3]/a</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'2350052170000')]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='D'])[1]/following::a[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Post Key'])[6]/following::a[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='TRF'])[1]/preceding::a[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='APP'])[1]/preceding::a[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='2350052170000']/parent::*</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[3]/a</value>
+   </webElementXpaths>
+</WebElementEntity>
