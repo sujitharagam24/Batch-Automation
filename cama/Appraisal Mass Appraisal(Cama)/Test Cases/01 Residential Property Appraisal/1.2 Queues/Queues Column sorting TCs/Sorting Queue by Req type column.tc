@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC8014-K</name>
+   <name>Sorting Queue by Req type column</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>a7506bd5-24cd-4da2-9986-5607aec086a0</testCaseGuid>
+   <testCaseGuid>c02d80f9-53d9-4cbe-a53b-73f4ab6fdf00</testCaseGuid>
 </TestCaseEntity>
