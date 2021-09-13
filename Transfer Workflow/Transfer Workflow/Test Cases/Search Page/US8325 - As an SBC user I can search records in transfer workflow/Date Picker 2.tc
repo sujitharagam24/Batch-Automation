@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>6bb4ca2c-6505-4fd6-8019-81164a700a6a</testCaseGuid>
    <variable>
-      <defaultValue>'02/21/2021'</defaultValue>
+      <defaultValue>'02/19/2020'</defaultValue>
       <description></description>
       <id>1bbb9b95-01d4-486f-bce3-36c398ae39c7</id>
       <masked>false</masked>
