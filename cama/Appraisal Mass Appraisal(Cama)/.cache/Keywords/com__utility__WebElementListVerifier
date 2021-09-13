@@ -1,0 +1,69 @@
+{
+  "keywordFileContentHash": "206B8AD5CA425877578820251625CC0B",
+  "keywordClasses": [
+    {
+      "name": "com.utility.WebElementListVerifier",
+      "keywordMethods": [
+        {
+          "name": "verifySortedNatural",
+          "parameters": [
+            {
+              "name": "list",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.util.List",
+                "unresolvedClassName": "List",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [
+                  {
+                    "fullClassName": "org.openqa.selenium.WebElement",
+                    "unresolvedClassName": "WebElement",
+                    "isArray": false,
+                    "isGnericsPlaceHolder": false,
+                    "hasImmutableClassName": false,
+                    "genericsTypes": [],
+                    "errorOnParsing": false
+                  }
+                ],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "verifySortedReverse",
+          "parameters": [
+            {
+              "name": "list",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.util.List",
+                "unresolvedClassName": "List",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [
+                  {
+                    "fullClassName": "org.openqa.selenium.WebElement",
+                    "unresolvedClassName": "WebElement",
+                    "isArray": false,
+                    "isGnericsPlaceHolder": false,
+                    "hasImmutableClassName": false,
+                    "genericsTypes": [],
+                    "errorOnParsing": false
+                  }
+                ],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

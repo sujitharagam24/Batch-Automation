@@ -1,5 +1,4 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -13,40 +12,46 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert
+import org.eclipse.core.runtime.Assert as Assert
 
-/** As an Appraiser, I want to see all the new parcels that need appraisals in the New Queue - Queues - CAMA */
-
-WebUI.openBrowser(GlobalVariable.Url, FailureHandling.STOP_ON_FAILURE );
-WebUI.click(findTestObject('01 Residential Property Appraisal/1 Navigation Page Elements/div_Dashboard'));
-WebUI.click(findTestObject('01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/NewTab'));
-
+/*Instance of Selenium Webdriver (allows the use of selenium script within Katalon) */
 WebDriver driver = DriverFactory.getWebDriver();
 
-// list of table rows
-List<WebElement> tableRowData= driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
-String[] row = new String[tableRowData.size()];
+/*Locating the table rows' webelements and Initializing an array the size of the rows */
+List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+String[] beforeSort_row = new String[QueueRows.size()];
 
-// iterating over rows in the table and getting the text
-for(int i=0; i < tableRowData.size(); i++) {
-	row[i] =  tableRowData.get(i).getText().trim();
+/*Getting the text into the array */
+for (int i = 0; i < QueueRows.size(); i++) {
+	(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
 }
-CustomKeywords.'com.utility.CommonMethods.print'(row);
 
-// Asserting table rows are not empty
-Assert.isNotNull(row);
+/*Clicking on the column header to sort the queue*/
+WebElement respBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[2]'));
+respBtn.click();
 
-WebUI.closeBrowser();
+/*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
+QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+String[] afterSortByResp= new String[QueueRows.size()];
 
+/*Getting the text into the array*/
+for (int i = 0; i < QueueRows.size(); i++) {
+	(afterSortByResp[i]) = QueueRows.get(i).getText().trim();
+}
+
+/*Printing the sorted table */
+CustomKeywords.'com.utility.CommonMethods.print'(afterSortByResp);
+
+/*Asserting that the column data after clicking on column header
+ * is not the same as before */
+assertNotEquals(beforeSort_row, afterSortByResp);

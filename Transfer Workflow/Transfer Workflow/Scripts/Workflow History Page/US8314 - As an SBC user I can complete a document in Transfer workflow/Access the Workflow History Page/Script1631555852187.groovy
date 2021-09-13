@@ -1,5 +1,4 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -13,40 +12,45 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert
+import org.eclipse.core.runtime.Assert as Assert
+import com.kms.katalon.core.testobject.TestObject as TestObject
 
-/** As an Appraiser, I want to see all the new parcels that need appraisals in the New Queue - Queues - CAMA */
+/**
+ * 
+ * Access the Workflow History Page through My Work tab
+ * Verify if No Action radio button is checked by default
+ * @author bilguun.amarsaikhan
+ *
+ */
 
-WebUI.openBrowser(GlobalVariable.Url, FailureHandling.STOP_ON_FAILURE );
-WebUI.click(findTestObject('01 Residential Property Appraisal/1 Navigation Page Elements/div_Dashboard'));
-WebUI.click(findTestObject('01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/NewTab'));
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-// list of table rows
-List<WebElement> tableRowData= driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
-String[] row = new String[tableRowData.size()];
+WebUI.maximizeWindow()
 
-// iterating over rows in the table and getting the text
-for(int i=0; i < tableRowData.size(); i++) {
-	row[i] =  tableRowData.get(i).getText().trim();
-}
-CustomKeywords.'com.utility.CommonMethods.print'(row);
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-// Asserting table rows are not empty
-Assert.isNotNull(row);
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
 
-WebUI.closeBrowser();
+WebUI.waitForPageLoad(10)
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
+
+WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[83]'))
+
+openButton.click();
+
+
+
 
