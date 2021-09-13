@@ -17,3 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://devmodpimsapptransferworkflow.azurewebsites.net/search')
+
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
+
+WebUI.click(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/span_Clear Form'))
+
+WebUI.closeBrowser()
+

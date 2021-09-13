@@ -39,29 +39,7 @@ WebUI.navigateToUrl('https://devmodpimsapptransferworkflow.azurewebsites.net/sea
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
-selenium.type('xpath=(//input[@type="text"])[2]', '222222')
+WebUI.click(findTestObject('Search Page Objectory/US8325/span_Search'))
 
-selenium.type('xpath=(//input[@type="text"])[3]', '3')
-
-selenium.type('xpath=(//input[@type="text"])[4]', '4')
-
-selenium.type('xpath=(//input[@type="text"])[5]', '5')
-
-selenium.type('xpath=(//input[@type="text"])[6]', '6')
-
-selenium.type('xpath=(//input[@type="text"])[7]', '7')
-
-selenium.type('xpath=(//input[@type="text"])[8]', '8')
-
-selenium.type('xpath=(//input[@type="text"])[9]', '9')
-
-selenium.type('xpath=(//input[@type="text"])[10]', '10')
-
-selenium.type('xpath=(//input[@type="text"])[11]', '11')
-
-selenium.type('xpath=(//input[@type="text"])[12]', '12')
-
-selenium.type('xpath=(//input[@type="text"])[13]', '13')
-
-selenium.type('xpath=(//input[@type="text"])[14]', '14')
+WebUI.closeBrowser()
 
