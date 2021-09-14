@@ -37,7 +37,7 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Home Page Objectory/US0001/h5_Hello, San Bernadino'))
+WebUI.click(findTestObject('Home Page Objectory/US0001/h5_Hello, San Bernardino'))
 
 WebUI.click(findTestObject('Home Page Objectory/US0001/img'))
 
