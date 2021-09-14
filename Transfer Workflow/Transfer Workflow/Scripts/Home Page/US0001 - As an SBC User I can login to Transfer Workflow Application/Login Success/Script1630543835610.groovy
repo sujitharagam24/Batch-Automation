@@ -46,4 +46,3 @@ def currentUrl = WebUI.getUrl()
 WebUI.verifyMatch(currentUrl, baseURL, false)
 
 WebUI.closeBrowser()
-

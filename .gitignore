@@ -1,20 +1,9 @@
-.gradle
 
-bin
-
-Reports
-
-Libs
-
-output
-
-!output/.gitkeep
-build
-
-.classpath
-
-.project
-
+/bin/
+/Libs/
+/.settings/
+/.classpath
+.svn/
 com.kms.katalon.core.webservice.properties
 com.kms.katalon.integration.analytics.properties
 com.kms.katalon.integration.analytics.properties
