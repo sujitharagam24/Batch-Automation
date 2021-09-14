@@ -37,8 +37,33 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.UnexpectedTagNameException;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.Alert
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
 
 class CommonMethods {
+	
+	public static WebDriver driver;
+	public static final int IMPLICIT_WAIT=10;
+	public static final int EXPLICIT_WAIT=20;
+	
 	/**
 	 * Refresh browser
 	 */
@@ -92,4 +117,312 @@ class CommonMethods {
 			System.out.println(ar[i]);
 		}
 	}
+	
+	
+	/**
+	 * this method will return an object of Explicit wait with time set to 20 sec
+	 *
+	 * @return WebDriverWait
+	 */
+	public static WebDriverWait getWait() {
+		WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_WAIT);
+		return wait;
+	}
+
+	/**
+	 * this method will wait until given element becomes clickable
+	 *
+	 * @param element
+	 */
+	public static void waitForClickability(WebElement element) {
+		getWait().until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	/**
+	 * This method waits for element to be visible
+	 *
+	 * @param element
+	 */
+	public static void waitForVisibility(WebElement element) {
+		getWait().until(ExpectedConditions.visibilityOf(element));
+	}
+
+	/**
+	 * Method waits for alert to be present
+	 */
+	public static void waitForAlert() {
+		getWait().until(ExpectedConditions.alertIsPresent());
+	}
+	
+	/**
+	 * this method will return an Object of JavascriptExecutor
+	 *
+	 * @return JavascriptExecutor
+	 */
+	public static JavascriptExecutor getJSExecutor() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return js;
+	}
+
+	/**
+	 * this method will click using JavascriptExecutor
+	 *
+	 * @param element
+	 */
+	public static void jsClick(WebElement element) {
+		getJSExecutor().executeScript("arguments[0].click();", element);
+	}
+
+	/**
+	 *
+	 * @param pattern
+	 * @return
+	 */
+	public static String getTimeStamp(String pattern) {
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		return sdf.format(date);
+	}
+
+	/**
+	 * This method will click on radio buttons or checkboxes by the given list of
+	 * webelements and value
+	 *
+	 * @param radioOrCheckBoxes
+	 * @param value
+	 */
+
+	public static void clickRadioOrCheckbox(List<WebElement> radioOrCheckBoxes, String value) {
+		String actualValue;
+		for (WebElement radioOrCheckbox : radioOrCheckBoxes) {
+			actualValue = radioOrCheckbox.getAttribute("value").trim();
+			if (radioOrCheckbox.isEnabled() && actualValue.equals(value)) {
+				jsClick(radioOrCheckbox);
+				break;
+			}
+		}
+
+	}
+
+	/**
+	 * This method will select an option from the dropdown by given webelement and
+	 * visible text value
+	 *
+	 * @param dd
+	 * @param visibleTextOrValue
+	 */
+	public static void selectDDValue(WebElement dd, String visibleTextOrValue) {
+		try {
+			Select select = new Select(dd);
+			List<WebElement> options = select.getOptions();
+			for (WebElement option : options) {
+				if (option.getText().equals(visibleTextOrValue)) {
+					select.selectByVisibleText(visibleTextOrValue);
+					break;
+				}
+			}
+		} catch (UnexpectedTagNameException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method will select an option from the dropdown by the given webelement
+	 * and index value
+	 *
+	 * @param dd
+	 * @param index
+	 */
+	public static void selectDDValue(WebElement dd, int index) {
+		try {
+
+			Select select = new Select(dd);
+			List<WebElement> options = select.getOptions();
+
+			int size = options.size();
+
+			if (size > index) {
+				select.selectByIndex(index);
+			}
+		} catch (UnexpectedTagNameException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * This method will switch to a frame by given frame webelement
+	 *
+	 * @param iFrame
+	 */
+
+	public static void switchToFrame(WebElement iFrame) {
+		try {
+			driver.switchTo().frame(iFrame);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * This method will switch to a frame by given index
+	 *
+	 * @param frameIndex
+	 */
+	public static void switchToFrame(int frameIndex) {
+		try {
+			driver.switchTo().frame(frameIndex);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * This method will switch to a frame by given frame name or id
+	 *
+	 * @param frameIndex
+	 */
+	public static void switchToFrame(String nameOrId) {
+		try {
+			driver.switchTo().frame(nameOrId);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * This method will switch to a child window
+	 */
+	public static void switchToChildWindow() {
+
+		String mainWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+		for (String window : allWindows) {
+			if (!window.equals(mainWindow)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+	}
+
+	/*
+	 * This method will accept a simple alert
+	 */
+	public static void Alert() {
+		Alert alert = driver.switchTo().alert();
+		waitForAlert();
+		alert.accept();
+	}
+
+	/**
+	 * This method hanldes confirmation alerts
+	 */
+	public static void confirmationAlert() {
+		Alert alert = driver.switchTo().alert();
+		waitForAlert();
+		alert.dismiss();
+	}
+
+	/**
+	 * This method handles prompt alerts
+	 */
+	public static void promptAlert(String key) {
+		Alert alert = driver.switchTo().alert();
+		waitForAlert();
+		alert.sendKeys(key);
+		alert.accept();
+
+	}
+
+	/**
+	 * This method returns object of actions class type
+	 */
+	public static Actions action() {
+		Actions action = new Actions(driver);
+		return action;
+	}
+
+	/**
+	 * This Method moves the mouse's cursor to desire webelement
+	 *
+	 * @param target
+	 */
+	public static void moveMouseTo(WebElement target) {
+		try {
+			action().moveToElement(target).perform();
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method clicks on desired element using the Actions class click method
+	 *
+	 * @param target
+	 */
+	public static void actionClick(WebElement target) {
+		try {
+			action().moveToElement(target).click().perform();
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method will double click on specified webelement
+	 *
+	 * @param target
+	 */
+	public static void doubleClick(WebElement target) {
+		try {
+			action().doubleClick(target).perform();
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method will right click on specified webelement
+	 *
+	 * @param target
+	 */
+	public static void rightClick(WebElement target) {
+		try {
+			action().contextClick(target).perform();
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method will drag a desired draggable element and drop it on desired
+	 * droppable target
+	 *
+	 * @param draggable
+	 * @param droppable
+	 */
+	public static void dragAndDrop(WebElement draggable, WebElement droppable) {
+		try {
+			action().dragAndDrop(draggable, droppable).perform();
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+	}
+
+	static String jsonFile;
+
+	public static String readJson(String fileName) {
+
+		try {
+			jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return jsonFile;
+	}
+
 }

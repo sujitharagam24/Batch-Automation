@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='fa55c914-a488-4182-a1e2-41df5b049433']/div/div/div/div/p</value>
+         <value>(//p[contains(text(), 'Land Market Appraisal')])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -6,12 +6,12 @@
    <elementGuidId>c738cfd8-a647-4d83-92d6-8eced37c0ba6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//table[@class='mud-table-root'])[1]/thead/tr/th[3]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>span.mud-button-root.mud-table-sort-label</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//span[contains(text(), 'Dist')])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='fa55c914-a488-4182-a1e2-41df5b049433']/div/div/div[4]/div/p</value>
+         <value>(//p[contains(text(), 'Discounted Cash Flow')])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

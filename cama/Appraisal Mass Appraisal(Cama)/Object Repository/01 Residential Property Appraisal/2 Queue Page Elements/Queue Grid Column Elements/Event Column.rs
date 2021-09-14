@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div[3]/div/div/div/div[5]/div/div/div/div/div[2]/div/div[3]/table/thead/tr/th[6]/span</value>
+         <value>(//span[contains(text(), 'Event')])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
