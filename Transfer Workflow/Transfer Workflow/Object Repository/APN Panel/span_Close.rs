@@ -6,12 +6,12 @@
    <elementGuidId>b61d745e-1a39-47d9-b17f-bdbe5139b4d9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.mud-button-label</value>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div[1]/div[2]/div[2]/div[5]/button[1]/span</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='_3338b6853b6d4c45b83021ca6c89f141']/div[2]/div[5]/button/span</value>
+         <key>CSS</key>
+         <value>span.mud-button-label</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -42,21 +42,14 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;_3338b6853b6d4c45b83021ca6c89f141&quot;)/div[2]/div[@class=&quot;mud-dialog-actions&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-text mud-button-text-default mud-button-text-size-medium mud-ripple&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
+      <value>id(&quot;_23b8dc807d3c449080412bc4cfc1ba13&quot;)/div[2]/div[@class=&quot;mud-dialog-actions&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-text mud-button-text-default mud-button-text-size-medium mud-ripple&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='_3338b6853b6d4c45b83021ca6c89f141']/div[2]/div[5]/button/span</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Associated APN'])[1]/following::span[1]</value>
+      <value>/html/body/div[1]/div[1]/div[2]/div[2]/div[5]/button[1]/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -92,5 +85,12 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//button/span</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='_3338b6853b6d4c45b83021ca6c89f141']/div[2]/div[5]/button/span</value>
    </webElementXpaths>
 </WebElementEntity>
