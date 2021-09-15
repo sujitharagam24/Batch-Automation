@@ -18,3 +18,11 @@ build
 com.kms.katalon.core.webservice.properties
 com.kms.katalon.integration.analytics.properties
 com.kms.katalon.integration.analytics.properties
+
+**/bin/
+**/Libs/
+**/.settings/
+**/.classpath
+**/.svn/
+**/Reports/
+**/settings/internal/com.kms.katalon.composer.testcase.properties

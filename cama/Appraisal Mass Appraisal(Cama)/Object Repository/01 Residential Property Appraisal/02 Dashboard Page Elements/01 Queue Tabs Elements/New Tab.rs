@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>New Tab</name>
+   <tag></tag>
+   <elementGuidId>5c55083f-3f46-45b0-b07e-838fa4e29547</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.mud-tab.mud-tab-active.mud-ripple</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[contains(text(), 'New')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mud-tab mud-tab-active mud-ripple</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>New</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-open-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-false py-8&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-12 mud-grid-item-sm-12 mud-grid-item-md-8&quot;]/div[@class=&quot;mud-paper mud-elevation-25 mud-card&quot;]/div[@class=&quot;mud-card-header&quot;]/div[@class=&quot;mud-card-header-content&quot;]/div[@class=&quot;mud-tabs mud-tabs-rounded mud-elevation-2&quot;]/div[@class=&quot;mud-tabs-toolbar&quot;]/div[@class=&quot;mud-tabs-toolbar-inner&quot;]/div[@class=&quot;mud-tabs-toolbar-content&quot;]/div[@class=&quot;mud-tabs-toolbar-wrapper&quot;]/div[@class=&quot;mud-tooltip-root mud-tooltip-inline&quot;]/div[@class=&quot;mud-tab mud-tab-active mud-ripple&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app']/div[2]/div/div/div/div[4]/div/div/div/div/div/div/div/div/div/div</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Work'])[1]/following::div[7]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Waiting Approval'])[1]/following::div[11]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='In Process'])[2]/preceding::div[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Waiting Approval'])[2]/preceding::div[3]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/div/div/div/div/div/div/div/div/div/div</value>
+   </webElementXpaths>
+</WebElementEntity>
