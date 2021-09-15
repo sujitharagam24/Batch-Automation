@@ -22,6 +22,6 @@ import org.openqa.selenium.Keys as Keys
  */
 
 WebUI.openBrowser(GlobalVariable.Url);
-WebUI.verifyElementPresent(findTestObject('01 Residential Property Appraisal/1 Navigation Page Elements/div_Logout'), 30);
+WebUI.verifyElementPresent(findTestObject('01 Residential Property Appraisal/01 Navigation Page Elements/div_Logout'), 30);
 WebUI.closeBrowser();
 

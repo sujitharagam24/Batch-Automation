@@ -30,13 +30,27 @@ import org.eclipse.core.runtime.Assert as Assert
  * @author Elian Blanco
  * */
 
- 
-WebUI.openBrowser(GlobalVariable.Url, FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/01. Application Landing/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow();
+WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'));
 
-WebUI.waitForPageLoad(20);
+WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/1 Navigation Page Elements/div_Dashboard'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/In Process Tab'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type Drop Down Arrow'));
+
+def clickedValuationType = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'));
+
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'));
+
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Save Button Valuation Tab'));
+
+def selectedValuationType = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/01 Selected Valuation Table/First Saved Valuation'));
+
+assertEquals(clickedValuationType, selectedValuationType);
+
+
+
+
+

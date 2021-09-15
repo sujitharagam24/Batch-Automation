@@ -33,7 +33,7 @@ import org.eclipse.core.runtime.Assert
 
 WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/01. Application Landing/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/2 Queue Page Elements/Queue Tabs Elements/New Tab'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'));
 
 WebDriver driver = DriverFactory.getWebDriver();
 
