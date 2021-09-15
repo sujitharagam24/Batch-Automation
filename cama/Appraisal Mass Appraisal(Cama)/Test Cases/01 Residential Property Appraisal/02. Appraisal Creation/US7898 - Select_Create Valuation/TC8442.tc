@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>As an Appraiser, I want the ability to select what valuation I want to perform on a subject property</description>
+   <name>TC8442</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a0a1c55c-c767-443c-bb76-b828730a43e3</testCaseGuid>
+</TestCaseEntity>
