@@ -7,7 +7,8 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='_23b8dc807d3c449080412bc4cfc1ba13']/div[2]/div[5]/button[2]/span</value>
+         <value>//div[@id='_23b8dc807d3c449080412bc4cfc1ba13']/div[2]/div[5]/button[2]/span
+</value>
       </entry>
       <entry>
          <key>CSS</key>
