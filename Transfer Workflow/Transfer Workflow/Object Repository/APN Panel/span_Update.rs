@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description>Manually obtain xpath for this button and for Update button</description>
-   <name>span_Delete</name>
+   <name>span_Update</name>
    <tag></tag>
-   <elementGuidId>dd4db2fa-8968-4c0a-8945-0f1953d8cfc3</elementGuidId>
+   <elementGuidId>df464ee7-6d70-4a6d-9970-7149dbf51120</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//span[@class='mud-button-label'])[2]</value>
+         <value> (//span[@class='mud-button-label'])[3]</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -35,13 +35,13 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Delete</value>
+      <value>Update</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;_909a0a0170424f6ba59628a45ba4c410&quot;)/div[2]/div[@class=&quot;mud-dialog-actions&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-text mud-button-text-error mud-button-text-size-medium mud-ripple&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
+      <value>id(&quot;_1c79d8743d174e108463b6a44d0bfe7d&quot;)/div[2]/div[@class=&quot;mud-dialog-actions&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-text mud-button-text-error mud-button-text-size-medium mud-ripple&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
    </webElementProperties>
 </WebElementEntity>
