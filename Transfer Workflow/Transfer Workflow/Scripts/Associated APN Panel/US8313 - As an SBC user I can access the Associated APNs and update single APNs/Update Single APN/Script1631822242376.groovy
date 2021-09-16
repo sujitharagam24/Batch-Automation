@@ -29,8 +29,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 /**
  *
  * Access the Worksheet Page through My Work tab
- * Verify Associated APN panel exists and update a
- *  single APN 
+ * Verify Associated APN panel exists and update a single APN  
  * Test case is dependent on Add Single APN script to be completed successfully
  * @author michele.jazo
  *
@@ -46,4 +45,8 @@ WebUI.click(findTestObject('APN Panel/strong_Associated APNs'))
 
 WebUI.click(findTestObject('APN Panel/UpdateIcon'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/span_Update'))
+WebUI.click(findTestObject('APN Panel/span_Update'))
+
+WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567890123'))
+
+WebUI.closeBrowser()

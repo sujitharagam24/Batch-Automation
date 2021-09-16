@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
+   <description>Manually obtain xpath for this button and for Update button</description>
    <name>span_Delete</name>
    <tag></tag>
    <elementGuidId>dd4db2fa-8968-4c0a-8945-0f1953d8cfc3</elementGuidId>
