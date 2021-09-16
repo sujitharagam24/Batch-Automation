@@ -6,12 +6,12 @@
    <elementGuidId>270922b7-e08a-460e-aa5a-9256c1875027</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>p.mud-typography.mud-typography-body2.mud-inherit-text</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='app']/div[2]/div/div/div/div/div/div[4]/div[2]/div/div/div/div/div/div[2]/button/p</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p.mud-typography.mud-typography-body2.mud-inherit-text</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
