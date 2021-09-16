@@ -6,12 +6,12 @@
    <elementGuidId>e3d64104-fa3b-4921-9101-bfdcedb54827</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.mud-button-group-root.mud-button-group-override-styles.mud-button-group-text.mud-button-group-text-dark.mud-button-group-text-size-small.mud-button-group-horizontal > button.mud-button-root.mud-icon-button.mud-ripple.mud-ripple-icon > span.mud-icon-button-label > svg.mud-icon-root.mud-svg-icon.mud-inherit-text.mud-icon-size-medium</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>(.//*[normalize-space(text()) and normalize-space(.)='Associated APNs'])[1]/following::*[name()='svg'][2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.mud-button-group-root.mud-button-group-override-styles.mud-button-group-text.mud-button-group-text-dark.mud-button-group-text-size-small.mud-button-group-horizontal > button.mud-button-root.mud-icon-button.mud-ripple.mud-ripple-icon > span.mud-icon-button-label > svg.mud-icon-root.mud-svg-icon.mud-inherit-text.mud-icon-size-medium</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

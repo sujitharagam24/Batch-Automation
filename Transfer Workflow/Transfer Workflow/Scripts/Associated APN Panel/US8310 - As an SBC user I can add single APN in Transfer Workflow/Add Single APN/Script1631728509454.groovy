@@ -28,13 +28,21 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Page_Transfer Workflow/p_Add APN'))
+WebUI.click(findTestObject('APN Panel/p_Add APN'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Transfer Workflow/input_Lead APN_mud-input-slot mud-input-roo_ff250c'), 
+WebUI.setText(findTestObject('APN Panel/input_Lead APN_mud-input-slot mud-input-roo_ff250c'), 
     '1234567891234')
 
 WebUI.getWindowIndex()
 
 index = WebUI.getWindowIndex()
+
+WebUI.click(findTestObject('Object Repository/APN Panel/button_Add APN'))
+
+WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN added'))
+
+WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
+
+WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567890123'))
 
 WebUI.closeBrowser()

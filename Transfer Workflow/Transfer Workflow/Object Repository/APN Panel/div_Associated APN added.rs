@@ -6,12 +6,12 @@
    <elementGuidId>17d5f047-9894-4ec2-bd9f-d25eb841709a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.mud-snackbar-content-message</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='mud-snackbar-container']/div/div[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.mud-snackbar-content-message</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -92,5 +92,12 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div[2]</value>
    </webElementXpaths>
 </WebElementEntity>
