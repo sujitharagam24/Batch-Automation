@@ -6,12 +6,11 @@
    <elementGuidId>b3e6bc1b-31d6-43e3-aba3-27e84684a851</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//p[contains(text(), 'Select')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='mud-tab mud-ripple']</value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
