@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-nav-link-text'])[2]</value>
+         <value>(//div[contains(text(), 'Logout')])[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
