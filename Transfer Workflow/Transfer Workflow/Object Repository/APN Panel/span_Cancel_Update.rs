@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>strong_Associated APNs</name>
+   <name>span_Cancel_Update</name>
    <tag></tag>
-   <elementGuidId>6d6988b7-602e-4c81-9dd0-2466190eaf9f</elementGuidId>
+   <elementGuidId>9fc5b681-5596-4f1a-b565-f3ede25147a6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/div/div/div/div[4]/div/div/strong</value>
+         <value> (//span[@class='mud-button-label'])[2]</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -20,69 +20,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>strong</value>
+      <value>span</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mud-button-label</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Associated APNs</value>
+      <value>Cancel</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-open-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-xl mt-4&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-6&quot;]/div[@class=&quot;mud-expansion-panels pa-0 ma-2&quot;]/div[@class=&quot;mud-expand-panel mud-elevation-5 mud-expand-panel-border&quot;]/div[@class=&quot;mud-expand-panel-header&quot;]/div[@class=&quot;mud-expand-panel-text&quot;]/strong[1]</value>
+      <value>id(&quot;_7071c00682d34da09a69295dd58d6298&quot;)/div[2]/div[@class=&quot;mud-dialog-actions&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-text mud-button-text-default mud-button-text-size-medium mud-ripple&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app']/div[2]/div/div/div/div/div/div[4]/div/div/strong</value>
+      <value>//div[@id='_7071c00682d34da09a69295dd58d6298']/div[2]/div[5]/button[2]/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Update'])[1]/following::strong[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Test Focus'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Parcel'])[1]/following::strong[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Associated APN'])[1]/following::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='No Associated APNs'])[1]/preceding::strong[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Update'])[1]/preceding::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Workflow'])[1]/preceding::strong[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Transfer Workflow'])[2]/preceding::span[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Associated APNs']/parent::*</value>
+      <value>//*/text()[normalize-space(.)='Cancel']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/div/div/strong</value>
+      <value>//button[2]/span</value>
    </webElementXpaths>
 </WebElementEntity>

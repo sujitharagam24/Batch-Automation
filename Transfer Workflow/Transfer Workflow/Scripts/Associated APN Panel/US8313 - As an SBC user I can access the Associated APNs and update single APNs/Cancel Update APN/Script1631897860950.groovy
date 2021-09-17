@@ -52,9 +52,9 @@ WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APNs'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/UpdateIcon'))
 
-WebUI.setText(findTestObject('Object Repository/APN Panel/input_Lead APN_mud-input-slot mud-input-roo_ff250c'), '123456780000')
+WebUI.setText(findTestObject('APN Panel/input_Lead APN'), '123456780000')
 
-WebUI.click(findTestObject('Object Repository/APN Panel/span_Cancel'))
+WebUI.click(findTestObject('APN Panel/span_Cancel_Update'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
 

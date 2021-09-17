@@ -41,12 +41,12 @@ WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I
 WebDriver driver = DriverFactory.getWebDriver();
 
 //Find Associated APN panel
-WebUI.click(findTestObject('APN Panel/strong_Associated APNs'))
+WebUI.click(findTestObject('APN Panel/strong_Associated APN Panel'))
 
 WebUI.click(findTestObject('APN Panel/UpdateIcon'))
 
 WebUI.click(findTestObject('APN Panel/span_Update'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567890123'))
+WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
 
 WebUI.closeBrowser()

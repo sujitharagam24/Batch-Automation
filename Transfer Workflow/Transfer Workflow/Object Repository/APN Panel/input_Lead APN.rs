@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Lead APN_mud-input-slot mud-input-roo_ff250c</name>
+   <name>input_Lead APN</name>
    <tag></tag>
    <elementGuidId>bb0db57e-1d37-4378-9e62-6ecf41897cbc</elementGuidId>
    <selectorCollection>
