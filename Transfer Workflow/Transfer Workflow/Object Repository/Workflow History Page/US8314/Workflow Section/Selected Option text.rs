@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/div/div/div/div[5]/div[2]/div/div/div/p</value>
+         <value>(//p[@class='mud-typography mud-typography-body1 mud-inherit-text ml-4'])</value>
       </entry>
       <entry>
          <key>CSS</key>

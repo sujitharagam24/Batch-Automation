@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-button-root mud-icon-button mud-ripple mud-ripple-radio mud-radio-color-default mud-checked'])[2]/following::span[@class='mud-radio-content mud-typography mud-typography-body1']</value>
+         <value>(//span[@class='mud-button-root mud-icon-button mud-ripple mud-ripple-radio mud-radio-color-default mud-checked'])/following::span[@class='mud-radio-content mud-typography mud-typography-body1'][1]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
