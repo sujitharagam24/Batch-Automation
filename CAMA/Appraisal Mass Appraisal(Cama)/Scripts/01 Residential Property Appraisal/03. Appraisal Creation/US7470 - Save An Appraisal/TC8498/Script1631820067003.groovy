@@ -39,7 +39,7 @@ WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/
 
 WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save Button'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'));
 
 //Being able to click on the select valuation tab verifies the tab is clickable
 def clickedValuationTab = WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));

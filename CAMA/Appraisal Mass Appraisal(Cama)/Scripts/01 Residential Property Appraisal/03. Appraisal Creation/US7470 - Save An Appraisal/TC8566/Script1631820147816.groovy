@@ -40,7 +40,7 @@ System.out.println(selectedNewParcelNumber);
 
 WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save Button'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'));
 
 WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/01 Navigation Page Elements/div_Dashboard'));
 

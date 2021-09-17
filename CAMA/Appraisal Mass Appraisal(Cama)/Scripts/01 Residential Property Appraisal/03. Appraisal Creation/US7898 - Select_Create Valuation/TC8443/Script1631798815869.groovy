@@ -32,23 +32,63 @@ import org.eclipse.core.runtime.Assert as Assert
 
 WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/01. Application Landing/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'));
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'));
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type Drop Down'));
 
-def clickedValuationType = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'));
+def firstSelectedValuationType = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'));
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'));
 
 WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Save Button Valuation Tab'));
 
-def selectedValuationType = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/01 Selected Valuation Table/First Saved Valuation'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type Drop Down'));
 
-assertEquals(clickedValuationType, selectedValuationType);
+def secondSelectedValuationType = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'));
+
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'));
+
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Save Button Valuation Tab'));
+
+WebDriver driver = DriverFactory.getWebDriver();
+
+List<WebElement> rows = driver.findElements(By.xpath("//tbody[@class='mud-table-body']/tr"));
+boolean flag = true;
+
+while(flag) {
+	for(WebElement row: rows) {
+		String rowText = row.getText();
+		if(rowText.contains(firstSelectedValuationType)) {
+			flag = false;
+			System.out.println(rowText);
+			System.out.println(firstSelectedValuationType);
+			assertTrue(rowText.contains(firstSelectedValuationType));
+			break;
+		}
+	}
+	
+		for(WebElement row: rows) {
+			String rowText = row.getText();
+			if(rowText.contains(secondSelectedValuationType)) {
+				flag = false;
+				System.out.println(rowText);
+				System.out.println(secondSelectedValuationType);
+				assertTrue(rowText.contains(secondSelectedValuationType));
+				break;
+			}
+		}
+
+}
+
+
+
+
+
+
 
 
 
