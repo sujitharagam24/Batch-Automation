@@ -84,6 +84,8 @@ while(flag) {
 
 }
 
+WebUI.closeBrowser();
+
 
 
 
