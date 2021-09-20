@@ -72,5 +72,9 @@ WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/0
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'));
 
+def selectedValuation = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type dropdown text field'));
+
+System.out.println(selectedValuation);
+
 WebUI.closeBrowser()
 

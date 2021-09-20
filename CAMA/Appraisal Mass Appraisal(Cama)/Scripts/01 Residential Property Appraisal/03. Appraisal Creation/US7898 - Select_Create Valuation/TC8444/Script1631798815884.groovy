@@ -37,3 +37,14 @@ WebUI.waitForPageLoad(20);
 WebUI.click(findTestObject('01 Residential Property Appraisal/01 Navigation Page Elements/div_Dashboard'));
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'));
+
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
+
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
+
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Actions Button'));
+
+//Being able to click on the select valuation tab verifies the tab is clickable
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/03 Get Comparables Tab/Get Comparables Tab'));
+
+WebUI.closeBrowser();

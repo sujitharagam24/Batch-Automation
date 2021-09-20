@@ -12,12 +12,6 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>0578f4aa-c811-41a9-85c2-778444c92e47</testSuiteGuid>
    <testCaseLink>
-      <guid>4523b69d-11cc-4a04-af1d-309da409d845</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/01. Application Landing/Dashboard Script</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>76e5060f-03d3-4e09-8aaa-bf3d5c84920f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -58,5 +52,35 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US7871 - Search Capabilities/TC8051</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>76b00eb6-6b6e-4606-ba15-ccf241dcc0f3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7470 - Save An Appraisal/TC8498</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2056db8c-d61c-49a9-a5de-decba87055d8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7470 - Save An Appraisal/TC8566</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6869b144-aad1-41f4-a132-61a5a81b3af0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7898 - Select_Create Valuation/TC8442</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>92f249d7-b54c-4b37-8378-41ce918ee46c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7898 - Select_Create Valuation/TC8443</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bc3ec7b5-21eb-429b-8c0e-6f903d643d0d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7898 - Select_Create Valuation/TC8444</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
