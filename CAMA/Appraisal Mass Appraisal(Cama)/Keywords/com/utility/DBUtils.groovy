@@ -32,21 +32,21 @@ public class DBUtils {
 	
    //Load driver class for your specific database type
 	
-   String conn = "jdbc:sqlserver://" + url + ":" + port + "/" + dbname
+   String conn = "jdbc:sqlserver://" + url + ":" + port + "/" + dbname;
 	
    //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
 	
-   //String connectionString = "jdbc:sqlite:" + dataFile
+   System.out.println("Driver Loaded");
 	
    if(connection != null && !connection.isClosed()){
 	
-   connection.close()
+   connection.close();
 	
    }
 	
-   connection = DriverManager.getConnection(conn, username, password)
+   connection = DriverManager.getConnection(conn, username, password);
 	
-   return connection
+   return connection;
 	
    }
 	
@@ -66,11 +66,11 @@ public class DBUtils {
 	
    def executeQuery(String queryString) {
 	
-   Statement stm = connection.createStatement()
+   Statement stm = connection.createStatement();
 	
-   ResultSet rs = stm.executeQuery(queryString)
+   ResultSet rs = stm.executeQuery(queryString);
 	
-   return rs
+   return rs;
 	
    }
 	
@@ -82,11 +82,11 @@ public class DBUtils {
 	
    if(connection != null && !connection.isClosed()){
 	
-   connection.close()
+   connection.close();
 	
    }
 	
-   connection = null
+   connection = null;
 	
    }
 	
@@ -104,11 +104,11 @@ public class DBUtils {
 	
    def execute(String queryString) {
 	
-   Statement stm = connection.createStatement()
+   Statement stm = connection.createStatement();
 	
-   boolean result = stm.execute(queryString)
+   boolean result = stm.execute(queryString);
 	
-   return result
+   return result;
 	
    }
 	
