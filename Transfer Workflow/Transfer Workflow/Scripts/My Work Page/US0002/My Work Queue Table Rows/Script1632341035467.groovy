@@ -16,45 +16,38 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
+import org.eclipse.core.runtime.Assert
 
 /**
- * 
- * Access the My Work Page
- * @author bilguun.amarsaikhan
+ * List all rows that are displayed in the Work Queues table
+ * @author michele.jazo
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-WebUI.maximizeWindow()
+// list of table rows
+List<WebElement> tableRowData= driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
+String[] row = new String[tableRowData.size()];
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+// iterating over rows in the table and getting the text
+for(int i=0; i < tableRowData.size(); i++) {
+	row[i] =  tableRowData.get(i).getText().trim();
+}
 
-def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'));
+// print out all rows from Work Queues table
+CustomKeywords.'com.utility.CommonMethods.print'(row);
 
-def expectedTitle = 'My Work';
+// Asserting table rows are not empty
+Assert.isNotNull(row);
 
-def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Title'));
-
-def expectedQueueTitle = 'Work Queues';
-
-def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
-
-def exptectedQueueContentTitle = 'Work Queue Contents';
-
-assertTrue(actualTitle.equals(expectedTitle));
-
-assertTrue(actualQueueTitle.equals(expectedQueueTitle));
-
-assertTrue(actualQueueContentTitle.equals(exptectedQueueContentTitle));
-
+WebUI.closeBrowser();

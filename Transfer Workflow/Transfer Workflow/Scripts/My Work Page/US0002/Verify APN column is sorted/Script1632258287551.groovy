@@ -25,7 +25,7 @@ import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
 /**
- * Verify Name column items are sorted
+ * Verify APN column items are sorted
  * @author bilguun.amarsaikhan
  *
  */
@@ -34,36 +34,29 @@ WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), 
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-ArrayList<String> obtainedList = new ArrayList<String>()
+ArrayList<Integer> obtainedList = new ArrayList<Integer>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/APN column items'), 5);
 
 for (WebElement we : elementList) {
     obtainedList.add(we.getText());
 	//System.out.println(we.getText());
 }
 
-// Removing My Work (C7213) from the list
-obtainedList.remove('My Work (C7213)');
+Collections.sort(obtainedList);
 
-// Using Collections.sort('list') does not work for assertion because some items were not sorted by alphabetical order
-//Collections.sort(obtainedList);
+/* Click on APN Column to sort the items */
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/APN column'))
 
-/* Click on Name Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column'))
+ArrayList<Integer> sortedList = new ArrayList<Integer>()
 
-ArrayList<String> sortedList = new ArrayList<String>()
-
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/APN column items'), 5);
 
 for (WebElement we : elementsList) {
     sortedList.add(we.getText()); 
 	//System.out.println(we.getText());
 }
-
-// Removing My Work (C7213) from the list 
-sortedList.remove('My Work (C7213)');
 
 assertEquals(obtainedList, sortedList)
 
