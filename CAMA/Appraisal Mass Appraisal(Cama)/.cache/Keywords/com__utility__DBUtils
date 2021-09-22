@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "70221C8A3D1F778A49284E1C1DF6F567",
+  "keywordFileContentHash": "720435CEDC44B08DF6C70F57B212B3C5",
   "keywordClasses": [
     {
       "name": "com.utility.DBUtils",
@@ -72,7 +72,8 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "executeQuery",
@@ -90,11 +91,13 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "closeDatabaseConnection",
-          "parameters": []
+          "parameters": [],
+          "javadoc": ""
         },
         {
           "name": "execute",
@@ -112,10 +115,11 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": "/**\r\n\t * Execute non-query (usually INSERT/UPDATE/DELETE/COUNT/SUM...) on database\r\n\t * @param queryString a SQL statement\r\n\t * @return single value result of SQL statement\r\n\t */"
         }
       ]
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }
