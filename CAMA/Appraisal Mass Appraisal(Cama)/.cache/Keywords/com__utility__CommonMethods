@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "B00D56C6A3A525EA8C38CBE046178238",
+  "keywordFileContentHash": "6690B485C475C125161F45B6F086BDEA",
   "keywordClasses": [
     {
       "name": "com.utility.CommonMethods",
@@ -87,6 +87,426 @@
             }
           ],
           "javadoc": "/**\r\n\t * Print all from an array\r\n\t * @param ar\r\n\t */"
+        },
+        {
+          "name": "getWait",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * this method will return an object of Explicit wait with time set to 20 sec\r\n\t *\r\n\t * @return WebDriverWait\r\n\t */"
+        },
+        {
+          "name": "waitForClickability",
+          "parameters": [
+            {
+              "name": "element",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * this method will wait until given element becomes clickable\r\n\t *\r\n\t * @param element\r\n\t */"
+        },
+        {
+          "name": "waitForVisibility",
+          "parameters": [
+            {
+              "name": "element",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method waits for element to be visible\r\n\t *\r\n\t * @param element\r\n\t */"
+        },
+        {
+          "name": "waitForAlert",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * Method waits for alert to be present\r\n\t */"
+        },
+        {
+          "name": "getJSExecutor",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * this method will return an Object of JavascriptExecutor\r\n\t *\r\n\t * @return JavascriptExecutor\r\n\t */"
+        },
+        {
+          "name": "jsClick",
+          "parameters": [
+            {
+              "name": "element",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * this method will click using JavascriptExecutor\r\n\t *\r\n\t * @param element\r\n\t */"
+        },
+        {
+          "name": "getTimeStamp",
+          "parameters": [
+            {
+              "name": "pattern",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t *\r\n\t * @param pattern\r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "clickRadioOrCheckbox",
+          "parameters": [
+            {
+              "name": "radioOrCheckBoxes",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.util.List",
+                "unresolvedClassName": "List",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [
+                  {
+                    "fullClassName": "org.openqa.selenium.WebElement",
+                    "unresolvedClassName": "WebElement",
+                    "isArray": false,
+                    "isGnericsPlaceHolder": false,
+                    "hasImmutableClassName": false,
+                    "genericsTypes": [],
+                    "errorOnParsing": false
+                  }
+                ],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "value",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will click on radio buttons or checkboxes by the given list of\r\n\t * webelements and value\r\n\t *\r\n\t * @param radioOrCheckBoxes\r\n\t * @param value\r\n\t */"
+        },
+        {
+          "name": "selectDDValue",
+          "parameters": [
+            {
+              "name": "dd",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "visibleTextOrValue",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will select an option from the dropdown by given webelement and\r\n\t * visible text value\r\n\t *\r\n\t * @param dd\r\n\t * @param visibleTextOrValue\r\n\t */"
+        },
+        {
+          "name": "selectDDValue",
+          "parameters": [
+            {
+              "name": "dd",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "index",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will select an option from the dropdown by the given webelement\r\n\t * and index value\r\n\t *\r\n\t * @param dd\r\n\t * @param index\r\n\t */"
+        },
+        {
+          "name": "switchToFrame",
+          "parameters": [
+            {
+              "name": "iFrame",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will switch to a frame by given frame webelement\r\n\t *\r\n\t * @param iFrame\r\n\t */"
+        },
+        {
+          "name": "switchToFrame",
+          "parameters": [
+            {
+              "name": "frameIndex",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will switch to a frame by given index\r\n\t *\r\n\t * @param frameIndex\r\n\t */"
+        },
+        {
+          "name": "switchToFrame",
+          "parameters": [
+            {
+              "name": "nameOrId",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will switch to a frame by given frame name or id\r\n\t *\r\n\t * @param frameIndex\r\n\t */"
+        },
+        {
+          "name": "switchToChildWindow",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * This method will switch to a child window\r\n\t */"
+        },
+        {
+          "name": "Alert",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "confirmationAlert",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * This method hanldes confirmation alerts\r\n\t */"
+        },
+        {
+          "name": "promptAlert",
+          "parameters": [
+            {
+              "name": "key",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method handles prompt alerts\r\n\t */"
+        },
+        {
+          "name": "action",
+          "parameters": [],
+          "javadoc": "/**\r\n\t * This method returns object of actions class type\r\n\t */"
+        },
+        {
+          "name": "moveMouseTo",
+          "parameters": [
+            {
+              "name": "target",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This Method moves the mouse\u0027s cursor to desire webelement\r\n\t *\r\n\t * @param target\r\n\t */"
+        },
+        {
+          "name": "actionClick",
+          "parameters": [
+            {
+              "name": "target",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method clicks on desired element using the Actions class click method\r\n\t *\r\n\t * @param target\r\n\t */"
+        },
+        {
+          "name": "doubleClick",
+          "parameters": [
+            {
+              "name": "target",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will double click on specified webelement\r\n\t *\r\n\t * @param target\r\n\t */"
+        },
+        {
+          "name": "rightClick",
+          "parameters": [
+            {
+              "name": "target",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will right click on specified webelement\r\n\t *\r\n\t * @param target\r\n\t */"
+        },
+        {
+          "name": "dragAndDrop",
+          "parameters": [
+            {
+              "name": "draggable",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "droppable",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "org.openqa.selenium.WebElement",
+                "unresolvedClassName": "WebElement",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * This method will drag a desired draggable element and drop it on desired\r\n\t * droppable target\r\n\t *\r\n\t * @param draggable\r\n\t * @param droppable\r\n\t */"
+        },
+        {
+          "name": "readJson",
+          "parameters": [
+            {
+              "name": "fileName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Read from a json file\r\n\t * @param fileName\r\n\t * @return\r\n\t */"
         }
       ]
     }

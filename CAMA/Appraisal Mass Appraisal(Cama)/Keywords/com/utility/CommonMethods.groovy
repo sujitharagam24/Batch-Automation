@@ -59,11 +59,11 @@ import java.util.Set;
 
 
 class CommonMethods {
-	
+
 	public static WebDriver driver;
 	public static final int IMPLICIT_WAIT=10;
 	public static final int EXPLICIT_WAIT=20;
-	
+
 	/**
 	 * Refresh browser
 	 */
@@ -117,13 +117,14 @@ class CommonMethods {
 			System.out.println(ar[i]);
 		}
 	}
-	
-	
+
+
 	/**
 	 * this method will return an object of Explicit wait with time set to 20 sec
 	 *
 	 * @return WebDriverWait
 	 */
+	@Keyword
 	public static WebDriverWait getWait() {
 		WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_WAIT);
 		return wait;
@@ -134,6 +135,7 @@ class CommonMethods {
 	 *
 	 * @param element
 	 */
+	@Keyword
 	public static void waitForClickability(WebElement element) {
 		getWait().until(ExpectedConditions.elementToBeClickable(element));
 	}
@@ -143,6 +145,7 @@ class CommonMethods {
 	 *
 	 * @param element
 	 */
+	@Keyword
 	public static void waitForVisibility(WebElement element) {
 		getWait().until(ExpectedConditions.visibilityOf(element));
 	}
@@ -150,15 +153,17 @@ class CommonMethods {
 	/**
 	 * Method waits for alert to be present
 	 */
+	@Keyword
 	public static void waitForAlert() {
 		getWait().until(ExpectedConditions.alertIsPresent());
 	}
-	
+
 	/**
 	 * this method will return an Object of JavascriptExecutor
 	 *
 	 * @return JavascriptExecutor
 	 */
+	@Keyword
 	public static JavascriptExecutor getJSExecutor() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js;
@@ -169,6 +174,7 @@ class CommonMethods {
 	 *
 	 * @param element
 	 */
+	@Keyword
 	public static void jsClick(WebElement element) {
 		getJSExecutor().executeScript("arguments[0].click();", element);
 	}
@@ -178,6 +184,7 @@ class CommonMethods {
 	 * @param pattern
 	 * @return
 	 */
+	@Keyword
 	public static String getTimeStamp(String pattern) {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
@@ -191,7 +198,7 @@ class CommonMethods {
 	 * @param radioOrCheckBoxes
 	 * @param value
 	 */
-
+	@Keyword
 	public static void clickRadioOrCheckbox(List<WebElement> radioOrCheckBoxes, String value) {
 		String actualValue;
 		for (WebElement radioOrCheckbox : radioOrCheckBoxes) {
@@ -201,7 +208,6 @@ class CommonMethods {
 				break;
 			}
 		}
-
 	}
 
 	/**
@@ -211,6 +217,7 @@ class CommonMethods {
 	 * @param dd
 	 * @param visibleTextOrValue
 	 */
+	@Keyword
 	public static void selectDDValue(WebElement dd, String visibleTextOrValue) {
 		try {
 			Select select = new Select(dd);
@@ -233,6 +240,7 @@ class CommonMethods {
 	 * @param dd
 	 * @param index
 	 */
+	@Keyword
 	public static void selectDDValue(WebElement dd, int index) {
 		try {
 
@@ -247,7 +255,6 @@ class CommonMethods {
 		} catch (UnexpectedTagNameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -255,14 +262,13 @@ class CommonMethods {
 	 *
 	 * @param iFrame
 	 */
-
+	@Keyword
 	public static void switchToFrame(WebElement iFrame) {
 		try {
 			driver.switchTo().frame(iFrame);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -270,13 +276,13 @@ class CommonMethods {
 	 *
 	 * @param frameIndex
 	 */
+	@Keyword
 	public static void switchToFrame(int frameIndex) {
 		try {
 			driver.switchTo().frame(frameIndex);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -284,18 +290,19 @@ class CommonMethods {
 	 *
 	 * @param frameIndex
 	 */
+	@Keyword
 	public static void switchToFrame(String nameOrId) {
 		try {
 			driver.switchTo().frame(nameOrId);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
 	 * This method will switch to a child window
 	 */
+	@Keyword
 	public static void switchToChildWindow() {
 
 		String mainWindow = driver.getWindowHandle();
@@ -311,6 +318,7 @@ class CommonMethods {
 	/*
 	 * This method will accept a simple alert
 	 */
+	@Keyword
 	public static void Alert() {
 		Alert alert = driver.switchTo().alert();
 		waitForAlert();
@@ -320,6 +328,7 @@ class CommonMethods {
 	/**
 	 * This method hanldes confirmation alerts
 	 */
+	@Keyword
 	public static void confirmationAlert() {
 		Alert alert = driver.switchTo().alert();
 		waitForAlert();
@@ -329,17 +338,18 @@ class CommonMethods {
 	/**
 	 * This method handles prompt alerts
 	 */
+	@Keyword
 	public static void promptAlert(String key) {
 		Alert alert = driver.switchTo().alert();
 		waitForAlert();
 		alert.sendKeys(key);
 		alert.accept();
-
 	}
 
 	/**
 	 * This method returns object of actions class type
 	 */
+	@Keyword
 	public static Actions action() {
 		Actions action = new Actions(driver);
 		return action;
@@ -350,6 +360,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void moveMouseTo(WebElement target) {
 		try {
 			action().moveToElement(target).perform();
@@ -363,6 +374,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void actionClick(WebElement target) {
 		try {
 			action().moveToElement(target).click().perform();
@@ -376,6 +388,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void doubleClick(WebElement target) {
 		try {
 			action().doubleClick(target).perform();
@@ -389,6 +402,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void rightClick(WebElement target) {
 		try {
 			action().contextClick(target).perform();
@@ -404,6 +418,7 @@ class CommonMethods {
 	 * @param draggable
 	 * @param droppable
 	 */
+	@Keyword
 	public static void dragAndDrop(WebElement draggable, WebElement droppable) {
 		try {
 			action().dragAndDrop(draggable, droppable).perform();
@@ -413,16 +428,19 @@ class CommonMethods {
 	}
 
 	static String jsonFile;
-
+	/**
+	 * Read from a json file
+	 * @param fileName
+	 * @return
+	 */
+	@Keyword
 	public static String readJson(String fileName) {
 
 		try {
 			jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return jsonFile;
 	}
-
 }

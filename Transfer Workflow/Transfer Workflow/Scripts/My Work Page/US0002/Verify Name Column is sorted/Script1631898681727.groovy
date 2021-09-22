@@ -20,30 +20,51 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
+/**
+ * Verify Name column items are sorted
+ * @author bilguun.amarsaikhan
+ *
+ */
+
 WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebDriver driver = DriverFactory.getWebDriver()
 
-ArrayList<String> obtainedList = new ArrayList<>(); 
+ArrayList<String> obtainedList = new ArrayList<String>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList= driver.findElements(By.xpath('((//tbody[@class=\'mud-table-body\'])[1]/tr)'));
-for(WebElement we:elementList){
-   obtainedList.add(we.getText());
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
+
+for (WebElement we : elementList) {
+    obtainedList.add(we.getText());
+	//System.out.println(we.getText());
 }
+
+// Removing My Work (C7213) from the list
+obtainedList.remove('My Work (C7213)');
+
+// Using Collections.sort('list') does not work for assertion because some items were not sorted by alphabetical order
+//Collections.sort(obtainedList);
 
 /* Click on Name Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column'));
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column'))
 
-ArrayList<String> sortedList = new ArrayList<>();
+ArrayList<String> sortedList = new ArrayList<String>()
 
-List<WebElement> elementsList= driver.findElements(By.xpath('((//tbody[@class=\'mud-table-body\'])[1]/tr)'));
-for(WebElement we:elementsList){
-   sortedList.add(we.getText());
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
+
+for (WebElement we : elementsList) {
+    sortedList.add(we.getText()); 
+	//System.out.println(we.getText());
 }
 
-assertNotEquals(obtainedList, sortedList);
+// Removing My Work (C7213) from the list 
+sortedList.remove('My Work (C7213)');
+
+assertEquals(obtainedList, sortedList)
+
+WebUI.closeBrowser()

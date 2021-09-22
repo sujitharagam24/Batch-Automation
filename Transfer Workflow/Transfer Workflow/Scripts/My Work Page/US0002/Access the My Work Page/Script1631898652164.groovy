@@ -48,7 +48,7 @@ def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work 
 
 def expectedQueueTitle = 'Work Queues';
 
-def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Contents Title'));
+def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
 
 def exptectedQueueContentTitle = 'Work Queue Contents';
 
