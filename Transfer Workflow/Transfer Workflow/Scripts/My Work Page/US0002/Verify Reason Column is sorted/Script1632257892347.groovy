@@ -25,7 +25,7 @@ import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
 /**
- * Verify Name column items are sorted
+ * Verify Reason column items are sorted
  * @author bilguun.amarsaikhan
  *
  */
@@ -37,33 +37,27 @@ WebDriver driver = DriverFactory.getWebDriver()
 ArrayList<String> obtainedList = new ArrayList<String>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Reason Column items'), 5);
 
 for (WebElement we : elementList) {
-    obtainedList.add(we.getText());
+    obtainedList.add(we.getText().toLowerCase());
 	//System.out.println(we.getText());
 }
 
-// Removing My Work (C7213) from the list
-obtainedList.remove('My Work (C7213)');
+Collections.sort(obtainedList);
 
-// Using Collections.sort('list') does not work for assertion because some items were not sorted by alphabetical order
-//Collections.sort(obtainedList);
-
-/* Click on Name Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column'))
+/* Click on Reason Column to sort the items */
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Reason Column'))
 
 ArrayList<String> sortedList = new ArrayList<String>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Reason Column items'), 5);
 
 for (WebElement we : elementsList) {
-    sortedList.add(we.getText()); 
+    sortedList.add(we.getText().toLowerCase()); 
 	//System.out.println(we.getText());
 }
 
-// Removing My Work (C7213) from the list 
-sortedList.remove('My Work (C7213)');
 
 assertEquals(obtainedList, sortedList)
 

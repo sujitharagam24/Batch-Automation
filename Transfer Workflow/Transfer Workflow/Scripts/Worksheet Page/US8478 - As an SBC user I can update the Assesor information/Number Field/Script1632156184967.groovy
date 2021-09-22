@@ -16,22 +16,22 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 
 /**
- * 
- * Access the My Work Page
+ * Validation check occurs for Number field on the Accessor Panel 
  * @author bilguun.amarsaikhan
  *
  */
-
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
@@ -40,21 +40,19 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'));
+WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/US8478/Open button'))
 
-def expectedTitle = 'My Work';
+WebUI.waitForPageLoad(10)
 
-def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Title'));
+// Click on Assessor Information Title to open the section
 
-def expectedQueueTitle = 'Work Queues';
+WebUI.click(findTestObject('Workflow History Page/Feature 8308/Test Case8366/Assessor Information title'))
 
-def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
+// Get the value of Event Date field 
 
-def exptectedQueueContentTitle = 'Work Queue Contents';
+def numberValue = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/US8478/Number field'), 'value')
 
-assertTrue(actualTitle.equals(expectedTitle));
+/* Verify Event Dates are matching */
+assertTrue(numberValue.equals("2550"));
 
-assertTrue(actualQueueTitle.equals(expectedQueueTitle));
-
-assertTrue(actualQueueContentTitle.equals(exptectedQueueContentTitle));
-
+WebUI.closeBrowser()

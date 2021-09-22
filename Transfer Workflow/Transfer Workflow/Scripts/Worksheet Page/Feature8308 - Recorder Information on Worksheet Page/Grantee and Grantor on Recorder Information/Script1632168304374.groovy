@@ -16,45 +16,60 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 
 /**
- * 
- * Access the My Work Page
+ * Validation check occurs for Grantee and Grantor fields on the Recorder Panel 
  * @author bilguun.amarsaikhan
  *
  */
-
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
+//Click on My Work Tab
+
 WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'));
+//WebUI.waitForPageLoad(10)
 
-def expectedTitle = 'My Work';
+//Click on Bankrupties button
 
-def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Title'));
+WebUI.waitForElementVisible(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Rush text'), 10);
 
-def expectedQueueTitle = 'Work Queues';
+WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Bankruptcies List button'))
 
-def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
+// Locate open button and click to open Worksheet Page
 
-def exptectedQueueContentTitle = 'Work Queue Contents';
+WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Open button'))
 
-assertTrue(actualTitle.equals(expectedTitle));
+// Click on Recorder Information Title to open the section
 
-assertTrue(actualQueueTitle.equals(expectedQueueTitle));
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
 
-assertTrue(actualQueueContentTitle.equals(exptectedQueueContentTitle));
+// Click on Read Only option
 
+WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
+
+// Get the value of Grantee Owner field
+
+def granteeOwner = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Grantee Owner'), 'value')
+
+// Get the value of Grantee Name field 
+
+def granteeName = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Grantee Name'), 'value')
+
+//Next Step is to get Grantee Name and Owner on Workflow History Page by clicking on Status button and verify
+
+WebUI.closeBrowser()
