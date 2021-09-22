@@ -16,22 +16,22 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 
 /**
- * 
- * Access the My Work Page
+ * Validation check occurs for Event Date field on the Accessor Panel 
  * @author bilguun.amarsaikhan
  *
  */
-
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
@@ -40,21 +40,37 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'));
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
 
-def expectedTitle = 'My Work';
+WebUI.waitForPageLoad(10)
 
-def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Title'));
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
 
-def expectedQueueTitle = 'Work Queues';
+/* Get the value of APN field */
 
-def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
+def apnValue = WebUI.getText(findTestObject('Object Repository/Worksheet Page Objectory/US8478/Lead APN'));
 
-def exptectedQueueContentTitle = 'Work Queue Contents';
+// Locate open button and click to open Worksheet Page
 
-assertTrue(actualTitle.equals(expectedTitle));
+WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[81]'))
 
-assertTrue(actualQueueTitle.equals(expectedQueueTitle));
+openButton.click();
 
-assertTrue(actualQueueContentTitle.equals(exptectedQueueContentTitle));
+// Click on Recorder Information Title to open the section
 
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
+
+// Click on Read Only option
+
+WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
+
+// Get the value of Event Date field 
+
+// def docNumber2 = driver.findElement(By.xpath("(//input[@type='text'])[13]")).getAttribute("value")
+
+def apnValue2 = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/APN'), 'value')
+
+/* Verify Event Dates are matching */
+assertTrue(apnValue.equals(apnValue2))
+
+WebUI.closeBrowser()
