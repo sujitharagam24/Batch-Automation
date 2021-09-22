@@ -38,37 +38,32 @@ WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizar
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type Drop Down'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Land Market Appraisal'), 
-    'Land Market Appraisal');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Land Market Appraisal'), 'Land Market Appraisal');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Land Market Appraisal'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Interim Use'), 
-    'Interim Use');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Interim Use'), 'Interim Use');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Interim Use'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Basic Income Approach'), 
-    'Basic Income Approach');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Basic Income Approach'), 'Basic Income Approach');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Basic Income Approach'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'), 
-    'Discounted Cash Flow');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'), 'Discounted Cash Flow');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Discounted Cash Flow'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Rent Loss'), 
-    'Rent Loss');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Rent Loss'), 'Rent Loss');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Rent Loss'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'), 
-    'Apartments Income');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'), 'Apartments Income');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Market'), 
-    'Apartments Market');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Market'), 'Apartments Market');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Market'));
 
-WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Cost Template - Site Improvements'), 
-    'Cost Template - Site Improvements');
+WebUI.verifyElementText(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Cost Template - Site Improvements'), 'Cost Template - Site Improvements');
 WebUI.verifyElementClickable(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Cost Template - Site Improvements'));
+
+WebUI.verifyElementText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Single Family Residential'), 'Single Family Residential');
+WebUI.verifyElementClickable(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Single Family Residential'));
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Apartments Income'));
 

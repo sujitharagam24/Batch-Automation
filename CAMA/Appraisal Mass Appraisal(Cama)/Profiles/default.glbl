@@ -11,22 +11,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
-      <name>DBServer</name>
+      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=modpims-CAMA'</initValue>
+      <name>DBUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
-      <name>DBName</name>
+      <initValue>'SnapShotTestRWE'</initValue>
+      <name>DBUsername</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
-      <name>DBUserID</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>DBPassword</name>
+      <initValue>'24L9x!JVspj9!'</initValue>
+      <name>DBPass</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
