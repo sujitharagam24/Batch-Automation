@@ -59,11 +59,11 @@ import java.util.Set;
 
 
 class CommonMethods {
-	
+
 	public static WebDriver driver;
 	public static final int IMPLICIT_WAIT=10;
 	public static final int EXPLICIT_WAIT=20;
-	
+
 	/**
 	 * Refresh browser
 	 */
@@ -117,8 +117,8 @@ class CommonMethods {
 			System.out.println(ar[i]);
 		}
 	}
-	
-	
+
+
 	/**
 	 * this method will return an object of Explicit wait with time set to 20 sec
 	 *
@@ -153,7 +153,7 @@ class CommonMethods {
 	public static void waitForAlert() {
 		getWait().until(ExpectedConditions.alertIsPresent());
 	}
-	
+
 	/**
 	 * this method will return an Object of JavascriptExecutor
 	 *
@@ -201,7 +201,6 @@ class CommonMethods {
 				break;
 			}
 		}
-
 	}
 
 	/**
@@ -247,7 +246,6 @@ class CommonMethods {
 		} catch (UnexpectedTagNameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -262,7 +260,6 @@ class CommonMethods {
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -276,7 +273,6 @@ class CommonMethods {
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -290,7 +286,6 @@ class CommonMethods {
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -334,7 +329,6 @@ class CommonMethods {
 		waitForAlert();
 		alert.sendKeys(key);
 		alert.accept();
-
 	}
 
 	/**
@@ -424,5 +418,4 @@ class CommonMethods {
 		}
 		return jsonFile;
 	}
-
 }
