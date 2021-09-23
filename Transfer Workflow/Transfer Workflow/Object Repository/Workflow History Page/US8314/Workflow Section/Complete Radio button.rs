@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='b6dc62b0-b28b-4ae0-a423-14a809a5f093'])[2]</value>
+         <value>(//input[@class='mud-radio-input'])[4]</value>
       </entry>
       <entry>
          <key>CSS</key>
