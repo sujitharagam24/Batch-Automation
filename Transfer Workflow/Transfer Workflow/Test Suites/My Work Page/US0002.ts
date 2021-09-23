@@ -59,4 +59,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/My Work Page/US0002/Verify Reason Column is sorted</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>cf7fad89-6d3b-49ca-afe9-05f904108cf5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US0002/My Work Queue Table Rows</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
