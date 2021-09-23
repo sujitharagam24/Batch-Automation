@@ -65,4 +65,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/My Work Page/US0002/My Work Queue Table Rows</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>f7f1f3df-0374-4f8a-8af9-988dbe219793</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US0002/Work Queue Contents Column Names</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

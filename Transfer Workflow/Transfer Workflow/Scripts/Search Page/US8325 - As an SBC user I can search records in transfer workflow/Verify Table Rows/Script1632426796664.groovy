@@ -28,12 +28,25 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert
 
-WebUI.openBrowser(GlobalVariable.baseURL)
+/**
+ *
+ * Access Search Results Page and verify table rows
+ * @author soyoung.jung
+ *
+ */
+
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+
 WebUI.maximizeWindow()
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_Search'))
+
 WebUI.click(findTestObject('Search Page Objectory/US8325/Dashboard Search Menu'))
+
 WebUI.click(findTestObject('Search Page Objectory/US8325/Date Picker/input_To_mud-input-slot mud-input-root mud-_a991a4'))
 
 WebUI.clearText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'))
+
 WebUI.clearText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date To'))
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Date Picker/input_To_mud-input-slot mud-input-root mud-_a991a4'), 
