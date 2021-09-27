@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Workflow History title</name>
+   <name>Complete Date</name>
    <tag></tag>
-   <elementGuidId>b6101fed-c7ce-4899-9021-704006c374ce</elementGuidId>
+   <elementGuidId>1130ba17-c31d-4e8e-819c-89adde71c7d9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-expand-panel-text'])[3]</value>
+         <value>(//th[@class='mud-table-cell'])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

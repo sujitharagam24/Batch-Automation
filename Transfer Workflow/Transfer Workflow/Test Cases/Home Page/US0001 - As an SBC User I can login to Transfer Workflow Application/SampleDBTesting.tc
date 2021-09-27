@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>8368</name>
+   <name>SampleDBTesting</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>722e5015-487d-4e1e-97c5-602af33f063d</testCaseGuid>
+   <testCaseGuid>254d5245-7232-4281-b9eb-5236685e2a53</testCaseGuid>
 </TestCaseEntity>

@@ -48,18 +48,50 @@ def dateValue = "09/21/2020";
 
 WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), dateValue);
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/span_Search'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/span_Search'));
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/History button'), 10);
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'), 10);
 
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/History button'))
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'))
 
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/Workflow History title'));
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Workflow History title'));
 
 def sectionTitle = "Workflow History";
 
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/Workflow History title'));
+def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Workflow History title'));
 
 assertTrue(sectionTitle.equals(existingTitle));
+
+def beginDate = 'Step Begin Date';
+
+def existingBeginDate = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Begin Date'));
+
+assertTrue(beginDate.equals(existingBeginDate));
+
+def completeDate =  'Step Complete Date';
+
+def existingCompleteDate = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Complete Date'));
+
+assertTrue(completeDate.equals(existingCompleteDate));
+
+def stepName = 'Step Name'; 
+
+def existingStepName = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Step Name'));
+
+assertTrue(stepName.equals(existingStepName));
+
+// Currently skipping the following step. Existing column name is Reason Key
+
+//def reason = 'Reason';
+
+//def existingReason = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Reason'));
+
+//assertTrue(reason.equals(existingReason));
+
+def completeBy = 'Complete By';
+
+def existingcompleteBy = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Complete By'));
+
+assertTrue(completeBy.equals(existingcompleteBy));
 
 WebUI.closeBrowser();
