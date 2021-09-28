@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>8368</name>
+   <name>8368 Access the Workflow History Panel on the Workflow History Page through Search Page by History Button</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>722e5015-487d-4e1e-97c5-602af33f063d</testCaseGuid>
