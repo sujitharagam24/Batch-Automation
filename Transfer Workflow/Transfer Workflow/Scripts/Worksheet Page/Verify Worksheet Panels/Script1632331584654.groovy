@@ -19,19 +19,26 @@ import org.openqa.selenium.Keys as Keys
 
 /**
  *
- * Access Search Results Page and verify clear form button works
- * @author soyoung.jung
+ * Access the Worksheet Page through My Work tab
+ * Verify panels exist on Worksheet Page
+ * @author michele.jazo
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_Search'))
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Associated Documents'))
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Recorder Information'))
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/span_Clear Form'))
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Assessor Information'))
+
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Associated APNs'))
+
+WebUI.click(findTestObject('Workflow History Page/Worksheet Page Panel/div_Workflow'))
+
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))
 
 WebUI.closeBrowser()

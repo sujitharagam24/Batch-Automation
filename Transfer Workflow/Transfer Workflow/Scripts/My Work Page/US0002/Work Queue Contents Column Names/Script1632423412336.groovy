@@ -14,24 +14,42 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.utility.CommonMethods
+
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
 
 /**
- *
- * Access Search Results Page and verify clear form button works
- * @author soyoung.jung
- *
- */
+*
+* Access My Work Page and verify columns are displays as expected on the Work Queue Contents Page
+* @author michele.jazo
+*
+*/
 
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
+WebDriver driver = DriverFactory.getWebDriver();
+
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_Search'))
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
+WebElement queueColumns = driver.findElement(By.xpath("(//table[@class='mud-table-root'])[1]/thead/tr"));
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/span_Clear Form'))
+String actualQueueColumns = queueColumns.getText();
 
-WebUI.closeBrowser()
+println("Work Queue Contents table contains the following column headers " + actualQueueColumns);
+
+String expectedQueueColumns = "Priority\nDate\nDocument Number\nDocument Type\nReason\nAPN";
+
+assertEquals(expectedQueueColumns, actualQueueColumns);
+
+WebUI.closeBrowser();

@@ -12,6 +12,12 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>65933981-6eb5-4df2-a4c8-f968cad52a75</testSuiteGuid>
    <testCaseLink>
+      <guid>63091aae-77bf-4ded-afc8-fbfc15514d3b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Verify Worksheet Panels</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>948447fa-619a-4efa-b1f1-81c9a489e264</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

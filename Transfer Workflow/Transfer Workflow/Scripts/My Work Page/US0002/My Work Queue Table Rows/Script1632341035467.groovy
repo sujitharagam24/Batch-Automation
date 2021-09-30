@@ -16,22 +16,38 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert
 
 /**
- *
- * Access Search Results Page and verify clear form button works
- * @author soyoung.jung
+ * List all rows that are displayed in the Work Queues table
+ * @author michele.jazo
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebDriver driver = DriverFactory.getWebDriver();
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_Search'))
+// list of table rows
+List<WebElement> tableRowData= driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
+String[] row = new String[tableRowData.size()];
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
+// iterating over rows in the table and getting the text
+for(int i=0; i < tableRowData.size(); i++) {
+	row[i] =  tableRowData.get(i).getText().trim();
+}
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/span_Clear Form'))
+// print out all rows from Work Queues table
+CustomKeywords.'com.utility.CommonMethods.print'(row);
 
-WebUI.closeBrowser()
+// Asserting table rows are not empty
+Assert.isNotNull(row);
+
+WebUI.closeBrowser();
