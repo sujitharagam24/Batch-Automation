@@ -39,7 +39,7 @@ WebUI.navigateToUrl('https://devmodpimsapptransferworkflow.azurewebsites.net/sea
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/span_Search'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
 
 WebUI.closeBrowser()
 

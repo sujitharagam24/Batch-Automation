@@ -21,7 +21,7 @@
       <guid>4c7299ad-5f3d-4996-906a-5a95002f34e7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Date Picker 2</testCaseId>
+      <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search Criteria page when I click Clear Form button</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
