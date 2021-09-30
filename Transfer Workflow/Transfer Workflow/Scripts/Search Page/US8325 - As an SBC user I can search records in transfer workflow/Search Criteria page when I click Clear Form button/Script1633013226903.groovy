@@ -14,43 +14,36 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import com.utility.CommonMethods
-
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert
+import org.eclipse.core.runtime.Assert as Assert
+import com.kms.katalon.core.testobject.TestObject as TestObject
 
-WebUI.openBrowser(GlobalVariable.baseURL)
-WebUI.maximizeWindow()
-WebUI.click(findTestObject('Search Page Objectory/US8325/Dashboard Search Menu'))
-WebUI.click(findTestObject('Search Page Objectory/US8325/Date Picker/input_To_mud-input-slot mud-input-root mud-_a991a4'))
+/**
+ * 
+ * Search Criteria page when I click Clear Form button
+ * @author bilguun.amarsaikhan
+ *
+ */
 
-WebUI.clearText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'))
-WebUI.clearText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date To'))
-
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Date Picker/input_To_mud-input-slot mud-input-root mud-_a991a4'), eventDateFrom1)
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
-
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
-List<WebElement> tableRows = driver.findElements(By.xpath("//table[@class='mud-table-root']/tbody/tr"));
-String[] row = new String[tableRows.size()];
 
-for(int i=0; i < tableRows.size(); i++) {
-	row[i] = tableRows.get(i).getText();
-}
+WebUI.maximizeWindow()
 
-CustomKeywords.'com.utility.CommonMethods.print'(row)
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
 
-Assert.isNotNull(row)
+def title = 'Search Criteria';
 
-WebUI.closeBrowser()
+def existingTitle = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Title'));
+
+assertTrue(title.equals(existingTitle));
+
+WebUI.closeBrowser();
