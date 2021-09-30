@@ -48,7 +48,7 @@ def recordedDocValue = "20200477552";
 
 WebUI.setText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case 8369/Recorded Doc number from field'), recordedDocValue);
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/span_Search'));
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'));
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case 8369/History button'), 10);
 

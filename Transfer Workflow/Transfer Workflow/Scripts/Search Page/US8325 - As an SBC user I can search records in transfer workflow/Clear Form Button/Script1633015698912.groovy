@@ -23,45 +23,27 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
+import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  * 
- * Access the Recorder Information Panel on the Workflow History Page through Search Page  by History Button
+ * Search Criteria page when I click Clear Form button
  * @author bilguun.amarsaikhan
  *
  */
+
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver()
+WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/div_Search'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
 
-WebUI.waitForPageLoad(10)
+def title = 'Search Criteria';
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 10);
+def existingTitle = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Title'));
 
-def dateValue = '09/21/2020'
+assertTrue(title.equals(existingTitle));
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 
-    dateValue)
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
-
-WebUI.waitForPageLoad(10)
-
-//WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/History button'), 10);
-
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/History button'))
-
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/Recorder Information title'))
-
-def sectionTitle = 'Recorder Information'
-
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/Recorder Information title'))
-
-assertTrue(sectionTitle.equals(existingTitle))
-
-WebUI.closeBrowser()
-
+WebUI.closeBrowser();
