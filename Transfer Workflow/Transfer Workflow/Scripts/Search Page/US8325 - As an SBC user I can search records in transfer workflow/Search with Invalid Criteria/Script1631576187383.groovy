@@ -48,6 +48,6 @@ WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_S
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/span_Search'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
 
 WebUI.closeBrowser()

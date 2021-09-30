@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/div/div/div/div[4]/div/div/strong</value>
+         <value>(//div[@class='mud-expand-panel-text'])[4]</value>
       </entry>
       <entry>
          <key>CSS</key>
