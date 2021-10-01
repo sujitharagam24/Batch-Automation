@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search tab</name>
+   <name>Search Button</name>
    <tag></tag>
-   <elementGuidId>d919d471-e78a-4d05-93da-9371ef216e60</elementGuidId>
+   <elementGuidId>929540ec-7ef9-43d8-b774-d0e7362c43ae</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-nav-link-text'])[3]</value>
+         <value>//div[@id='app']/div[2]/div/div/div[2]/div/form/div/div/div[11]/div/div/button[2]/span</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -41,7 +42,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-close-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-tabs mud-tabs-rounded mud-paper-outlined mt-8&quot;]/div[@class=&quot;mud-tabs-panels pa-6&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-sm mt-4&quot;]/form[1]/div[@class=&quot;mud-paper mud-paper-outlined mud-card&quot;]/div[@class=&quot;mud-card-content&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start mt-2&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-6&quot;]/div[@class=&quot;mud-paper mud-elevation-1&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-filled mud-button-filled-primary mud-button-filled-size-medium mud-ripple ml-auto&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-open-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-tabs mud-tabs-rounded mud-paper-outlined mt-8&quot;]/div[@class=&quot;mud-tabs-panels pa-6&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-sm mt-4&quot;]/form[1]/div[@class=&quot;mud-paper mud-paper-outlined mud-card&quot;]/div[@class=&quot;mud-card-content&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start mt-2&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-6&quot;]/div[@class=&quot;mud-paper mud-elevation-1&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-filled mud-button-filled-primary mud-button-filled-size-medium mud-ripple ml-auto&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

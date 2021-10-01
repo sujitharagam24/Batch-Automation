@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Associated Doc columns exist</name>
+   <name>Use Record Date From</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c44e0089-3a1a-42af-a9ab-8974c7faef19</testCaseGuid>
+   <testCaseGuid>8bd088e8-9ae6-4428-837b-30b83f70ee09</testCaseGuid>
 </TestCaseEntity>

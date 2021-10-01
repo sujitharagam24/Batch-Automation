@@ -44,7 +44,7 @@ WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_Search'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/div_Search'))
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
