@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//span[@class='mud-icon-button-label'])[6]</value>
+         <value> (//span[@class='mud-icon-button-label'])[8]</value>
       </entry>
       <entry>
          <key>BASIC</key>
