@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search tab</name>
+   <name>div_Rows per page</name>
    <tag></tag>
-   <elementGuidId>d919d471-e78a-4d05-93da-9371ef216e60</elementGuidId>
+   <elementGuidId>775f8d73-cc04-4611-bda0-712c756e2a4d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-nav-link-text'])[3]</value>
+         <value>//div[@id='app']/div[2]/div/div/div[2]/div/div/div/div/div[2]/div</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value>div.mud-toolbar.mud-toolbar-gutters.mud-table-pagination-toolbar</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,69 +21,70 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
+      <value>div</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mud-button-label</value>
+      <value>mud-toolbar mud-toolbar-gutters mud-table-pagination-toolbar</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Search</value>
+      <value>Rows per page:
+        10
+        102550100
+
+1-0 of 0
+    
+        
+        
+        </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-close-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-tabs mud-tabs-rounded mud-paper-outlined mt-8&quot;]/div[@class=&quot;mud-tabs-panels pa-6&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-sm mt-4&quot;]/form[1]/div[@class=&quot;mud-paper mud-paper-outlined mud-card&quot;]/div[@class=&quot;mud-card-content&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start mt-2&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-6&quot;]/div[@class=&quot;mud-paper mud-elevation-1&quot;]/button[@class=&quot;mud-button-root mud-button mud-button-filled mud-button-filled-primary mud-button-filled-size-medium mud-ripple ml-auto&quot;]/span[@class=&quot;mud-button-label&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;mud-layout mud-drawer-open-responsive-md-left mud-drawer-left-clipped-never&quot;]/div[@class=&quot;mud-main-content&quot;]/div[@class=&quot;mud-tabs mud-tabs-rounded mud-paper-outlined mt-8&quot;]/div[@class=&quot;mud-tabs-panels pa-6&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-12&quot;]/div[@class=&quot;mud-paper mud-elevation-5 pa-2&quot;]/div[@class=&quot;mud-table mud-xs-table mud-table-dense mud-table-hover mud-table-bordered mud-elevation-0&quot;]/div[@class=&quot;mud-table-pagination&quot;]/div[@class=&quot;mud-toolbar mud-toolbar-gutters mud-table-pagination-toolbar&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app']/div[2]/div/div/div[2]/div/form/div/div/div[11]/div/div/button[2]/span</value>
+      <value>//div[@id='app']/div[2]/div/div/div[2]/div/div/div/div/div[2]/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Clear Form'])[1]/following::span[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Scan Operator ID'])[1]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='APN'])[1]/following::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Entry Date/ MSC Date'])[1]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Active'])[1]/preceding::span[4]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Complete'])[1]/preceding::span[8]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Reload'])[1]/preceding::div[19]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//button[2]/span</value>
+      <value>//div[2]/div/div/div/div/div[2]/div</value>
    </webElementXpaths>
 </WebElementEntity>
