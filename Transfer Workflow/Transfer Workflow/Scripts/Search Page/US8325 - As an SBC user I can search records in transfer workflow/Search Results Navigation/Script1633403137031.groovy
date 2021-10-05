@@ -16,20 +16,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
 
 /**
- * Validation check occurs for Recorded Date field on the Accessor Panel 
- * @author bilguun.amarsaikhan
+ *
+ * Search results page navigation exists
+ * @author michele.jazo
  *
  */
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
@@ -38,35 +37,21 @@ WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'), 
+    '1')
 
-WebUI.waitForPageLoad(10)
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
+WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
 
-/* Get the value of Recorded Date field */
+WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
 
-def eventDate = WebUI.getText(findTestObject('Worksheet Page Objectory/US8478/Event Date'));
+WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
 
-// Locate open button and click to open Worksheet Page
+WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[81]'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/FirstPage'))
 
-openButton.click();
-
-// Click on Assessor Information Title to open the section
-
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
-
-// Get the value of Event Date field 
-
-// def docNumber2 = driver.findElement(By.xpath("(//input[@type='text'])[13]")).getAttribute("value")
-
-def eventDate2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8478/Event Date on Assessor'), 'value')
-
-/* Verify Event Dates are matching */
-assertTrue(eventDate.equals(eventDate2))
-
-//WebUI.closeBrowser()
+WebUI.closeBrowser()

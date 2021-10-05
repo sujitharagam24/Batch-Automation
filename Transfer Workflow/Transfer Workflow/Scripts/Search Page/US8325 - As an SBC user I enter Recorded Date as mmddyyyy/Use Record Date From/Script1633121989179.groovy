@@ -46,6 +46,6 @@ WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
 
 WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/div_Rows per page'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/div_mud-table-pagination'))
 
 WebUI.closeBrowser()
