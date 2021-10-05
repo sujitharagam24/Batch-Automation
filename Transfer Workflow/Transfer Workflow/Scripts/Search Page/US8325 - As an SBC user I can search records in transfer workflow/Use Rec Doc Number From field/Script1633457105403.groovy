@@ -16,32 +16,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
-/**
- * 
- * Access the Search Page
- * @author bilguun.amarsaikhan
- *
- */
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+def recDocNumber = '20190254823';
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), recDocNumber);
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
+def recDocNumberResult = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search result Rec Doc Number'));
 
-def title = 'Search Criteria';
+assertTrue(recDocNumber.equals(recDocNumberResult));
 
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Title'));
+WebUI.closeBrowser();
 
-assertTrue(title.equals(existingTitle));
+
+
