@@ -32,13 +32,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search tab'))
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Record Date From Input'), "02022000")
 
