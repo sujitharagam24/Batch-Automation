@@ -9,4 +9,19 @@
       <initValue>'https://devmodpimsapptransferworkflow.azurewebsites.net/'</initValue>
       <name>baseURL</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=TransferWorkflow_db'</initValue>
+      <name>dbUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'SnapShotTestRWE'</initValue>
+      <name>dbUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'24L9x!JVspj9!'</initValue>
+      <name>dbPassword</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

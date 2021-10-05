@@ -33,13 +33,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+/**
+ *
+ * Access Search Results Page and search with invalid criteria
+ * @author soyoung.jung
+ *
+ */
 
-WebUI.navigateToUrl('https://devmodpimsapptransferworkflow.azurewebsites.net/search')
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.maximizeWindow()
+
+WebUI.click(findTestObject('Search Page Objectory/US8325/div_Search'))
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/span_Search'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
 
 WebUI.closeBrowser()
-

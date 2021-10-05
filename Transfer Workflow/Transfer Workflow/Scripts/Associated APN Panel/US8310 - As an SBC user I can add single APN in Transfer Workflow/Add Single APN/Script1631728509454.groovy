@@ -30,7 +30,7 @@ WebUI.callTestCase(findTestCase('Associated APN Panel/US8310 - As an SBC user I 
 
 WebUI.click(findTestObject('APN Panel/p_Add APN'))
 
-WebUI.setText(findTestObject('APN Panel/input_Lead APN_mud-input-slot mud-input-roo_ff250c'), 
+WebUI.setText(findTestObject('APN Panel/input_Lead APN'), 
     '1234567891234')
 
 WebUI.getWindowIndex()
@@ -43,6 +43,6 @@ WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN added
 
 WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567890123'))
+WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
 
 WebUI.closeBrowser()
