@@ -69,5 +69,5 @@ def docNumber2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8
 /* Verify Recorded Numbers are matching */
 assertTrue(docNumber.equals(docNumber2))
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 

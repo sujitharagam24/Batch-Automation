@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Rows per page</name>
+   <name>div_Rows</name>
    <tag></tag>
-   <elementGuidId>775f8d73-cc04-4611-bda0-712c756e2a4d</elementGuidId>
+   <elementGuidId>fb51cc07-3e68-488e-bf7b-8be6c29eb450</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/div[2]/div/div/div/div/div[2]/div</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>div.mud-toolbar.mud-toolbar-gutters.mud-table-pagination-toolbar</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='app']/div[2]/div/div/div[2]/div/div/div/div/div[3]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -39,7 +39,7 @@
         10
         102550100
 
-1-0 of 0
+1-10 of 101
     
         
         
@@ -57,21 +57,21 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app']/div[2]/div/div/div[2]/div/div/div/div/div[2]/div</value>
+      <value>//div[@id='app']/div[2]/div/div/div[2]/div/div/div/div/div[3]/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Scan Operator ID'])[1]/following::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='XFRUTL'])[8]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Entry Date/ MSC Date'])[1]/following::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sales CPT with Sale'])[5]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,6 +85,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/div/div/div/div[2]/div</value>
+      <value>//div/div[3]/div</value>
    </webElementXpaths>
 </WebElementEntity>
