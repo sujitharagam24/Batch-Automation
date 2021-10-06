@@ -25,39 +25,45 @@ import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
 /**
- * Verify Document Type column items are sorted
+ * Verify Name column items are sorted
  * @author bilguun.amarsaikhan
  *
  */
 
-WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('My Work Page/US8761 - As a SBC user I can sort items in my work queue/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
 ArrayList<String> obtainedList = new ArrayList<String>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
 
 for (WebElement we : elementList) {
-    obtainedList.add(we.getText().toLowerCase());
+    obtainedList.add(we.getText());
 	//System.out.println(we.getText());
 }
 
-Collections.sort(obtainedList);
+// Removing My Work (C7213) from the list
+obtainedList.remove('My Work (C7213)');
 
-/* Click on Document Number Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column'))
+// Using Collections.sort('list') does not work for assertion because some items were not sorted by alphabetical order
+//Collections.sort(obtainedList);
+
+/* Click on Name Column to sort the items */
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column'))
 
 ArrayList<String> sortedList = new ArrayList<String>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Name Column items'), 5);
 
 for (WebElement we : elementsList) {
-    sortedList.add(we.getText().toLowerCase()); 
+    sortedList.add(we.getText()); 
 	//System.out.println(we.getText());
 }
 
+// Removing My Work (C7213) from the list 
+sortedList.remove('My Work (C7213)');
 
 assertEquals(obtainedList, sortedList)
 

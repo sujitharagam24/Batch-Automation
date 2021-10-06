@@ -31,7 +31,7 @@ import org.eclipse.core.runtime.Assert
  *
  */
 
-WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('My Work Page/US8761 - As a SBC user I can sort items in my work queue/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 

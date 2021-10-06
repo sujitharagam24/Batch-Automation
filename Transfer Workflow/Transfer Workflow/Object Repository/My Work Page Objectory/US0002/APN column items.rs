@@ -6,12 +6,11 @@
    <elementGuidId>21521707-f21d-43aa-bd04-f989b3d16006</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//table[@class='mud-table-root'])[2]//td[7]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@id='componentWorkItems'])//td[7]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
