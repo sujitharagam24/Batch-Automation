@@ -37,7 +37,7 @@ WebDriver driver = DriverFactory.getWebDriver()
 ArrayList<Integer> obtainedList = new ArrayList<Integer>();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Item Count column items'), 5);
 
 for (WebElement we : elementList) {
     obtainedList.add(Integer.parseInt(we.getText()));
@@ -47,11 +47,11 @@ for (WebElement we : elementList) {
 Collections.sort(obtainedList);
 
 /* Click on Item Count Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column'))
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US8761/Item Count column'))
 
 ArrayList<Integer> sortedList = new ArrayList<Integer>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Item Count column items'), 5);
 
 for (WebElement we : elementsList) {
     sortedList.add(Integer.parseInt(we.getText())); 

@@ -10,63 +10,63 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>62ba7407-7e64-4953-b9c6-3eef767e2c26</testSuiteGuid>
+   <testSuiteGuid>67e2fec7-baac-44a3-b9fd-78d1bea3a859</testSuiteGuid>
    <testCaseLink>
-      <guid>bbf0dbcc-2b00-44c1-857c-1a0997765448</guid>
+      <guid>385d0a1d-6faa-43e8-b132-72e0ef47585c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Access the My Work Page</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1eefcacb-2544-4725-80b8-3eddb7912763</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify APN column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>13b99954-64fd-4def-b795-ca9edf3599af</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Date Column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d4cdde37-552a-43b1-9ef5-02eaba1ac3e0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Document Number Column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e89da966-9834-4429-99c9-440d037a6a2e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Document Type Column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7c8231e1-b8ae-4262-bbd3-b16894fd2828</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Item Count Column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>78a0043b-6eaf-4389-8cf9-9844eac538f7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Name Column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>772bfbe9-9383-4e24-bb8f-2dfac3479c1d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Reason Column is sorted</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>cf7fad89-6d3b-49ca-afe9-05f904108cf5</guid>
+      <guid>73613a36-9a2e-414d-9da9-68c434925207</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/My Work Queue Table Rows</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f7f1f3df-0374-4f8a-8af9-988dbe219793</guid>
+      <guid>a375f10e-a220-491d-8a55-5b903318821e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify APN column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>eff1cf57-c04d-478c-926c-f815b44216f1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Date Column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d9c7f035-49d7-4a78-9ef6-c7e157d31796</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Document Number Column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9b2d56b5-65fa-41a0-969f-4c980e06ebee</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Document Type Column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6a690ae8-f613-41ae-a3e0-60e5ff1ffc8a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Item Count Column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6adc102f-a574-4d2f-8604-161bd106ce9d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Name Column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>89f88b31-fdb3-4733-889b-31b08632b58a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Verify Reason Column is sorted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>170e4ae8-1af0-4535-a6a7-f4425dc595bf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Work Queue Contents Column Names</testCaseId>

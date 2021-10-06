@@ -52,7 +52,7 @@ assertTrue(actualHomeTitle.equals(expectedHomeTitle))
 WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
 // Get the text of h5 title 
-def actualMyWorkTitle = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'))
+def actualMyWorkTitle = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/My Work title'))
 
 def expectedMyWorkTitle = 'My Work'
 

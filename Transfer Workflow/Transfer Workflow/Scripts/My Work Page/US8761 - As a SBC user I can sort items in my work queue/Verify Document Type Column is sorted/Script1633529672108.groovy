@@ -37,7 +37,7 @@ WebDriver driver = DriverFactory.getWebDriver()
 ArrayList<String> obtainedList = new ArrayList<String>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Type column items'), 5);
 
 for (WebElement we : elementList) {
     obtainedList.add(we.getText().toLowerCase());
@@ -47,11 +47,11 @@ for (WebElement we : elementList) {
 Collections.sort(obtainedList);
 
 /* Click on Document Number Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column'))
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Type column'))
 
 ArrayList<String> sortedList = new ArrayList<String>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Type column items'), 5);
 
 for (WebElement we : elementsList) {
     sortedList.add(we.getText().toLowerCase()); 
