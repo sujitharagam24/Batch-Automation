@@ -24,57 +24,37 @@ import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 /**
- * Verify Date column items are sorted
+ * Verify Item Count column items are sorted
  * @author bilguun.amarsaikhan
  *
  */
 
-WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('My Work Page/US8761 - As a SBC user I can sort items in my work queue/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-ArrayList<Date> obtainedList = new ArrayList<Date>()
+ArrayList<Integer> obtainedList = new ArrayList<Integer>();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> dateList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Date column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column items'), 5);
 
-for (WebElement we : dateList) {
-    obtainedList.add(we.getText());
+for (WebElement we : elementList) {
+    obtainedList.add(Integer.parseInt(we.getText()));
 	//System.out.println(we.getText());
 }
 
-Collections.sort(obtainedList, new Comparator<String>() {
-	DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
-	@Override
-	public int compare(String o1, String o2) {
-	try {
-	  return format.parse(o1).compareTo(format.parse(o2));
-		} catch (ParseException e) {
-		  throw new IllegalArgumentException(e);
-		}
-	}
-	});
+Collections.sort(obtainedList);
 
-/* Click on Name Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Date column'))
+/* Click on Item Count Column to sort the items */
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column'))
 
-ArrayList<Date> sortedList = new ArrayList<Date>()
+ArrayList<Integer> sortedList = new ArrayList<Integer>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Date column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column items'), 5);
 
 for (WebElement we : elementsList) {
-    sortedList.add(we.getText()); 
+    sortedList.add(Integer.parseInt(we.getText())); 
 	//System.out.println(we.getText());
 }
 

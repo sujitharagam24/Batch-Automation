@@ -25,38 +25,39 @@ import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
 /**
- * Verify Item Count column items are sorted
+ * Verify Document Type column items are sorted
  * @author bilguun.amarsaikhan
  *
  */
 
-WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('My Work Page/US8761 - As a SBC user I can sort items in my work queue/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-ArrayList<Integer> obtainedList = new ArrayList<Integer>();
+ArrayList<String> obtainedList = new ArrayList<String>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column items'), 5);
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
 
 for (WebElement we : elementList) {
-    obtainedList.add(Integer.parseInt(we.getText()));
+    obtainedList.add(we.getText().toLowerCase());
 	//System.out.println(we.getText());
 }
 
 Collections.sort(obtainedList);
 
-/* Click on Item Count Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column'))
+/* Click on Document Number Column to sort the items */
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column'))
 
-ArrayList<Integer> sortedList = new ArrayList<Integer>()
+ArrayList<String> sortedList = new ArrayList<String>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Item Count column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
 
 for (WebElement we : elementsList) {
-    sortedList.add(Integer.parseInt(we.getText())); 
+    sortedList.add(we.getText().toLowerCase()); 
 	//System.out.println(we.getText());
 }
+
 
 assertEquals(obtainedList, sortedList)
 
