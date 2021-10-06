@@ -47,7 +47,7 @@ WebDriver driver = DriverFactory.getWebDriver()
 ArrayList<Date> obtainedList = new ArrayList<Date>()
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> dateList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Date column items'), 5);
+List<WebElement> dateList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Date column items'), 5);
 
 for (WebElement we : dateList) {
     obtainedList.add(we.getText());
@@ -67,11 +67,11 @@ Collections.sort(obtainedList, new Comparator<String>() {
 	});
 
 /* Click on Name Column to sort the items */
-WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Date column'))
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US8761/Date column'))
 
 ArrayList<Date> sortedList = new ArrayList<Date>()
 
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Date column items'), 5);
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Date column items'), 5);
 
 for (WebElement we : elementsList) {
     sortedList.add(we.getText()); 

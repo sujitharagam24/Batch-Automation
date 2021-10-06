@@ -40,15 +40,15 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'));
+def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/My Work title'));
 
 def expectedTitle = 'My Work';
 
-def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Title'));
+def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/Work Queues Title'));
 
 def expectedQueueTitle = 'Work Queues';
 
-def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
+def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/Work Queue Contents Title'));
 
 def exptectedQueueContentTitle = 'Work Queue Contents';
 
