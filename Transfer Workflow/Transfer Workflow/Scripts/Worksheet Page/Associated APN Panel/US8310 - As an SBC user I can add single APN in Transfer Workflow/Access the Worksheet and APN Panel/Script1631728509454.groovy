@@ -16,41 +16,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  *
- * Access Search Page and verify date format by entering mmddyyyy
+ * Access the Worksheet Page through My Work tab
+ * Verify Associated APN panel exists
  * @author michele.jazo
  *
  */
 
-<<<<<<< HEAD
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search tab'))
-=======
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
->>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Record Date From Input'), "02022000")
+//Find Associated APN panel
+WebUI.click(findTestObject('APN Panel/strong_Associated APN Panel'))
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
-
-WebUI.waitForPageLoad(10)
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_mud-table-pagination'))
-
-WebUI.closeBrowser()
+WebUI.click(findTestObject('APN Panel/td_No Associated APNs'))

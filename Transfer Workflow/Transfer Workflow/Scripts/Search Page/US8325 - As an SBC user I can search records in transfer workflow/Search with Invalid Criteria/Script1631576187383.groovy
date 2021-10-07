@@ -40,14 +40,22 @@ import org.openqa.selenium.Keys as Keys
  *
  */
 
+<<<<<<< HEAD
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+=======
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
+>>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
 
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Search Page Objectory/US8325/div_Search'))
 
+<<<<<<< HEAD
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
+=======
+>>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
 WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
 
 WebUI.closeBrowser()

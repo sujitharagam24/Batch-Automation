@@ -26,31 +26,35 @@ import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- *
- * Access Search Page and verify date format by entering mmddyyyy
- * @author michele.jazo
+ * 
+ * Access the My Work Page
+ * @author bilguun.amarsaikhan
  *
  */
 
-<<<<<<< HEAD
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver()
+WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search tab'))
-=======
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
->>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Record Date From Input'), "02022000")
+def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/My Work title'));
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
+def expectedTitle = 'My Work';
 
-WebUI.waitForPageLoad(10)
+def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/Work Queues Title'));
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_mud-table-pagination'))
+def expectedQueueTitle = 'Work Queues';
 
-WebUI.closeBrowser()
+def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US8761/Work Queue Contents Title'));
+
+def exptectedQueueContentTitle = 'Work Queue Contents';
+
+assertTrue(actualTitle.equals(expectedTitle));
+
+assertTrue(actualQueueTitle.equals(expectedQueueTitle));
+
+assertTrue(actualQueueContentTitle.equals(exptectedQueueContentTitle));
+

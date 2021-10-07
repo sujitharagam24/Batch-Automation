@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>As an Appraiser, I want the ability to select a valuation that has been performed and saved on a subject property</description>
-   <name>TC8444</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>310dce60-64d1-4b3f-8acd-6fe9375d9e26</testCaseGuid>
-</TestCaseEntity>
