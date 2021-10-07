@@ -16,38 +16,40 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  *
- * Search results page navigation exists
+ * Access Search Page and search by APN
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'), 
-    '1')
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Search APN'), 
+    '0333032190000')
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
 
 WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_20120470301'))
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_20200268028'))
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
+RecordedDoc1 = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/td_20120470301'))
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
+compare = "20120470301"
 
-WebUI.closeBrowser()
+WebUI.verifyMatch(RecordedDoc1, compare, false)
+
+RecordedDoc2 = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/td_20200268028'))
+
+compare = "20200268028"
+
+WebUI.verifyMatch(RecordedDoc2, compare, false)
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
