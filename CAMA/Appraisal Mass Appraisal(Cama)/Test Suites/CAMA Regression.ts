@@ -51,36 +51,36 @@
       <guid>c3d09e80-837c-4a36-908f-a3cc30be7754</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US7871 - Search Capabilities/TC8051</testCaseId>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US7871 - Filter Capabilities/TC8051</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>76b00eb6-6b6e-4606-ba15-ccf241dcc0f3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7470 - Save An Appraisal/TC8498</testCaseId>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation Tab/US7470 - Save An Appraisal/TC8498</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2056db8c-d61c-49a9-a5de-decba87055d8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7470 - Save An Appraisal/TC8566</testCaseId>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation Tab/US7470 - Save An Appraisal/TC8566</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6869b144-aad1-41f4-a132-61a5a81b3af0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7898 - Select_Create Valuation/TC8442</testCaseId>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/05. Select Valuation Type Tab/US7898 - Select_Create Valuation/TC8442</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>92f249d7-b54c-4b37-8378-41ce918ee46c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7898 - Select_Create Valuation/TC8443</testCaseId>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/05. Select Valuation Type Tab/US7898 - Select_Create Valuation/TC8443</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bc3ec7b5-21eb-429b-8c0e-6f903d643d0d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation/US7898 - Select_Create Valuation/TC8444</testCaseId>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/05. Select Valuation Type Tab/US7898 - Select_Create Valuation/TC8444</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
