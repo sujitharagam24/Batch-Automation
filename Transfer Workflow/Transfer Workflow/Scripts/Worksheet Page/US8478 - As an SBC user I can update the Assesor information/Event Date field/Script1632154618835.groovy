@@ -69,4 +69,4 @@ def eventDate2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8
 /* Verify Event Dates are matching */
 assertTrue(eventDate.equals(eventDate2))
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()

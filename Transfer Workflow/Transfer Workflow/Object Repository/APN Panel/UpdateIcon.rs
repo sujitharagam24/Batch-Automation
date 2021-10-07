@@ -6,12 +6,11 @@
    <elementGuidId>bbe0bf0d-2178-41b0-addf-1eb7946ef3af</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value> (//span[@class='mud-icon-button-label'])[9]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value> (//span[@class='mud-icon-button-label'])[5]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

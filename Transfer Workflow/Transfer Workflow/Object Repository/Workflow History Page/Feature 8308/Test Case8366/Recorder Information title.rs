@@ -6,12 +6,11 @@
    <elementGuidId>02e31cf3-7f71-44eb-accc-2bf6d4651917</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;app&quot;]/div[2]/div/div/div/div[1]/div/div[2]/div[1]/div/strong</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//div[@class='mud-expand-panel-text'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
