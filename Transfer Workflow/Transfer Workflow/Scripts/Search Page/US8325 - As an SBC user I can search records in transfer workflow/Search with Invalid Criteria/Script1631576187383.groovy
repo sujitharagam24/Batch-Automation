@@ -45,6 +45,12 @@ WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can searc
 
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+
+def expectedMsg = '1-0 of 0';
+
+def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 0 msg'));
+
+assertTrue(expectedMsg.equals(actualMsg));
 
 WebUI.closeBrowser()
