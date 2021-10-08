@@ -53,3 +53,6 @@ WebUI.verifyMatch(RecordedDoc2, compare, false)
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
+
+WebUI.closeBrowser()
+
