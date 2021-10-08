@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 /**
  *
- * Access Search Page and search by APN
+ * Access Search Page and search by ASR Document Number
  * @author michele.jazo
  *
  */
@@ -27,8 +27,8 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Search APN'), 
-    '0333032190000')
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Search ASR From'), 
+    '20190254823')
 
 WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
 
@@ -36,23 +36,13 @@ WebUI.waitForPageLoad(10)
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_20120470301'))
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_20200268028'))
-
 RecordedDoc1 = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/td_20120470301'))
 
-compare = "20120470301"
+compare = "20190254823"
 
 WebUI.verifyMatch(RecordedDoc1, compare, false)
 
-RecordedDoc2 = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/td_20200268028'))
-
-compare = "20200268028"
-
-WebUI.verifyMatch(RecordedDoc2, compare, false)
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
+findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 1 msg')
 
 WebUI.closeBrowser()
 
