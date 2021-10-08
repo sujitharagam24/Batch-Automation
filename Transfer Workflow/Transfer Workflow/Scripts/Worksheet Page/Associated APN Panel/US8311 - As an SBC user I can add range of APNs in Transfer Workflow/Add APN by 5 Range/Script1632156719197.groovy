@@ -49,7 +49,7 @@ WebUI.setText(findTestObject('APN Panel/APN Range/input_ToAPN_Range'),
 
 WebUI.click(findTestObject('Object Repository/APN Panel/button_Add APN'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN added'))
+//WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN added'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
 

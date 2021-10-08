@@ -6,11 +6,11 @@
    <elementGuidId>a82be5d8-74eb-4862-b0d5-7c6a92775abb</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value> (//span[@class='mud-icon-button-label'])[8]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value> (//button[@aria-label='Delete'])//span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

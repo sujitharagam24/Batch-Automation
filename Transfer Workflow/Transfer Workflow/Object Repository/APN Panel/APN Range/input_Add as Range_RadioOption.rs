@@ -6,12 +6,12 @@
    <elementGuidId>b850c509-03fe-433c-b3d5-e6dec56d2167</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>input.mud-input-slot.mud-input-root.mud-input-root-outlined</value>
+         <key>XPATH</key>
+         <value>(//span[@class='mud-radio-button'])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>/html/body/div[1]/div[1]/div[2]/div[2]/div[4]/div[1]/label[2]/span[1]/span/input</value>
+         <key>CSS</key>
+         <value>input.mud-input-slot.mud-input-root.mud-input-root-outlined</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-expand-panel-text'])[4]</value>
+         <value>(//div[@id='panelAssociatedApns'])</value>
       </entry>
       <entry>
          <key>CSS</key>
