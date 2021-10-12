@@ -18,10 +18,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
 /**
  *
- * Search results Search By Track Number
+ * Search results Search by a range Rec Doc # From and To field
  * @author menen.Desta
  *
  */
@@ -29,16 +28,21 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'), 
-    '16582')
+def recDocNumber = '20190254823'
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), 
+    recDocNumber);
 
+def to = '20190254833'
 
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'),
+	to);
 
-def expectedMsg = '1-10';
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
-def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result Message'));
+def expectedMsg = '1-4';
+
+def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Range Search Result Message'));
 
 assertTrue(actualMsg.contains(expectedMsg));
 

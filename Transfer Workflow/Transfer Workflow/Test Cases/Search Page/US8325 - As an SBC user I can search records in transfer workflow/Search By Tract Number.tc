@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Search By Track Number</name>
+   <name>Search By Tract Number</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>53f11c74-b1d2-495e-b458-d884a7e23ced</testCaseGuid>
