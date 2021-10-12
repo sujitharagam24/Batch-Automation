@@ -16,13 +16,37 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.eclipse.core.runtime.Assert as Assert
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+/**
+ * Verify error message when search without any input
+ * @author bilguun.amarsaikhan
+ *
+ */
 
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Error Search Message'))
+def expectedPopUpWindowTitle = 'Message from webpage';
+
+def actualPopUpWindowTitle = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Pop up window title'));
+
+assertTrue(expectedPopUpWindowTitle.equals(actualPopUpWindowTitle));
+
+def expectedPopUpWindowMSG = 'You must supply search criteria.';
+
+def actualPopUpWindowMGS = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Pop up window MSG'));
+
+assertTrue(expectedPopUpWindowMSG.equals(actualPopUpWindowMGS));
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/OK button on PO up window'))
+
+assertEquals(true, WebUI.verifyElementNotPresent(findTestObject('Object Repository/Search Page Objectory/US8325/OK button on PO up window'), 20));
 
 WebUI.closeBrowser()
 
