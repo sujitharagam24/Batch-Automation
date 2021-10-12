@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value> (//span[@class='mud-button-label'])[1]</value>
+         <value>(//*[text()='Cancel'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

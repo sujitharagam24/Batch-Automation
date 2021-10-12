@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/div/div/div/div[4]/div[2]/div/div/div/div/div/div/div/div/table/tbody/tr/td[2]</value>
+         <value>(//*[@id='panelAssociatedApns'])//td[2]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

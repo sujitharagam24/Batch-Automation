@@ -16,7 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
+import org.eclipse.core.runtime.Assert as Assert
+import static org.junit.Assert.*
 /**
  *
  * Access the Worksheet Page through My Work tab
@@ -30,8 +36,18 @@ WebUI.callTestCase(findTestCase('Worksheet Page/Associated APN Panel/US8310 - As
 
 WebUI.click(findTestObject('APN Panel/p_Add APN'))
 
+public static long digits() {
+    while (true) {
+        long numb = (long)(Math.random() * 100000000 * 1000000); 
+        if (String.valueOf(numb).length() == 13)
+            return numb;
+    }
+}
+
+String thirteenRandomDigits =String.valueOf(digits());
+			
 WebUI.setText(findTestObject('APN Panel/input_Lead APN'), 
-    '1234567891234')
+    thirteenRandomDigits)
 
 WebUI.getWindowIndex()
 
@@ -39,10 +55,17 @@ index = WebUI.getWindowIndex()
 
 WebUI.click(findTestObject('Object Repository/APN Panel/button_Add APN'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN added'))
-
 WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
+ArrayList<Integer> apnNumberList = new ArrayList<Integer>()
+
+List<WebElement> apnList = WebUI.findWebElements(findTestObject('Object Repository/APN Panel/td_1234567891234'), 5);
+
+for (WebElement we : apnList) {
+	apnNumberList.add(we.getText().replaceAll('-', ''));
+	System.out.println(we.getText());
+}
+
+assertTrue(apnNumberList.contains(thirteenRandomDigits));
 
 WebUI.closeBrowser()
