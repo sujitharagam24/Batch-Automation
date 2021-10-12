@@ -25,7 +25,7 @@ import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
 /**
- * Script to sort the Queues by the "Event" column
+ * Script to sort the Queues by the "Event Date" column
  * @author Elian Blanco
  */
 
@@ -33,31 +33,30 @@ import org.eclipse.core.runtime.Assert as Assert
 WebDriver driver = DriverFactory.getWebDriver();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+List<WebElement> QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
 String[] beforeSort_row = new String[QueueRows.size()];
 
 /*Getting the text into the array */
 for (int i = 0; i < QueueRows.size(); i++) {
-	(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
+    (beforeSort_row[i]) = QueueRows.get(i).getText().trim();
 }
 
 /*Clicking on the column header to sort the queue*/
-WebElement eventBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[6]'));
-eventBtn.click();
+WebElement eventdateBtn = driver.findElement(By.xpath("(//span[contains(text(), 'Event')])[1]"));
+eventdateBtn.click();
 
 /*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
-String[] afterSortByEvent_row= new String[QueueRows.size()];
+QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
+String[] afterSortByEventdate_row= new String[QueueRows.size()];
 
 /*Getting the text into the array*/
 for (int i = 0; i < QueueRows.size(); i++) {
-	(afterSortByEvent_row[i]) = QueueRows.get(i).getText().trim();
+    (afterSortByEventdate_row[i]) = QueueRows.get(i).getText().trim();
 }
 
 /*Printing the sorted table */
-CustomKeywords.'com.utility.CommonMethods.print'(afterSortByEvent_row);
+CustomKeywords.'com.utility.CommonMethods.print'(afterSortByEventdate_row);
 
-/*Asserting that the column data after clicking on column header
+/*Asserting that the column data after clicking on column header 
  * is not the same as before */
-assertNotEquals(beforeSort_row, afterSortByEvent_row);
-
+assertNotEquals(beforeSort_row, afterSortByEventdate_row);

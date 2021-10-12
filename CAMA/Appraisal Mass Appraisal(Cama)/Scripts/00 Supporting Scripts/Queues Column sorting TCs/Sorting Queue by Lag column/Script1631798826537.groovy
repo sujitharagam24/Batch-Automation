@@ -16,16 +16,18 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
+import org.eclipse.core.runtime.Assert
 
 /**
- * Script to sort the Queues by the "Event Key" column
+ * Script to sort the Queues by the "Lag" column
  * @author Elian Blanco
  */
 
@@ -33,36 +35,30 @@ import org.eclipse.core.runtime.Assert as Assert
 WebDriver driver = DriverFactory.getWebDriver();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+List<WebElement> QueueRows = driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
 String[] beforeSort_row = new String[QueueRows.size()];
 
 /*Getting the text into the array */
-for (int i = 0; i < QueueRows.size(); i++) {
-	(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
+for(int i=0; i < QueueRows.size(); i++) {
+	beforeSort_row[i] =  QueueRows.get(i).getText().trim();
 }
 
 /*Clicking on the column header to sort the queue*/
-WebElement eventKeyBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[10]'));
-eventKeyBtn.click();
+WebElement lagBtn = driver.findElement(By.xpath("(//span[contains(text(), 'Lag')])[1]"));
+lagBtn.click();
 
 /*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
-String[] afterSortByEventKey= new String[QueueRows.size()];
+QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
+String[] afterSortByLag_row= new String[QueueRows.size()];
 
 /*Getting the text into the array*/
 for (int i = 0; i < QueueRows.size(); i++) {
-	(afterSortByEventKey[i]) = QueueRows.get(i).getText().trim();
+	(afterSortByLag_row[i]) = QueueRows.get(i).getText().trim();
 }
 
 /*Printing the sorted table */
-CustomKeywords.'com.utility.CommonMethods.print'(afterSortByEventKey);
+CustomKeywords.'com.utility.CommonMethods.print'(afterSortByLag_row);
 
 /*Asserting that the column data after clicking on column header
  * is not the same as before */
-assertNotEquals(beforeSort_row, afterSortByEventKey);
-
-
-
-
-
-
+assertNotEquals(beforeSort_row, afterSortByLag_row);

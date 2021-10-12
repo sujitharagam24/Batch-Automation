@@ -21,35 +21,35 @@ import org.openqa.selenium.Keys as Keys
  * @author Elian Blanco
  *  */
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/01. Application Landing/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'));
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Parcel Column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Parcel Column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Lag column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Lag column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by event date'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by event date'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Event column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Event column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Req type column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Req type column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Use column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Use column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Event Key column'),
+WebUI.callTestCase(findTestCase('null'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Post Key column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Post Key column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by District column'),
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by District column'),
 	[:], FailureHandling.STOP_ON_FAILURE);
 
 WebUI.closeBrowser();

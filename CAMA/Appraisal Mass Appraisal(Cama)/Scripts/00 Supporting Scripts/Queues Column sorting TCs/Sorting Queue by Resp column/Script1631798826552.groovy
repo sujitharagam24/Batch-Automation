@@ -33,7 +33,7 @@ import org.eclipse.core.runtime.Assert as Assert
 WebDriver driver = DriverFactory.getWebDriver();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+List<WebElement> QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
 String[] beforeSort_row = new String[QueueRows.size()];
 
 /*Getting the text into the array */
@@ -42,11 +42,11 @@ for (int i = 0; i < QueueRows.size(); i++) {
 }
 
 /*Clicking on the column header to sort the queue*/
-WebElement respBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[2]'));
+WebElement respBtn = driver.findElement(By.xpath("(//span[contains(text(), 'Resp')])[1]"));
 respBtn.click();
 
 /*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
 String[] afterSortByResp= new String[QueueRows.size()];
 
 /*Getting the text into the array*/

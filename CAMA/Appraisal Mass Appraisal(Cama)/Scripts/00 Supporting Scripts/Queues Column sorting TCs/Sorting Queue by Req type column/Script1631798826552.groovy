@@ -25,7 +25,7 @@ import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
 /**
- * Script to sort the Queues by the "Use" column
+ * Script to sort the Queues by the "Req Type" column
  * @author Elian Blanco
  */
 
@@ -33,7 +33,7 @@ import org.eclipse.core.runtime.Assert as Assert
 WebDriver driver = DriverFactory.getWebDriver();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+List<WebElement> QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
 String[] beforeSort_row = new String[QueueRows.size()];
 
 /*Getting the text into the array */
@@ -42,26 +42,21 @@ for (int i = 0; i < QueueRows.size(); i++) {
 }
 
 /*Clicking on the column header to sort the queue*/
-WebElement useBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[9]'));
-useBtn.click();
+WebElement reqTypeBtn = driver.findElement(By.xpath("(//span[contains(text(), 'Req')])[1]"));
+reqTypeBtn.click();
 
 /*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
-String[] afterSortByuse_row= new String[QueueRows.size()];
+QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
+String[] afterSortByreqType_row= new String[QueueRows.size()];
 
 /*Getting the text into the array*/
 for (int i = 0; i < QueueRows.size(); i++) {
-	(afterSortByuse_row[i]) = QueueRows.get(i).getText().trim();
+	(afterSortByreqType_row[i]) = QueueRows.get(i).getText().trim();
 }
 
 /*Printing the sorted table */
-CustomKeywords.'com.utility.CommonMethods.print'(afterSortByuse_row);
+CustomKeywords.'com.utility.CommonMethods.print'(afterSortByreqType_row);
 
 /*Asserting that the column data after clicking on column header
  * is not the same as before */
-assertNotEquals(beforeSort_row, afterSortByuse_row);
-
-
-
-
-
+assertNotEquals(beforeSort_row, afterSortByreqType_row);

@@ -25,7 +25,7 @@ import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
 /**
- * Script to sort the Queues by the "Dist" column
+ * Script to sort the Queues by the "Excl" column
  * @author Elian Blanco
  */
 
@@ -33,7 +33,7 @@ import org.eclipse.core.runtime.Assert as Assert
 WebDriver driver = DriverFactory.getWebDriver();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+List<WebElement> QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
 String[] beforeSort_row = new String[QueueRows.size()];
 
 /*Getting the text into the array */
@@ -42,22 +42,24 @@ for (int i = 0; i < QueueRows.size(); i++) {
 }
 
 /*Clicking on the column header to sort the queue*/
-WebElement distBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[3]'));
-distBtn.click();
+WebElement exclBtn = driver.findElement(By.xpath("(//span[contains(text(), 'Excl')])[1]"));
+exclBtn.click();
 
 /*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
-String[] afterSortByDist= new String[QueueRows.size()];
+QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
+String[] afterSortByExcl_row= new String[QueueRows.size()];
 
 /*Getting the text into the array*/
 for (int i = 0; i < QueueRows.size(); i++) {
-	(afterSortByDist[i]) = QueueRows.get(i).getText().trim();
+	(afterSortByExcl_row[i]) = QueueRows.get(i).getText().trim();
 }
 
 /*Printing the sorted table */
-CustomKeywords.'com.utility.CommonMethods.print'(afterSortByDist);
+CustomKeywords.'com.utility.CommonMethods.print'(afterSortByExcl_row);
 
 /*Asserting that the column data after clicking on column header
  * is not the same as before */
-assertNotEquals(beforeSort_row, afterSortByDist);
+assertNotEquals(beforeSort_row, afterSortByExcl_row);
+
+
 

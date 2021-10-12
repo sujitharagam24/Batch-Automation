@@ -29,42 +29,50 @@ import org.eclipse.core.runtime.Assert as Assert
  * @author elian.blanco
  *
  */
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/01. Application Landing/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'))
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'));
+def selectedNewParcelNumber = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'))
 
-def selectedNewParcelNumber = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
+System.out.println(selectedNewParcelNumber)
 
-System.out.println(selectedNewParcelNumber);
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'))
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
+WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'))
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/01 Navigation Page Elements/div_Dashboard'))
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/01 Navigation Page Elements/div_Dashboard'));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'))
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'));
+WebDriver driver = DriverFactory.getWebDriver()
 
-WebDriver driver = DriverFactory.getWebDriver();
+List<WebElement> rows = driver.findElements(By.xpath('//tbody[@class=\'mud-table-body\']/tr'))
 
-List<WebElement> rows = driver.findElements(By.xpath("//tbody[@class='mud-table-body']/tr"));
-WebElement next =driver.findElement(By.xpath("(//span[@class='mud-icon-button-label'])[4]"));
-boolean flag = true;
+WebElement next = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[5]'))
 
-while(flag) {
-	for(WebElement row: rows) {
-		String rowText = row.getText();	
-		if(rowText.contains(selectedNewParcelNumber)) {
-			flag = false;
-			System.out.println(rowText);
-			System.out.println(selectedNewParcelNumber);
-			assertTrue(rowText.contains(selectedNewParcelNumber));
-			break;
-		}
-	}
-	next.click();
-	rows = driver.findElements(By.xpath("//tbody[@class='mud-table-body']/tr"));
+boolean flag = true
+
+while (flag) {
+    for (WebElement row : rows) {
+        String rowText = row.getText()
+
+        if (rowText.contains(selectedNewParcelNumber)) {
+            flag = false
+
+            System.out.println(rowText)
+
+            System.out.println(selectedNewParcelNumber)
+
+            assertTrue(rowText.contains(selectedNewParcelNumber))
+
+            break
+        }
+    }
+    
+    next.click()
+
+    rows = driver.findElements(By.xpath('//tbody[@class=\'mud-table-body\']/tr'))
 }
- 
-WebUI.closeBrowser();
+
+WebUI.closeBrowser()

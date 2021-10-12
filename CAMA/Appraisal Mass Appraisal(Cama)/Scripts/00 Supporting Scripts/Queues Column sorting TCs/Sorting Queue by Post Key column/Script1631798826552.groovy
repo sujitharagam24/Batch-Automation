@@ -25,7 +25,7 @@ import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
 /**
- * Script to sort the Queues by the "Parcel" column
+ * Script to sort the Queues by the "Post Key" column
  * @author Elian Blanco
  */
 
@@ -33,42 +33,33 @@ import org.eclipse.core.runtime.Assert as Assert
 WebDriver driver = DriverFactory.getWebDriver();
 
 /*Locating the table rows' webelements and Initializing an array the size of the rows */
-List<WebElement> QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
+List<WebElement> QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
 String[] beforeSort_row = new String[QueueRows.size()];
 
- //Getting the text into the array
+/*Getting the text into the array */
 for (int i = 0; i < QueueRows.size(); i++) {
-    (beforeSort_row[i]) = QueueRows.get(i).getText().trim();
+	(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
 }
 
-/*Printing the unsorted table */
-CustomKeywords.'com.utility.CommonMethods.print'(beforeSort_row);
-
 /*Clicking on the column header to sort the queue*/
-WebElement parcelBtn = driver.findElement(By.xpath('(//span[@class=\'mud-button-root mud-table-sort-label\'])[3]'));
-parcelBtn.click();
+WebElement postKeyBtn = driver.findElement(By.xpath("(//span[contains(text(), 'Post')])[1]"));
+postKeyBtn.click();
 
 /*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-QueueRows = driver.findElements(By.xpath('(//table[@class=\'mud-table-root\'])[1]/tbody/tr'));
-String[] afterSortByParcel= new String[QueueRows.size()];
+QueueRows = driver.findElements(By.xpath("(//table[@class=\'mud-table-root\'])[1]/tbody/tr"));
+String[] afterSortByPostKey= new String[QueueRows.size()];
 
-/*Get the text into the array*/
+/*Getting the text into the array*/
 for (int i = 0; i < QueueRows.size(); i++) {
-    (afterSortByParcel[i]) = QueueRows.get(i).getText().trim();
+	(afterSortByPostKey[i]) = QueueRows.get(i).getText().trim();
 }
 
 /*Printing the sorted table */
-CustomKeywords.'com.utility.CommonMethods.print'(afterSortByParcel);
+CustomKeywords.'com.utility.CommonMethods.print'(afterSortByPostKey);
 
 /*Asserting that the column data after clicking on column header
  * is not the same as before */
-assertNotEquals(beforeSort_row, afterSortByParcel);
-
-
-
-
-
-
+assertNotEquals(beforeSort_row, afterSortByPostKey);
 
 
 
