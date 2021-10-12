@@ -83,4 +83,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/01 Residential Property Appraisal/05. Select Valuation Type Tab/US7898 - Select_Create Valuation/TC8444</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>3ebefd11-1f92-4209-b464-0ce321d6f6d5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US7870 - Subject Property Sales Data/TC8990</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
