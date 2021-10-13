@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Error Search Message</name>
+   <name>Search Doc Type</name>
    <tag></tag>
-   <elementGuidId>57d8b687-a4df-4df5-ad8a-67ade6b7a267</elementGuidId>
+   <elementGuidId>9adec476-121f-43bd-b277-810ad34284ae</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-button-label'])</value>
+         <value>(//input[@type='text'])[8]</value>
       </entry>
       <entry>
          <key>BASIC</key>

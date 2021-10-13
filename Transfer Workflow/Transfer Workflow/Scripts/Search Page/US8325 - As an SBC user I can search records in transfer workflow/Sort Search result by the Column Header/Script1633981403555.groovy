@@ -16,6 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
+import org.eclipse.core.runtime.Assert as Assert
+import static org.junit.Assert.*
 
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
@@ -31,7 +38,45 @@ WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Rec
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Sort Search Result by the Column Header'))
+//Create an empty List to get all the items under Recorded Doc #
+
+//Create a List of elements which has all the items under Recorded Doc #
+
+//Add all the web elements to the empty arraylist as a string(integer)
+
+// Sort them
+
+WebDriver driver = DriverFactory.getWebDriver();
+
+ArrayList<Integer> obtainedList = new ArrayList<Integer>();
+
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325/Name Column Items'), 3);
+
+for (WebElement we : elementList) {
+	obtainedList.add(we.getText());
+}
+
+Collections.sort(obtainedList);
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Sort Search Result by the Column Name'));
+
+//Create an empty List to get all the items under Recorded Doc #
+
+//Create a List of elements which has all the items under Recorded Doc #
+
+//Add all the web elements to the empty arraylist as a string(integer)
+
+// assert  two arraylists to see if they are equal
+
+ArrayList<Integer> sortedList = new ArrayList<Integer>()
+
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325/Name Column Items'), 3);
+
+for (WebElement we : elementsList) {
+	sortedList.add(we.getText());
+	//System.out.println(we.getText());
+}
+
+assertEquals(obtainedList, sortedList)
 
 WebUI.closeBrowser()
-
