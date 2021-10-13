@@ -50,3 +50,4 @@ WebUI.click(findTestObject('APN Panel/span_Update'))
 WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
 
 WebUI.closeBrowser()
+
