@@ -50,3 +50,4 @@ WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN delet
 WebUI.click(findTestObject('APN Panel/td_No Associated APNs'))
 
 WebUI.closeBrowser()
+
