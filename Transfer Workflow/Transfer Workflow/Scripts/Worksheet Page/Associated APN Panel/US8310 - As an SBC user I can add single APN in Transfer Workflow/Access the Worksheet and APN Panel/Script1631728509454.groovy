@@ -16,13 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
-import org.eclipse.core.runtime.Assert as Assert
-import static org.junit.Assert.*
 
 /**
  *
@@ -38,4 +31,5 @@ WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I
 //Find Associated APN panel
 WebUI.click(findTestObject('APN Panel/strong_Associated APN Panel'))
 
-//WebUI.click(findTestObject('APN Panel/td_No Associated APNs'))
+WebUI.click(findTestObject('APN Panel/td_No Associated APNs'))
+

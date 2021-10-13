@@ -39,7 +39,7 @@ WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I
     [:], FailureHandling.STOP_ON_FAILURE)
 
 //Find Associated APN panel
-WebUI.click(findTestObject('APN Panel/strong_Associated APN Panel'))
+WebUI.click(findTestObject('Object Repository/APN Panel/strong_Associated APN Panel'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/DeleteTrashIcon'))
 
@@ -50,3 +50,4 @@ WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN delet
 WebUI.click(findTestObject('APN Panel/td_No Associated APNs'))
 
 WebUI.closeBrowser()
+

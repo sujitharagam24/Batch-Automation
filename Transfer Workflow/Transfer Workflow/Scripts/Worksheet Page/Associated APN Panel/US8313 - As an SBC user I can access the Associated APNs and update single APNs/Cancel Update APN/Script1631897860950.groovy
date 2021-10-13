@@ -61,3 +61,5 @@ findTestObject('Object Repository/APN Panel/UpdateIcon')
 findTestObject('Object Repository/APN Panel/DeleteTrashIcon')
 
 WebUI.closeBrowser()
+
+
