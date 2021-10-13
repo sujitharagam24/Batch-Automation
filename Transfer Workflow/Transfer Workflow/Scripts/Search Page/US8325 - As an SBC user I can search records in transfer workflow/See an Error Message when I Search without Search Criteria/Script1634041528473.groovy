@@ -20,18 +20,9 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-def recDocNumber = '20190254823'
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'),
-	recDocNumber);
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Error Search Message'))
 
-def to = '20190254833'
+WebUI.closeBrowser()
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'),
-	to);
-
-def docType = 'Bill of Sale'
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Doc Type'), docType);
-
-WebUI.closeBrowser();
