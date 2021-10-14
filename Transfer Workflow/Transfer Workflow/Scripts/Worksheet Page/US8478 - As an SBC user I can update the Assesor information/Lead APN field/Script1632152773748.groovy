@@ -64,7 +64,10 @@ WebUI.click(findTestObject('Workflow History Page/Feature 8308/Test Case8366/Ass
 
 // def docNumber2 = driver.findElement(By.xpath("(//input[@type='text'])[13]")).getAttribute("value")
 
-def leadAPN2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8478/Lead APN on Assessor'), 'value')
+def leadAPN2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8478/Lead APN on Assessor'), 'value');
+
+//for now '-' will be removed until it is implemented on all the pages
+leadAPN = leadAPN.replaceAll('-', '');
 
 /* Verify Lead APN numbers are matching */
 assertTrue(leadAPN.equals(leadAPN2))

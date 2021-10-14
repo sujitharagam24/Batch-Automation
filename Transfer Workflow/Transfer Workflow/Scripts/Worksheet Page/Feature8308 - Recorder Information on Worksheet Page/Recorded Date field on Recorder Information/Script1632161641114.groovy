@@ -52,7 +52,7 @@ def eventDate = WebUI.getText(findTestObject('Worksheet Page Objectory/US8478/Ev
 
 // Locate open button and click to open Worksheet Page
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[81]'))
+WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[114]'))
 
 openButton.click();
 
@@ -71,6 +71,13 @@ WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature83
 def recordedDate = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Recorded Date'), 'value')
 
 /* Verify Event Dates are matching */
-assertTrue(eventDate.equals(recordedDate))
+
+if(!recordedDate.isEmpty()) {
+	assertTrue(eventDate.equals(recordedDate))
+}else {
+	WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Assessor Information title'))
+	recordedDate = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Recorded Date on Assessor'), 'value')
+	assertTrue(eventDate.equals(recordedDate))
+}
 
 WebUI.closeBrowser()
