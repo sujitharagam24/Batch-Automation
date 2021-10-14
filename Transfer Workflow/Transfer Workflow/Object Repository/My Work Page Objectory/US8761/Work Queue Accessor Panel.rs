@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Criteria</name>
+   <name>Work Queue Accessor Panel</name>
    <tag></tag>
-   <elementGuidId>42b77450-7095-4dc9-affe-ba4dec74e7a8</elementGuidId>
+   <elementGuidId>7d285f07-2ff1-4c73-8e39-19f9cdcb8664</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//div[@class='mud-expand-panel-header'])[3]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='mud-tab mud-ripple'])</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

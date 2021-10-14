@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Criteria</name>
+   <name>Doc Type Drop-Down</name>
    <tag></tag>
-   <elementGuidId>42b77450-7095-4dc9-affe-ba4dec74e7a8</elementGuidId>
+   <elementGuidId>7ab5858a-3976-45db-8f9b-8ccd38cda08d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//div[@class='mud-input-adornment mud-input-adornment-end mud-select-input'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='mud-tab mud-ripple'])</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
