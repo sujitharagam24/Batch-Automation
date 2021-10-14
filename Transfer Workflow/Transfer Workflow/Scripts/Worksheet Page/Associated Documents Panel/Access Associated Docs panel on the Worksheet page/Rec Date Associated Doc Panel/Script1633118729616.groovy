@@ -26,8 +26,8 @@ import org.openqa.selenium.Keys as Keys
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Access the Worksheet and Associated Document Record'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Associated Documents/div_Associated Documents'))
 
@@ -37,7 +37,7 @@ recdate = WebUI.getText(findTestObject('Object Repository/Associated Documents/A
 
 System.out.println(recdate)
 
-compare = "8/3/2020 12:00:00 AM"
+compare = "5/15/2017"
 
 WebUI.verifyMatch(recdate, compare, false)
 

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Manually obtain xpath</description>
-   <name>UpdateIcon</name>
+   <description></description>
+   <name>Search Doc Type</name>
    <tag></tag>
-   <elementGuidId>bbe0bf0d-2178-41b0-addf-1eb7946ef3af</elementGuidId>
+   <elementGuidId>92ae5722-f553-4e3f-9ac0-12e14a451ce3</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//button[@ aria-label=&quot;Update&quot;])</value>
+         <value>(//input[@type='text'])[8]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

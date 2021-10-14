@@ -16,53 +16,40 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
-import org.eclipse.core.runtime.Assert as Assert
-import static org.junit.Assert.*
 
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 
+def recDocNumber = '20190254823'
+
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'),
+	recDocNumber);
+
+def to = '20190254833'
+
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'),
+	to);
+
+def docType = 'Bill of Sale'
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Doc Type'), docType);
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Criteria'));
+
 def recDocNumber = '20190254835'
 
 WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'),
-	recDocNumber)
+	recDocNumber);
 
-def to = '20190254865'
+def to = '20190254850'
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'), to)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'),
+	to);
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
+def docType = 'Affidavit of Deth'
 
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Doc Type'), docType);
 
-WebDriver driver = DriverFactory.getWebDriver();
-
-ArrayList<Integer> obtainedList = new ArrayList<Integer>();
-
-List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325/Recorded Doc Column Name Items'), 3);
-
-for (WebElement we : elementList) {
-	obtainedList.add(we.getText());
-}
-
-Collections.sort(obtainedList);
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Recorded Doc Column Name'));
-
-
-ArrayList<Integer> sortedList = new ArrayList<Integer>()
-
-List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325/Recorded Doc Column Name Items'), 3);
-
-for (WebElement we : elementsList) {
-	sortedList.add(we.getText());
-	//System.out.println(we.getText());
-}
-
-assertEquals(obtainedList, sortedList)
-
-WebUI.closeBrowser()
+WebUI.closeBrowser();

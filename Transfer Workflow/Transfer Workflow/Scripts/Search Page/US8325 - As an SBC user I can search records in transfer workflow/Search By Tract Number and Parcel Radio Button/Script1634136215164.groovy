@@ -14,31 +14,25 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import static org.junit.Assert.*
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-/**
- *
- * Access the Associated Documents Panel panel through My Work tab
- * Select a document that contains Associated APN data
- * Verify Associated Documents document type data is expected value
- * @author michele.jazo
- *
- */
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
+	[:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Access the Worksheet and Associated Document Record'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+def tractNumber = '16582'
 
-WebUI.click(findTestObject('Object Repository/Associated Documents/div_Associated Documents'))
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'), tractNumber);
 
-WebUI.click(findTestObject('Object Repository/Associated Documents/Associated Documents Data/td_NP0250'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Parcel Radio Button'))
 
-doctype = WebUI.getText(findTestObject('Object Repository/Associated Documents/Associated Documents Data/td_NP0250'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
-System.out.println(doctype)
+def expectedMsg = '1-5';
 
-compare = "NP0250"
+def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Result Message with Tract and Parcel option'));
 
-WebUI.verifyMatch(doctype, compare, false)
+assertTrue(actualMsg.contains(expectedMsg));
 
 WebUI.closeBrowser()

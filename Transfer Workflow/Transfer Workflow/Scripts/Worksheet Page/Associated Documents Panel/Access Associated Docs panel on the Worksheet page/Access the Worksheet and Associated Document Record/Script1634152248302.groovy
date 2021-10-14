@@ -25,29 +25,37 @@ import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
-
 /**
- *
- * Access the Worksheet Page through My Work tab
- * Verify Associated APN panel exists and update a single APN  
- * Test case is dependent on Add Single APN script to be completed successfully
+ * 
+ * Access the Worksheet page to view record with Associated Documents
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-//Find Associated APN panel
-WebUI.click(findTestObject('Object Repository/APN Panel/strong_Associated APN Panel'))
+WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('APN Panel/UpdateIcon'))
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.click(findTestObject('APN Panel/span_Update'))
+WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
 
-WebUI.closeBrowser()
+WebElement openButton1 = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[10]'))
 
+openButton1.click();
+
+WebUI.delay(30)
+
+WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
+
+WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
+
+WebUI.delay(5)
+
+WebElement openButton2 = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[87]'))
+
+openButton2.click();

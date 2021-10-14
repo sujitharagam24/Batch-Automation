@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Manually obtain xpath</description>
-   <name>UpdateIcon</name>
+   <description></description>
+   <name>Result Message with Tract and Parcel option</name>
    <tag></tag>
-   <elementGuidId>bbe0bf0d-2178-41b0-addf-1eb7946ef3af</elementGuidId>
+   <elementGuidId>7936f1de-adf4-4dd5-bcc0-7c1bcc02bb93</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//button[@ aria-label=&quot;Update&quot;])</value>
+         <value>//*[contains(text(),'1-5')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

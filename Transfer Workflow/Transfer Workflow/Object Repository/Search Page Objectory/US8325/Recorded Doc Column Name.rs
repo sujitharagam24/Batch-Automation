@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Manually obtain xpath</description>
-   <name>UpdateIcon</name>
+   <description></description>
+   <name>Recorded Doc Column Name</name>
    <tag></tag>
-   <elementGuidId>bbe0bf0d-2178-41b0-addf-1eb7946ef3af</elementGuidId>
+   <elementGuidId>af4d5dfc-f967-4769-ba2c-62a5f5bebbcb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//button[@ aria-label=&quot;Update&quot;])</value>
+         <value>(//span[@class='mud-button-root mud-table-sort-label'])[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
