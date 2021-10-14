@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>US0001</name>
+   <name>Home Page test cases</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,9 +10,15 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>9b997260-7abc-4338-bbc0-aca857763a1a</testSuiteGuid>
+   <testSuiteGuid>dd0f8d74-55df-4f1d-9d88-a7c1a81ceae0</testSuiteGuid>
    <testCaseLink>
-      <guid>f751105c-dc85-4564-8b6e-d5e80fa71357</guid>
+      <guid>ee2d41d1-d4fa-4a26-b9cc-c7602b6ecc4c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Home Page/US0001 - As an SBC User I can login to Transfer Workflow Application/Home Page buttons</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0fcfdacf-10ba-4013-8c21-ba30a3b4f9e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Home Page/US0001 - As an SBC User I can login to Transfer Workflow Application/Login Success</testCaseId>
@@ -24,9 +30,15 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>9badc85d-bda3-4d40-a0bb-6431ead90c10</guid>
+      <guid>f45b1e37-c903-463d-bab2-935785dbe3e8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Home Page/US0001 - As an SBC User I can login to Transfer Workflow Application/Navigate to SBCounty web site</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0a96a06b-1415-427a-89c5-2b4c32308caa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Home Page/US0001 - As an SBC User I can login to Transfer Workflow Application/SampleDBTesting</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

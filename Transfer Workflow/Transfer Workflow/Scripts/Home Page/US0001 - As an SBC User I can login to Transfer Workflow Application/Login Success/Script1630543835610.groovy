@@ -43,6 +43,6 @@ WebUI.click(findTestObject('Home Page Objectory/US0001/img'))
 
 def currentUrl = WebUI.getUrl()
 
-WebUI.verifyMatch(currentUrl, baseURL, false)
+WebUI.verifyMatch(currentUrl, GlobalVariable.baseURL, false)
 
 WebUI.closeBrowser()

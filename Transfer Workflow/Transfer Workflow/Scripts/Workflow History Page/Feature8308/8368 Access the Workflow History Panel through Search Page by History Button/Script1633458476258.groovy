@@ -42,13 +42,13 @@ WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Page_
 
 WebUI.waitForPageLoad(10)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 10);
+WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), 10);
 
-def dateValue = "09/21/2020";
+def dateValue = "09212020";
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), dateValue);
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), dateValue);
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'));
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'), 10);
 
