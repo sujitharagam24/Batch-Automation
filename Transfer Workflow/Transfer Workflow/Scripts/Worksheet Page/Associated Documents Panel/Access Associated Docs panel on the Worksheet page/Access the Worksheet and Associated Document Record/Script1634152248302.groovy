@@ -40,8 +40,6 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
-
 WebUI.waitForPageLoad(10)
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
@@ -55,6 +53,8 @@ WebUI.delay(30)
 WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
 
 WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
+
+WebUI.delay(5)
 
 WebElement openButton2 = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[87]'))
 
