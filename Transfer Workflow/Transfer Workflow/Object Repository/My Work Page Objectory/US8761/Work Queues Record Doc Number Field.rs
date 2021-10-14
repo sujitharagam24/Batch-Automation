@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Criteria</name>
+   <name>Work Queues Record Doc Number Field</name>
    <tag></tag>
-   <elementGuidId>42b77450-7095-4dc9-affe-ba4dec74e7a8</elementGuidId>
+   <elementGuidId>31637608-e789-47df-832b-603023bcada6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//input[@type='text'])[13]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='mud-tab mud-ripple'])</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

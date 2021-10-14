@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Criteria</name>
+   <name>Update Button</name>
    <tag></tag>
-   <elementGuidId>42b77450-7095-4dc9-affe-ba4dec74e7a8</elementGuidId>
+   <elementGuidId>45a48e6f-2ae7-466f-a61c-1949f6d13996</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-tab mud-ripple'])</value>
+         <value>(//span[@class='mud-button-label'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
