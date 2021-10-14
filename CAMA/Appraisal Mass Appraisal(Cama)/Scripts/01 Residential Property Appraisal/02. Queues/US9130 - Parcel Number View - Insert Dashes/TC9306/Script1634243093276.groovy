@@ -14,6 +14,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.utility.CommonMethods
+
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.By as By
@@ -34,30 +36,6 @@ String parcelNumber = WebUI.getText(findTestObject('Object Repository/01 Residen
 
 System.out.println(parcelNumber);
 
-String parcelFirst = parcelNumber.substring(0, 5);
-
-String parcelSecond = parcelNumber.substring(5, 9);
-
-String parcelThird = parcelNumber.substring(9, 12);
-
-String parcelFourth = parcelNumber.substring(12, 14);
-
-String parcelFifth = parcelNumber.substring(14, 17);
-
-String[] dashes = parcelNumber.split('[-]');
-
-int format = dashes.length;
-
-assertTrue(format == 5);
-
-assertTrue(parcelFirst.contains('-'));
-
-assertTrue(parcelSecond.contains('-'));
-
-assertTrue(parcelThird.contains('-'));
-
-assertTrue(parcelFourth.contains('-'));
-
-
+CustomKeywords.'com.utility.CommonMethods.parcelNumberFormatVerifier'(parcelNumber);
 
 WebUI.closeBrowser();

@@ -57,6 +57,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
+
 
 class CommonMethods {
 
@@ -68,7 +71,7 @@ class CommonMethods {
 	 * Refresh browser
 	 */
 	@Keyword
-	def refreshBrowser() {
+	public static refreshBrowser() {
 		KeywordUtil.logInfo("Refreshing")
 		WebDriver webDriver = DriverFactory.getWebDriver()
 		webDriver.navigate().refresh()
@@ -80,7 +83,7 @@ class CommonMethods {
 	 * @param to Katalon test object
 	 */
 	@Keyword
-	def clickElement(TestObject to) {
+	public static clickElement(TestObject to) {
 		try {
 			WebElement element = WebUiBuiltInKeywords.findWebElement(to);
 			KeywordUtil.logInfo("Clicking element")
@@ -100,7 +103,7 @@ class CommonMethods {
 	 * @return All rows inside HTML table
 	 */
 	@Keyword
-	def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
+	public static List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
 		WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
 		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
 		return selectedRows
@@ -112,7 +115,7 @@ class CommonMethods {
 	 * @param ar
 	 */
 	@Keyword
-	def static void print(String[] ar) {
+	public static void print(String[] ar) {
 		for(int i = 0; i < ar.length; i++) {
 			System.out.println(ar[i]);
 		}
@@ -443,4 +446,39 @@ class CommonMethods {
 		}
 		return jsonFile;
 	}
+	
+	/**
+	 * Verifies parcel number contains dashes and it is broken down into 5 parts (4-3-2-1-3)
+	 * @param parcelNumber
+	 */
+	
+	@Keyword
+	public static void parcelNumberFormatVerifier(String parcelNumber) {
+	
+	String parcelFirst = parcelNumber.substring(0, 5);
+	
+	String parcelSecond = parcelNumber.substring(5, 9);
+	
+	String parcelThird = parcelNumber.substring(9, 12);
+	
+	String parcelFourth = parcelNumber.substring(12, 14);
+	
+	String parcelFifth = parcelNumber.substring(14, 17);
+	
+	String[] dashes = parcelNumber.split('[-]');
+	
+	int format = dashes.length;
+	
+	assertTrue(format == 5);
+	
+	assertTrue(parcelFirst.contains('-'));
+	
+	assertTrue(parcelSecond.contains('-'));
+	
+	assertTrue(parcelThird.contains('-'));
+	
+	assertTrue(parcelFourth.contains('-'));
+	
+	}
+	
 }

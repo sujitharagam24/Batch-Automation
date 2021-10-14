@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "6690B485C475C125161F45B6F086BDEA",
+  "keywordFileContentHash": "745C7B2562195988878C3B1F22675932",
   "keywordClasses": [
     {
       "name": "com.utility.CommonMethods",
@@ -507,6 +507,25 @@
             }
           ],
           "javadoc": "/**\r\n\t * Read from a json file\r\n\t * @param fileName\r\n\t * @return\r\n\t */"
+        },
+        {
+          "name": "parcelNumberFormatVerifier",
+          "parameters": [
+            {
+              "name": "parcelNumber",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Verifies parcel number contains dashes and it is broken down into 5 parts (4-3-2-1-3)\r\n\t * @param parcelNumber\r\n\t */"
         }
       ]
     }
