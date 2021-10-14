@@ -42,26 +42,36 @@ WebUI.waitForPageLoad(10)
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 10);
 
-def dateValue = '09/21/2020'
+def dateValue = '09212020'
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), 
     dateValue)
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
 
-WebUI.waitForPageLoad(10)
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Search Result Text'), 10);
 
-//WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/History button'), 10);
+def recordedDocSearch = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorded number on search result'));
 
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/History button'))
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'))
 
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/Recorder Information title'))
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
 
-def sectionTitle = 'Recorder Information'
+def sectionTitle = 'Recorder Information';
 
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature/Test Case8366/Recorder Information title'))
+def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
 
-assertTrue(sectionTitle.equals(existingTitle))
+assertTrue(existingTitle.contains(sectionTitle))
+
+// IDs will come and there is an unhandled error on the page. Dev will fix it soon. 
+
+def recordedDocWorkflow = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorded doc on Workflow'));
+
+System.out.println(recordedDocSearch)
+System.out.println('blas')
+System.out.println(recordedDocWorkflow)
+assertTrue(recordedDocSearch.equals(recordedDocWorkflow))
+
+
 
 WebUI.closeBrowser()
-
