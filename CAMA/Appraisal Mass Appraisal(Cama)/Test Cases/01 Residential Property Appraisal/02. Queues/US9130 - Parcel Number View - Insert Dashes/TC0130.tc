@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>As an Appraiser, I should be able to see dashes in between 4th, 7th, and 9th of the Parcel Numbers in the queue.</description>
+   <name>TC0130</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cf43f685-2837-4ef3-814c-dd9c907413c3</testCaseGuid>
+</TestCaseEntity>

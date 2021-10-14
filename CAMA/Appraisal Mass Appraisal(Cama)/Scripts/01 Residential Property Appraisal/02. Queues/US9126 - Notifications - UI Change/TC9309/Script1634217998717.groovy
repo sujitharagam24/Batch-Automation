@@ -14,11 +14,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import com.utility.CommonMethods
-
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
@@ -27,23 +24,19 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
-/** [US7871] As an Appraiser, I should be able to see specific columns in all of the Queues  - Queues - CAMA
- * @author Elian Blanco
- *  */
-
+/**
+ * As an SBC User I want to see an Icon bell with notifications at the top right corner of the page. 
+ * @author elian.blanco
+ * */
 
 WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'));
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Toolbar/Bell Icon'));
 
-WebDriver driver = DriverFactory.getWebDriver();
+String notificationSExpectedText = "Notifications";
 
-WebElement queueColumns = driver.findElement(By.xpath("(//table[@class='mud-table-root'])[1]/thead/tr"));
+String notificationsActualText =  WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Toolbar/NotificationsElement'));
 
-String actualQueueColumns = queueColumns.getText();
-
-String expectedQueueColumns = "Details\nDist\nResp\nParcel\nLag\nEvent Date\nEvent\nReq Type\nExcl\nUse\nPost Key";
-
-assertEquals(expectedQueueColumns, actualQueueColumns);
+assertEquals(notificationSExpectedText, notificationsActualText);
 
 WebUI.closeBrowser();

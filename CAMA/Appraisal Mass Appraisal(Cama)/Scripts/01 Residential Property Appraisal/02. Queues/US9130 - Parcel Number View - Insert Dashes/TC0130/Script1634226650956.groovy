@@ -14,11 +14,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import com.utility.CommonMethods
-
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
@@ -27,23 +24,40 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
-/** [US7871] As an Appraiser, I should be able to see specific columns in all of the Queues  - Queues - CAMA
- * @author Elian Blanco
- *  */
-
-
+/**
+ * As an Appraiser, I should be able to see dashes in between 4th, 7th, and 9th of the Parcel Numbers in the queue.
+ * @author elian.blanco
+ */
 WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'));
+String parcelNumber = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
 
-WebDriver driver = DriverFactory.getWebDriver();
+System.out.println(parcelNumber);
 
-WebElement queueColumns = driver.findElement(By.xpath("(//table[@class='mud-table-root'])[1]/thead/tr"));
+String parcelFirst = parcelNumber.substring(0, 5);
 
-String actualQueueColumns = queueColumns.getText();
+String parcelSecond = parcelNumber.substring(5, 9);
 
-String expectedQueueColumns = "Details\nDist\nResp\nParcel\nLag\nEvent Date\nEvent\nReq Type\nExcl\nUse\nPost Key";
+String parcelThird = parcelNumber.substring(9, 12);
 
-assertEquals(expectedQueueColumns, actualQueueColumns);
+String parcelFourth = parcelNumber.substring(12, 14);
+
+String parcelFifth = parcelNumber.substring(14, 17);
+
+String[] dashes = parcelNumber.split('[-]');
+
+int format = dashes.length;
+
+assertTrue(format == 5);
+
+assertTrue(parcelFirst.contains('-'));
+
+assertTrue(parcelSecond.contains('-'));
+
+assertTrue(parcelThird.contains('-'));
+
+assertTrue(parcelFourth.contains('-'));
+
+
 
 WebUI.closeBrowser();
