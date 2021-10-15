@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Search Page test suite collection</name>
+   <name>Search Page test cases</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,63 +10,75 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>851fd906-f9b5-4b75-9b26-37bd7db2fd04</testSuiteGuid>
+   <testSuiteGuid>9eaf432f-1419-4b93-8018-ff6b5bce183f</testSuiteGuid>
    <testCaseLink>
-      <guid>5218be6a-12b7-444d-982d-1c979aabd41b</guid>
+      <guid>160e97ec-ef93-4d20-b4b5-f4af4a1a1fc4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>69a32066-4672-4778-b42c-f04d85fb4a87</guid>
+      <guid>d359ef9b-eaa6-4b88-a788-1f61c7f26340</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Clear Form Button</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0b99997c-e8dc-4437-84d9-fc9b7c2609e0</guid>
+      <guid>4eed2c5a-26e3-4746-8eac-043915bdafd9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Modify a Search Criteria After Initial Search</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3e25a095-dfdc-4f8c-a294-b5a2e1cb069d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/No Matching Records</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ad3d7da3-822f-4061-b8d0-a6f752eb5995</guid>
+      <guid>2d2fca1a-72e8-4348-b900-399d680e03b2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search a Range By Rec Doc Number From and To Field</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b9abca7d-4945-499b-a861-bd63eb8606b1</guid>
+      <guid>36a6be9a-6117-417a-8e3e-505d8eb80dea</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search by APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6ff9be70-f73f-47f5-b9c8-71de3c9c3b0c</guid>
+      <guid>ad112605-1040-43c1-b427-7ddeba4720f1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search by ASR Doc Number</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6957e979-a4b9-4a23-b719-d2bba6b39fc0</guid>
+      <guid>da36a74a-6874-4058-834d-6a656bf95b28</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search by Grantee</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a8f07c04-5f6a-4fb4-8e18-ffde3088b15b</guid>
+      <guid>7b96b294-2f37-402f-bb62-44dd0d1a9e5c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search By Tract Number and Parcel Radio Button</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d43485e9-a138-4bd5-8604-21e1a63a341b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search By Tract Number</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>40fc4135-7c96-4eac-8808-8692af3264d4</guid>
+      <guid>bfa65210-936f-4a70-841b-b3e984d107ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search Results Navigation</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>fbccf6f3-7b32-4c35-9f44-292dd5c8944f</guid>
+      <guid>94036024-d341-40bb-b7c1-f870e7129a46</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search with Invalid Criteria</testCaseId>
@@ -78,25 +90,25 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>30504fe4-ac76-4445-806d-3be56154c142</guid>
+      <guid>b319b034-35a3-489d-9967-2550db9796bd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/See an Error Message when I Search without Search Criteria</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>baf4096d-1aa8-4359-8410-a0a8e07f87f5</guid>
+      <guid>d36fae21-2cfc-468b-9f72-73ab052b7c04</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Sort Search result by the Column Header</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>26d6ac49-3020-4bd1-b244-d8991ac71f68</guid>
+      <guid>8dbf6dbd-631f-4ac9-bd76-e632d319c587</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Use Rec Doc Number From field</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3185b7c9-e473-485c-bb9a-dae935037239</guid>
+      <guid>2febadc0-15a0-4bcb-8eb6-4df72c342576</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I enter Recorded Date as mmddyyyy/Use Record Date From</testCaseId>

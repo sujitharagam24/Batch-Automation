@@ -65,13 +65,8 @@ assertTrue(existingTitle.contains(sectionTitle))
 
 // IDs will come and there is an unhandled error on the page. Dev will fix it soon. 
 
-def recordedDocWorkflow = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorded doc on Workflow'));
+def recordedDocWorkflow = WebUI.getAttribute(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorded doc on Workflow'), 'value');
 
-System.out.println(recordedDocSearch)
-System.out.println('blas')
-System.out.println(recordedDocWorkflow)
 assertTrue(recordedDocSearch.equals(recordedDocWorkflow))
-
-
 
 WebUI.closeBrowser()

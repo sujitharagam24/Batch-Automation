@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Event Date on Assessor</name>
+   <name>Pop up window MSG</name>
    <tag></tag>
-   <elementGuidId>cd7965cb-be06-4e07-9d21-dfc71deafc11</elementGuidId>
+   <elementGuidId>97f433c3-522f-4ca3-8a4a-7857022fb55e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@type='text'])[16]</value>
+         <value>//*[text()='You must supply search criteria.']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
