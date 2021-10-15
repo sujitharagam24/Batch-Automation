@@ -1,0 +1,59 @@
+{
+  "keywordFileContentHash": "0C058DF50B1B9CC0640F4D0D3EB4C5D6",
+  "keywordClasses": [
+    {
+      "name": "com.utility.DBUtils",
+      "keywordMethods": [
+        {
+          "name": "connectDB",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "storeDataFromDB",
+          "parameters": [
+            {
+              "name": "sqlQuery",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "closeDatabaseConnection",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "execute",
+          "parameters": [
+            {
+              "name": "queryString",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\r\n\t * Execute non-query (usually INSERT/UPDATE/DELETE/COUNT/SUM...) on database\r\n\t * @param queryString a SQL statement\r\n\t * @return single value result of SQL statement\r\n\t * @author Elian Blanco\r\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

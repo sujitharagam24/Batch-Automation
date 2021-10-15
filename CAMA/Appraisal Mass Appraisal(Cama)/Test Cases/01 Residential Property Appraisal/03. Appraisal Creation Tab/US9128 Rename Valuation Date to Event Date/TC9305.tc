@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the valutaion date is  renamed to Event Date.</description>
+   <name>TC9305</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f7367d43-32c0-4f06-b99a-c07568014ecb</testCaseGuid>
+</TestCaseEntity>

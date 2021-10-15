@@ -57,18 +57,21 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
+
 
 class CommonMethods {
-	
+
 	public static WebDriver driver;
 	public static final int IMPLICIT_WAIT=10;
 	public static final int EXPLICIT_WAIT=20;
-	
+
 	/**
 	 * Refresh browser
 	 */
 	@Keyword
-	def refreshBrowser() {
+	public static refreshBrowser() {
 		KeywordUtil.logInfo("Refreshing")
 		WebDriver webDriver = DriverFactory.getWebDriver()
 		webDriver.navigate().refresh()
@@ -80,7 +83,7 @@ class CommonMethods {
 	 * @param to Katalon test object
 	 */
 	@Keyword
-	def clickElement(TestObject to) {
+	public static clickElement(TestObject to) {
 		try {
 			WebElement element = WebUiBuiltInKeywords.findWebElement(to);
 			KeywordUtil.logInfo("Clicking element")
@@ -100,7 +103,7 @@ class CommonMethods {
 	 * @return All rows inside HTML table
 	 */
 	@Keyword
-	def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
+	public static List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
 		WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
 		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
 		return selectedRows
@@ -112,18 +115,19 @@ class CommonMethods {
 	 * @param ar
 	 */
 	@Keyword
-	def static void print(String[] ar) {
+	public static void print(String[] ar) {
 		for(int i = 0; i < ar.length; i++) {
 			System.out.println(ar[i]);
 		}
 	}
-	
-	
+
+
 	/**
 	 * this method will return an object of Explicit wait with time set to 20 sec
 	 *
 	 * @return WebDriverWait
 	 */
+	@Keyword
 	public static WebDriverWait getWait() {
 		WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_WAIT);
 		return wait;
@@ -134,6 +138,7 @@ class CommonMethods {
 	 *
 	 * @param element
 	 */
+	@Keyword
 	public static void waitForClickability(WebElement element) {
 		getWait().until(ExpectedConditions.elementToBeClickable(element));
 	}
@@ -143,6 +148,7 @@ class CommonMethods {
 	 *
 	 * @param element
 	 */
+	@Keyword
 	public static void waitForVisibility(WebElement element) {
 		getWait().until(ExpectedConditions.visibilityOf(element));
 	}
@@ -150,15 +156,17 @@ class CommonMethods {
 	/**
 	 * Method waits for alert to be present
 	 */
+	@Keyword
 	public static void waitForAlert() {
 		getWait().until(ExpectedConditions.alertIsPresent());
 	}
-	
+
 	/**
 	 * this method will return an Object of JavascriptExecutor
 	 *
 	 * @return JavascriptExecutor
 	 */
+	@Keyword
 	public static JavascriptExecutor getJSExecutor() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js;
@@ -169,6 +177,7 @@ class CommonMethods {
 	 *
 	 * @param element
 	 */
+	@Keyword
 	public static void jsClick(WebElement element) {
 		getJSExecutor().executeScript("arguments[0].click();", element);
 	}
@@ -178,6 +187,7 @@ class CommonMethods {
 	 * @param pattern
 	 * @return
 	 */
+	@Keyword
 	public static String getTimeStamp(String pattern) {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
@@ -191,7 +201,7 @@ class CommonMethods {
 	 * @param radioOrCheckBoxes
 	 * @param value
 	 */
-
+	@Keyword
 	public static void clickRadioOrCheckbox(List<WebElement> radioOrCheckBoxes, String value) {
 		String actualValue;
 		for (WebElement radioOrCheckbox : radioOrCheckBoxes) {
@@ -201,7 +211,6 @@ class CommonMethods {
 				break;
 			}
 		}
-
 	}
 
 	/**
@@ -211,6 +220,7 @@ class CommonMethods {
 	 * @param dd
 	 * @param visibleTextOrValue
 	 */
+	@Keyword
 	public static void selectDDValue(WebElement dd, String visibleTextOrValue) {
 		try {
 			Select select = new Select(dd);
@@ -233,6 +243,7 @@ class CommonMethods {
 	 * @param dd
 	 * @param index
 	 */
+	@Keyword
 	public static void selectDDValue(WebElement dd, int index) {
 		try {
 
@@ -247,7 +258,6 @@ class CommonMethods {
 		} catch (UnexpectedTagNameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -255,14 +265,13 @@ class CommonMethods {
 	 *
 	 * @param iFrame
 	 */
-
+	@Keyword
 	public static void switchToFrame(WebElement iFrame) {
 		try {
 			driver.switchTo().frame(iFrame);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -270,13 +279,13 @@ class CommonMethods {
 	 *
 	 * @param frameIndex
 	 */
+	@Keyword
 	public static void switchToFrame(int frameIndex) {
 		try {
 			driver.switchTo().frame(frameIndex);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -284,18 +293,19 @@ class CommonMethods {
 	 *
 	 * @param frameIndex
 	 */
+	@Keyword
 	public static void switchToFrame(String nameOrId) {
 		try {
 			driver.switchTo().frame(nameOrId);
 		} catch (NoSuchFrameException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
 	 * This method will switch to a child window
 	 */
+	@Keyword
 	public static void switchToChildWindow() {
 
 		String mainWindow = driver.getWindowHandle();
@@ -311,6 +321,7 @@ class CommonMethods {
 	/*
 	 * This method will accept a simple alert
 	 */
+	@Keyword
 	public static void Alert() {
 		Alert alert = driver.switchTo().alert();
 		waitForAlert();
@@ -320,6 +331,7 @@ class CommonMethods {
 	/**
 	 * This method hanldes confirmation alerts
 	 */
+	@Keyword
 	public static void confirmationAlert() {
 		Alert alert = driver.switchTo().alert();
 		waitForAlert();
@@ -329,17 +341,18 @@ class CommonMethods {
 	/**
 	 * This method handles prompt alerts
 	 */
+	@Keyword
 	public static void promptAlert(String key) {
 		Alert alert = driver.switchTo().alert();
 		waitForAlert();
 		alert.sendKeys(key);
 		alert.accept();
-
 	}
 
 	/**
 	 * This method returns object of actions class type
 	 */
+	@Keyword
 	public static Actions action() {
 		Actions action = new Actions(driver);
 		return action;
@@ -350,6 +363,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void moveMouseTo(WebElement target) {
 		try {
 			action().moveToElement(target).perform();
@@ -363,6 +377,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void actionClick(WebElement target) {
 		try {
 			action().moveToElement(target).click().perform();
@@ -376,6 +391,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void doubleClick(WebElement target) {
 		try {
 			action().doubleClick(target).perform();
@@ -389,6 +405,7 @@ class CommonMethods {
 	 *
 	 * @param target
 	 */
+	@Keyword
 	public static void rightClick(WebElement target) {
 		try {
 			action().contextClick(target).perform();
@@ -404,6 +421,7 @@ class CommonMethods {
 	 * @param draggable
 	 * @param droppable
 	 */
+	@Keyword
 	public static void dragAndDrop(WebElement draggable, WebElement droppable) {
 		try {
 			action().dragAndDrop(draggable, droppable).perform();
@@ -413,16 +431,54 @@ class CommonMethods {
 	}
 
 	static String jsonFile;
-
+	/**
+	 * Read from a json file
+	 * @param fileName
+	 * @return
+	 */
+	@Keyword
 	public static String readJson(String fileName) {
 
 		try {
 			jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return jsonFile;
 	}
-
+	
+	/**
+	 * Verifies parcel number contains dashes and it is broken down into 5 parts (4-3-2-1-3)
+	 * @param parcelNumber
+	 */
+	
+	@Keyword
+	public static void parcelNumberFormatVerifier(String parcelNumber) {
+	
+	String parcelFirst = parcelNumber.substring(0, 5);
+	
+	String parcelSecond = parcelNumber.substring(5, 9);
+	
+	String parcelThird = parcelNumber.substring(9, 12);
+	
+	String parcelFourth = parcelNumber.substring(12, 14);
+	
+	String parcelFifth = parcelNumber.substring(14, 17);
+	
+	String[] dashes = parcelNumber.split('[-]');
+	
+	int format = dashes.length;
+	
+	assertTrue(format == 5);
+	
+	assertTrue(parcelFirst.contains('-'));
+	
+	assertTrue(parcelSecond.contains('-'));
+	
+	assertTrue(parcelThird.contains('-'));
+	
+	assertTrue(parcelFourth.contains('-'));
+	
+	}
+	
 }
