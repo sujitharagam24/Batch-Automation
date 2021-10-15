@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Detail button</name>
+   <name>Sale Data table</name>
    <tag></tag>
-   <elementGuidId>5a85be3f-d44f-40e2-9642-63f0138a46aa</elementGuidId>
+   <elementGuidId>69aae91a-fb75-4f5d-85de-3161f788bd93</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@class='mud-button-root mud-button mud-button-text mud-button-text-info mud-button-text-size-medium mud-ripple'])[1]</value>
+         <value>(//tbody[@class='mud-table-body'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

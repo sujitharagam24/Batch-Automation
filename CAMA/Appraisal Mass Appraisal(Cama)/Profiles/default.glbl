@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=modpims-CAMA'</initValue>
+      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=modpims'</initValue>
       <name>DBUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

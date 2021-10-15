@@ -44,7 +44,7 @@ WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/
 
 WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Actions Button'));
 
-//Being able to click on the select valuation tab verifies the tab is clickable
+//Being able to click on the get Comparables verifies the tab is clickable
 WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/03 Get Comparables Tab/Get Comparables Tab'));
 
 WebUI.closeBrowser();

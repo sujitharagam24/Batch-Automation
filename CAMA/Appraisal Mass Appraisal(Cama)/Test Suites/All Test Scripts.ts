@@ -89,4 +89,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US7870 - Subject Property Sales Data/TC8990</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>0cf5b43c-bebb-443b-adeb-e3c9482da04d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/03. Appraisal Creation Tab/US9128 Rename Valuation Date to Event Date/TC9305</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c42d552d-644c-472f-a801-e1d1fa2d4c39</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US9126 - Notifications - UI Change/TC9309</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b2a40b82-417d-4f28-a1b3-a02e672c1aed</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US9130 - Parcel Number View - Insert Dashes/TC9306</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

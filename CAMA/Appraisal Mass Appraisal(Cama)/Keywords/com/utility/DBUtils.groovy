@@ -49,7 +49,7 @@ public class DBUtils {
 		} catch (SQLException e) {
 			e.printStackTrace()
 		}
-		System.out.println("Connection Successful");
+		System.out.println("Connection Successful");			
 	}
 
 	/**
