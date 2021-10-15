@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>History button</name>
+   <name>Search Result Text</name>
    <tag></tag>
-   <elementGuidId>c6965f15-4919-476f-aae8-0b9ff10676f9</elementGuidId>
+   <elementGuidId>ae929b85-a443-4e74-b38d-1eb4b9179943</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-icon-button-label'])[13]</value>
+         <value>(//*[text()='Scan Operator ID'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

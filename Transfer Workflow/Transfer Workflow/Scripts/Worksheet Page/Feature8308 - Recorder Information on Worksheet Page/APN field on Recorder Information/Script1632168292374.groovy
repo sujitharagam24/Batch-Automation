@@ -71,6 +71,10 @@ WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature83
 def apnValue2 = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/APN'), 'value')
 
 /* Verify Event Dates are matching */
+
+apnValue = apnValue.replaceAll('-', '');
+apnValue2 = apnValue2.replaceAll('-', '');
+
 assertTrue(apnValue.equals(apnValue2))
 
 WebUI.closeBrowser()

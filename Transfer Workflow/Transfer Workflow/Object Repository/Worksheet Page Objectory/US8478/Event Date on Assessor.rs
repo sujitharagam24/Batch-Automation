@@ -6,12 +6,11 @@
    <elementGuidId>cd7965cb-be06-4e07-9d21-dfc71deafc11</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//input[@type='text'])[16]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//input[@type='text'])[16]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

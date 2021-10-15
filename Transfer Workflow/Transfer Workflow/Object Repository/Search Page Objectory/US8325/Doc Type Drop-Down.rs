@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>History button</name>
+   <name>Doc Type Drop-Down</name>
    <tag></tag>
-   <elementGuidId>c6965f15-4919-476f-aae8-0b9ff10676f9</elementGuidId>
+   <elementGuidId>7ab5858a-3976-45db-8f9b-8ccd38cda08d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//div[@class='mud-input-adornment mud-input-adornment-end mud-select-input'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='mud-icon-button-label'])[13]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

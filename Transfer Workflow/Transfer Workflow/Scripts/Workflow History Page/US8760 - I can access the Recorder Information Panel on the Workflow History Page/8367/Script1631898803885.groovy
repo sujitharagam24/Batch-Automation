@@ -16,59 +16,50 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
 
 /**
- * Validation check occurs for Recorded Document field on the Recorder Information Panel 
+ * 
+ * Access the Assessor Information Panel on the Workflow History Page through Search Page  by History Button
  * @author bilguun.amarsaikhan
  *
  */
+
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
-
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/div_Search'))
 
 WebUI.waitForPageLoad(10)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
+WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 10);
 
-/* Get the value of Recorded Number */
+def dateValue = "09212020";
 
-def docNumber = WebUI.getText(findTestObject('Worksheet Page Objectory/US8478/Recorded Number text'));
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), dateValue);
 
-// Locate open button and click to open Worksheet Page
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[114]'))
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'), 10);
 
-openButton.click();
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'))
 
-// Click on Recorded Information Title to open the section
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Assessor Information title'));
 
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
+def sectionTitle = "Assessor Information";
 
-//Click on Read Only option
+def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Assessor Information title'));
 
-WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
+assertTrue(sectionTitle.equals(existingTitle));
 
-// Get the value of Recorded Number field 
-
-def docNumber2 = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Recorded Doc number'), 'value')
-
-/* Verify Recorded Numbers are matching */
-assertTrue(docNumber.equals(docNumber2))
-
-WebUI.closeBrowser()
+WebUI.closeBrowser();

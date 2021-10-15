@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>History button</name>
+   <name>OK button on PO up window</name>
    <tag></tag>
-   <elementGuidId>c6965f15-4919-476f-aae8-0b9ff10676f9</elementGuidId>
+   <elementGuidId>0a1e50f7-3e0f-4c6b-beb7-5c84031fcae6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-icon-button-label'])[13]</value>
+         <value>//*[text()='OK']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

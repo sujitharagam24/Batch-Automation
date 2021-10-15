@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>History button</name>
+   <name>Recorded doc on Workflow</name>
    <tag></tag>
-   <elementGuidId>c6965f15-4919-476f-aae8-0b9ff10676f9</elementGuidId>
+   <elementGuidId>7b6eb630-a80e-4b95-90d3-c37befce008e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-icon-button-label'])[13]</value>
+         <value>(//input[@class='mud-input-slot mud-input-root mud-input-root-text mud-input-root-margin-dense'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

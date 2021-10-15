@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>History button</name>
+   <name>Search Result 1 Message</name>
    <tag></tag>
-   <elementGuidId>c6965f15-4919-476f-aae8-0b9ff10676f9</elementGuidId>
+   <elementGuidId>99d1dfc5-7732-4678-ba73-dc3f0c5d9ada</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-icon-button-label'])[13]</value>
+         <value>//*[contains(text(),'1-1')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

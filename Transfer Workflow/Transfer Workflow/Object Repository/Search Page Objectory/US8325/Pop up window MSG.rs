@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>History button</name>
+   <name>Pop up window MSG</name>
    <tag></tag>
-   <elementGuidId>c6965f15-4919-476f-aae8-0b9ff10676f9</elementGuidId>
+   <elementGuidId>97f433c3-522f-4ca3-8a4a-7857022fb55e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-icon-button-label'])[13]</value>
+         <value>//*[text()='You must supply search criteria.']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
