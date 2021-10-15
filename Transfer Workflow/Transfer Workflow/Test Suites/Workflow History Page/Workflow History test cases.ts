@@ -75,13 +75,13 @@
       <guid>b029f85c-96b3-456f-9436-42b7993e878f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/US8760 - As a SBC user, I can access the Recorder Information Panel on the Workflow History Page through by History Button/8366</testCaseId>
+      <testCaseId>Test Cases/Workflow History Page/US8760 - I can access the Recorder Information Panel on the Workflow History Page/8366</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>32f9bf0d-3e4f-4b24-8d01-fdafd03b54e8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/US8760 - As a SBC user, I can access the Recorder Information Panel on the Workflow History Page through by History Button/8367</testCaseId>
+      <testCaseId>Test Cases/Workflow History Page/US8760 - I can access the Recorder Information Panel on the Workflow History Page/8367</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>39f8e9a7-a8a3-4d7d-8a09-8c08f493229f</guid>
