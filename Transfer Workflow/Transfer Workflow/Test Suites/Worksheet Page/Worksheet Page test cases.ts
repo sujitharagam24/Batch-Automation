@@ -75,19 +75,19 @@
       <guid>d527079f-b5f1-4f32-be15-1d161c919019</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I can access the Associated APNs and update single APNs/Cancel Update APN</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I can access the Associated APNs and update single APNs/Cancel Update APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2eb757dc-6bf0-4394-b235-335b71b7284b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I can access the Associated APNs and update single APNs/Update Single APN</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I can access the Associated APNs and update single APNs/Update Single APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6865dac4-0d83-4b81-8336-5d79998a325c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user, I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3339b5de-47ed-4899-ae65-2b56addae160</guid>
