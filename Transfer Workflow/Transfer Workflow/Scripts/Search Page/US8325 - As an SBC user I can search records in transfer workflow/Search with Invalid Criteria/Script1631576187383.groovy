@@ -40,11 +40,25 @@ import org.openqa.selenium.Keys as Keys
  *
  */
 
+<<<<<<< HEAD
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+=======
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
+>>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
 
+WebUI.maximizeWindow()
+
+WebUI.click(findTestObject('Search Page Objectory/US8325/div_Search'))
+
+<<<<<<< HEAD
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
+<<<<<<< HEAD
+=======
+>>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
+=======
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
 def expectedMsg = '1-0 of 0';
@@ -52,5 +66,6 @@ def expectedMsg = '1-0 of 0';
 def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 0 msg'));
 
 assertTrue(expectedMsg.equals(actualMsg));
+>>>>>>> c9e3ec0c78397da91500e9b31be563c38db4c10b
 
 WebUI.closeBrowser()

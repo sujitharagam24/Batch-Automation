@@ -14,50 +14,42 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.utility.CommonMethods
+
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- *
- * Search results page navigation exists
- * @author michele.jazo
- *
- */
-<<<<<<< HEAD
+*
+* Access My Work Page and verify columns are displays as expected on the Work Queue Contents Page
+* @author michele.jazo
+*
+*/
+
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
-=======
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
->>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
+WebElement queueColumns = driver.findElement(By.xpath("(//table[@class='mud-table-root'])[1]/thead/tr"));
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'), 
-    '1')
+String actualQueueColumns = queueColumns.getText();
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+println("Work Queue Contents table contains the following column headers " + actualQueueColumns);
 
-WebUI.waitForPageLoad(10)
+String expectedQueueColumns = "Priority\nDate\nDocument Number\nDocument Type\nReason\nAPN";
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
+assertEquals(expectedQueueColumns, actualQueueColumns);
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
-
-WebUI.closeBrowser()
+WebUI.closeBrowser();

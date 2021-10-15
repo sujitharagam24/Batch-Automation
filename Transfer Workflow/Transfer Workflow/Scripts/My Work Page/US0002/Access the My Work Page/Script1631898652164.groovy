@@ -26,38 +26,35 @@ import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- *
- * Search results page navigation exists
- * @author michele.jazo
+ * 
+ * Access the My Work Page
+ * @author bilguun.amarsaikhan
  *
  */
-<<<<<<< HEAD
+
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
-=======
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
->>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
+def actualTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/My Work title'));
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'), 
-    '1')
+def expectedTitle = 'My Work';
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+def actualQueueTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queues Title'));
 
-WebUI.waitForPageLoad(10)
+def expectedQueueTitle = 'Work Queues';
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
+def actualQueueContentTitle  = WebUI.getText(findTestObject('Object Repository/My Work Page Objectory/US0002/Work Queue Contents Title'));
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
+def exptectedQueueContentTitle = 'Work Queue Contents';
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
+assertTrue(actualTitle.equals(expectedTitle));
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
+assertTrue(actualQueueTitle.equals(expectedQueueTitle));
 
-WebUI.closeBrowser()
+assertTrue(actualQueueContentTitle.equals(exptectedQueueContentTitle));
+

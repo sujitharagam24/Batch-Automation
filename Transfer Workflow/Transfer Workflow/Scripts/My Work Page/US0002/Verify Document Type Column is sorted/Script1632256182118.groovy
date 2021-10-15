@@ -16,48 +16,49 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import static org.junit.Assert.*
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
+import static org.junit.Assert.*
 
 /**
- *
- * Search results page navigation exists
- * @author michele.jazo
+ * Verify Document Type column items are sorted
+ * @author bilguun.amarsaikhan
  *
  */
-<<<<<<< HEAD
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebDriver driver = DriverFactory.getWebDriver()
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
-=======
+ArrayList<String> obtainedList = new ArrayList<String>()
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
->>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
+/*Locating the table rows' webelements and Initializing an array the size of the rows */
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'), 
-    '1')
+for (WebElement we : elementList) {
+    obtainedList.add(we.getText().toLowerCase());
+	//System.out.println(we.getText());
+}
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+Collections.sort(obtainedList);
 
-WebUI.waitForPageLoad(10)
+/* Click on Document Number Column to sort the items */
+WebUI.click(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column'))
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
+ArrayList<String> sortedList = new ArrayList<String>()
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
+List<WebElement> elementsList = WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US0002/Document Type column items'), 5);
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
+for (WebElement we : elementsList) {
+    sortedList.add(we.getText().toLowerCase()); 
+	//System.out.println(we.getText());
+}
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
+
+assertEquals(obtainedList, sortedList)
 
 WebUI.closeBrowser()

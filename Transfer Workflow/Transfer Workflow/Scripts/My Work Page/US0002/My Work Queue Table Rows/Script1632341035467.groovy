@@ -16,48 +16,38 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
+import org.eclipse.core.runtime.Assert
 
 /**
- *
- * Search results page navigation exists
+ * List all rows that are displayed in the Work Queues table
  * @author michele.jazo
  *
  */
-<<<<<<< HEAD
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('My Work Page/US0002/Access the My Work Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-WebUI.maximizeWindow()
+// list of table rows
+List<WebElement> tableRowData= driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
+String[] row = new String[tableRowData.size()];
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
-=======
+// iterating over rows in the table and getting the text
+for(int i=0; i < tableRowData.size(); i++) {
+	row[i] =  tableRowData.get(i).getText().trim();
+}
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
->>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
+// print out all rows from Work Queues table
+CustomKeywords.'com.utility.CommonMethods.print'(row);
 
-WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'), 
-    '1')
+// Asserting table rows are not empty
+Assert.isNotNull(row);
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
-
-WebUI.waitForPageLoad(10)
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
-
-WebUI.closeBrowser()
+WebUI.closeBrowser();
