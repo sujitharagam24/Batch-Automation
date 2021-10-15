@@ -54,8 +54,18 @@ WebUI.click(findTestObject('Search Page Objectory/US8325/div_Search'))
 <<<<<<< HEAD
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), '111111')
 
+<<<<<<< HEAD
 =======
 >>>>>>> 0ae875d8ff8af99bb4358cd08ebdcb83ef94cb8d
 WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab'))
+=======
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
+
+def expectedMsg = '1-0 of 0';
+
+def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 0 msg'));
+
+assertTrue(expectedMsg.equals(actualMsg));
+>>>>>>> c9e3ec0c78397da91500e9b31be563c38db4c10b
 
 WebUI.closeBrowser()

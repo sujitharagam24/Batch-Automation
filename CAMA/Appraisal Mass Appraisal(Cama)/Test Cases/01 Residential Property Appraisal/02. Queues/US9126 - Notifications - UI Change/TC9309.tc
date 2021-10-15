@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>As an SBC User I want to see an Icon bell with notifications at the top right corner of the dashboard page.</description>
+   <name>TC9309</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec0c1d16-5d07-46e8-9ab4-2eb78f4a25dc</testCaseGuid>
+</TestCaseEntity>

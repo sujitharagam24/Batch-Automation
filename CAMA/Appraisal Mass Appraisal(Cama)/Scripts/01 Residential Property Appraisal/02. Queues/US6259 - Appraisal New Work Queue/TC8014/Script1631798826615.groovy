@@ -27,36 +27,39 @@ import org.eclipse.core.runtime.Assert as Assert
 /** As an Appraiser, I want the ability to sort all columns in the New Queue - Queues - CAMA
  * @author Elian Blanco
  *  */
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/01. Application Landing/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'))
 
-WebUI.click(findTestObject('01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/New Tab'));
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Parcel Column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Parcel Column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Lag column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Lag column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by event date'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by event date'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Event column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Event column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Req type column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Req type column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Excl column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Use column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Use column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Event Key column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Resp column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by Post Key column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Post Key column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('01 Residential Property Appraisal/02. Queues/Queues Column sorting TCs/Sorting Queue by District column'), 
-    [:], FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by District column'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.closeBrowser();
+WebUI.closeBrowser()
+

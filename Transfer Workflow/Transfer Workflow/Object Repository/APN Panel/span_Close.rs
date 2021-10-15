@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/div[1]/div[1]/div[2]/div[2]/div[5]/button[1]/span</value>
+         <value>(//*[text()='Close'])</value>
       </entry>
       <entry>
          <key>CSS</key>

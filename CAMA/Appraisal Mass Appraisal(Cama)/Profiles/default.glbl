@@ -9,4 +9,19 @@
       <initValue>'https://devmodpimsappcama.azurewebsites.net/'</initValue>
       <name>Url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=modpims'</initValue>
+      <name>DBUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>DBUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>DBPass</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/div/div/div/div[4]/div[2]/div/div/div/div/div/div[2]/button/p</value>
+         <value>(//*[text()='Add APN'])</value>
       </entry>
       <entry>
          <key>CSS</key>

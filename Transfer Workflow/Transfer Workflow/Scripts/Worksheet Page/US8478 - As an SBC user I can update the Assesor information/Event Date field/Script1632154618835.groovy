@@ -52,7 +52,7 @@ def eventDate = WebUI.getText(findTestObject('Worksheet Page Objectory/US8478/Ev
 
 // Locate open button and click to open Worksheet Page
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[81]'))
+WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[114]'))
 
 openButton.click();
 
@@ -69,4 +69,4 @@ def eventDate2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8
 /* Verify Event Dates are matching */
 assertTrue(eventDate.equals(eventDate2))
 
-//WebUI.closeBrowser()
+WebUI.closeBrowser()

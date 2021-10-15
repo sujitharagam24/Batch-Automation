@@ -26,7 +26,7 @@ import org.openqa.selenium.Keys as Keys
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
+WebUI.callTestCase(findTestCase('Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Access the Worksheet and Associated Document Record'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Associated Documents/div_Associated Documents'))
@@ -37,7 +37,7 @@ docnumber = WebUI.getText(findTestObject('Object Repository/Associated Documents
 
 System.out.println(docnumber)
 
-compare = "20200268028"
+compare = "20170197765"
 
 WebUI.verifyMatch(docnumber, compare, false)
 

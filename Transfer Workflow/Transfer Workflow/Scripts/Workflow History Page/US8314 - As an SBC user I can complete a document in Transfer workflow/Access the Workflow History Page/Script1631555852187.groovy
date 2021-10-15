@@ -47,10 +47,8 @@ WebUI.waitForPageLoad(10)
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[83]'))
+//WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[83]'))
 
-openButton.click();
+//openButton.click();
 
-
-
-
+WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/Open button'));

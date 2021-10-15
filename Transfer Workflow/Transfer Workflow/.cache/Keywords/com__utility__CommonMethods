@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "110A065CF295B60F14B1D23F09456305",
+  "keywordFileContentHash": "18EA8B8FB73D5FCDC0744C87F2688B84",
   "keywordClasses": [
     {
       "name": "com.utility.CommonMethods",
@@ -87,6 +87,11 @@
             }
           ],
           "javadoc": "/**\r\n\t * Print all from an array\r\n\t * @param ar\r\n\t */"
+        },
+        {
+          "name": "digits",
+          "parameters": [],
+          "javadoc": ""
         }
       ]
     }

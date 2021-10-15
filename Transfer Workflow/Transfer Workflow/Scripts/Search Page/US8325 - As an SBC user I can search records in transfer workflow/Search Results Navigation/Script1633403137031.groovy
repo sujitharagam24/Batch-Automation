@@ -50,6 +50,8 @@ WebUI.setText(findTestObject('Search Page Objectory/US8325/Search Trac Number'),
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
+WebUI.waitForPageLoad(10)
+
 WebUI.click(findTestObject('Search Page Objectory/US8325/NextPage'))
 
 WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
@@ -57,7 +59,5 @@ WebUI.click(findTestObject('Search Page Objectory/US8325/LastPage'))
 WebUI.click(findTestObject('Search Page Objectory/US8325/PreviousPage'))
 
 WebUI.click(findTestObject('Search Page Objectory/US8325/div_Rows'))
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/FirstPage'))
 
 WebUI.closeBrowser()
