@@ -24,13 +24,43 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8311 - As an SBC user I can add range of APNs in Transfer Workflow/Add APN by 5 Range</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2f9b51c5-100a-4aee-aea8-8664168b22fa</guid>
+      <guid>d592a088-eb2e-4a08-a7e7-67d8b248a6d8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 2 APN Range</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4a955939-7939-4559-abf3-837f494e9681</guid>
+      <guid>69779bb9-dc64-4599-a9a4-c8409e3c2d05</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5d81b588-a035-4cc9-a78c-92501cf15885</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4b418360-ff65-4b25-885b-31f71bbe2da5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>56e06480-8b25-42a5-9dea-7d6217ab6ceb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>717059ea-a30e-4772-a7a0-b96cc35e0a1a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ef9eaead-c537-4006-b560-34a16a605b0a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel</testCaseId>
