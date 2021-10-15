@@ -16,12 +16,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'SnapShotTestRWE'</initValue>
+      <initValue>''</initValue>
       <name>DBUsername</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'24L9x!JVspj9!'</initValue>
+      <initValue>''</initValue>
       <name>DBPass</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
