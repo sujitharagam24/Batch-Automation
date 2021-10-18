@@ -55,6 +55,6 @@ WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
 
 findTestObject('Object Repository/APN Panel/APN Range/td_1110000000000')
 
-findTestObject('Object Repository/APN Panel/APN Range/td_1110000000005')
+findTestObject('Object Repository/APN Panel/APN Range/td_1110000000004')
 
 WebUI.closeBrowser()
