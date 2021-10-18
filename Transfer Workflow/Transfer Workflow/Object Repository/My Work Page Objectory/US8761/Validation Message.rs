@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//li[@class='validation-message'])</value>
+         <value>(//*[contains( text(),'13 characters')])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
