@@ -83,10 +83,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Workflow History Page/US8760 - I can access the Recorder Information Panel on the Workflow History Page/8367</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>39f8e9a7-a8a3-4d7d-8a09-8c08f493229f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/US8760 - As a SBC user, I can access the Recorder Information Panel on the Workflow History Page through by History Button/8368 Access the Workflow History Panel through Search Page by History Button</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>

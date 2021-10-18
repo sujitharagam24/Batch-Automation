@@ -24,54 +24,6 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Add Single APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9d6fc06d-95ed-4790-b7a3-b72b8e6d59e5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8311 - As an SBC user I can add range of APNs in Transfer Workflow/Add APN by 5 Range</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d6dde3ad-7ac1-46d8-992b-27a00c36dd71</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8311 - As an SBC user I can add range of APNs in Transfer Workflow/Add APN by 51 Range</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e59c4efb-4ea1-4591-bd44-cc3939106179</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Cancel Delete APN</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>2e4d1ad8-3ac0-4d57-bb2b-86e78ccc8fbd</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 2 APN Range</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a23bf0ad-ba6c-451c-86c0-72eb123f120a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 5 APN Range</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0d9ffed5-dd87-4176-a3b6-f63ef95b1302</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 50 APN Range</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b6fbeb94-afdd-49c8-a1be-53bcaccc6e66</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete APN Range Setup</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ab9359da-2a27-4b6c-88a8-dc36d6ae7f31</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d527079f-b5f1-4f32-be15-1d161c919019</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -84,16 +36,34 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I can access the Associated APNs and update single APNs/Update Single APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>23d4067b-8668-4b66-9f1a-102afe546292</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9d6fc06d-95ed-4790-b7a3-b72b8e6d59e5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8311 - As an SBC user I can add range of APNs in Transfer Workflow/Add APN by 5 Range</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>860e1226-edb4-4faa-ab19-fca576b7781b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 5 APN Range</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>948ff3d0-a167-4152-bb05-aaae6e3d7b4e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>6865dac4-0d83-4b81-8336-5d79998a325c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3339b5de-47ed-4899-ae65-2b56addae160</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Access the Worksheet and Associated Document Record</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c73986d9-f76d-4958-910c-7c8d89e10e75</guid>
@@ -118,6 +88,18 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Doc Number Associated Doc Panel</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dd3a9d67-bfae-40e6-a826-7541c91e1626</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I cannot add a duplicate APN/Add duplicate APN Validation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>03056645-7d0a-4fd6-964e-0cf7e256b754</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - I am not able to update single APNs using invalid characters/Add APN Invalid Characters</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>935f5fdf-64eb-44c5-aeee-359d5eaa5f53</guid>

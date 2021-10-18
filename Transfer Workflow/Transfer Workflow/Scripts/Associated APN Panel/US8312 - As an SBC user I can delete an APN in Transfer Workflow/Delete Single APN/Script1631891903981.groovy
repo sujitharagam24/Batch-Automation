@@ -37,7 +37,7 @@ WebUI.click(findTestObject('Object Repository/APN Panel/span_Delete_Cancel'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
 
-findTestObject('Object Repository/APN Panel/UpdateIcon')
+findTestObject('null')
 
 findTestObject('Object Repository/APN Panel/DeleteTrashIcon')
 
