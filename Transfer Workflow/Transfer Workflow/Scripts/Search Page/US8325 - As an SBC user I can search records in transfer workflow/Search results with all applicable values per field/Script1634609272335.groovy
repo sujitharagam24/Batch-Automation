@@ -15,31 +15,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-/**
- *
- * Search results Search By Tract Number and Parcel Radio Button
- * @author menen.Desta
- *
- */
+def recDocNumber = '20200336067';
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), recDocNumber);
 
-def tractNumber = '16582'
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'), tractNumber);
+def expectedMsg = '1-1';
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Parcel Radio Button'))
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
-
-def expectedMsg = '1-5';
-
-def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Result Message with Tract and Parcel option'));
+def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 1 Message'));
 
 assertTrue(actualMsg.contains(expectedMsg));
 
