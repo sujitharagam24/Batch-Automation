@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "745C7B2562195988878C3B1F22675932",
+  "keywordFileContentHash": "682CA7FF3C34886F94AAF10D161585B1",
   "keywordClasses": [
     {
       "name": "com.utility.CommonMethods",
@@ -526,6 +526,38 @@
             }
           ],
           "javadoc": "/**\r\n\t * Verifies parcel number contains dashes and it is broken down into 5 parts (4-3-2-1-3)\r\n\t * @param parcelNumber\r\n\t */"
+        },
+        {
+          "name": "isDateWithinRange",
+          "parameters": [
+            {
+              "name": "dateToValidate",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "dateFormat",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
         }
       ]
     }

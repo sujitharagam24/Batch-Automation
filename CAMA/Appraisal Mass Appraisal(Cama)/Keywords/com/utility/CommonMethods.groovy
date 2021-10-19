@@ -60,6 +60,12 @@ import java.util.Set;
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
 
 class CommonMethods {
 
@@ -446,39 +452,73 @@ class CommonMethods {
 		}
 		return jsonFile;
 	}
-	
+
 	/**
 	 * Verifies parcel number contains dashes and it is broken down into 5 parts (4-3-2-1-3)
 	 * @param parcelNumber
 	 */
-	
+
 	@Keyword
 	public static void parcelNumberFormatVerifier(String parcelNumber) {
-	
-	String parcelFirst = parcelNumber.substring(0, 5);
-	
-	String parcelSecond = parcelNumber.substring(5, 9);
-	
-	String parcelThird = parcelNumber.substring(9, 12);
-	
-	String parcelFourth = parcelNumber.substring(12, 14);
-	
-	String parcelFifth = parcelNumber.substring(14, 17);
-	
-	String[] dashes = parcelNumber.split('[-]');
-	
-	int format = dashes.length;
-	
-	assertTrue(format == 5);
-	
-	assertTrue(parcelFirst.contains('-'));
-	
-	assertTrue(parcelSecond.contains('-'));
-	
-	assertTrue(parcelThird.contains('-'));
-	
-	assertTrue(parcelFourth.contains('-'));
-	
+
+		String parcelFirst = parcelNumber.substring(0, 5);
+
+		String parcelSecond = parcelNumber.substring(5, 9);
+
+		String parcelThird = parcelNumber.substring(9, 12);
+
+		String parcelFourth = parcelNumber.substring(12, 14);
+
+		String parcelFifth = parcelNumber.substring(14, 17);
+
+		String[] dashes = parcelNumber.split('[-]');
+
+		int format = dashes.length;
+
+		assertTrue(format == 5);
+
+		assertTrue(parcelFirst.contains('-'));
+
+		assertTrue(parcelSecond.contains('-'));
+
+		assertTrue(parcelThird.contains('-'));
+
+		assertTrue(parcelFourth.contains('-'));
 	}
-	
+
+	@Keyword
+	public static boolean isDateWithinRange(String dateToValidate, String dateFormat) {
+
+		SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+		sdf.setLenient(false);
+		try {
+
+			Date currentDate =  Calendar.getInstance().getTime();
+
+			Date date = sdf.parse(dateToValidate);
+
+			Calendar monthsBeforeCurrentDate = Calendar.getInstance().
+			monthsBeforeCurrentDate.add(Calendar.MONTH, -7);
+
+			/****************** Verbose *****************************/
+			System.out.println("\n\ncurrentdDate : "
+					+ currentDate);
+			System.out.println("currentDateBeforeXMonths : "
+					+ monthsBeforeCurrentDate.getTime());
+			System.out.println("dateToValidate : "
+					+ dateToValidate);
+			/*********************************************************/
+
+			if (date.before(monthsBeforeCurrentDate.getTime())){
+				System.out.println("More than 7 months ");
+				return true;
+			}else {
+				System.out.println("Less than 7 months");
+				return false;
+			}
+		} catch (ParseException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }
