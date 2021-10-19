@@ -14,33 +14,23 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import static org.junit.Assert.*
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
+
 /**
  *
- * Search results Search By Tract Number and Parcel Radio Button
+ * Search results See the Doc Category list from Search page
  * @author menen.Desta
  *
  */
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
-	[:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE);
 
-def tractNumber = '16582'
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Doc Category Drop-Down'));
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'), tractNumber);
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Parcel Radio Button'))
+WebUI.closeBrowser();
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
-
-def expectedMsg = '1-5';
-
-def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Result Message with Tract and Parcel option'));
-
-assertTrue(actualMsg.contains(expectedMsg));
-
-WebUI.closeBrowser()

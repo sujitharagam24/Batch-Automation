@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 
 /**
  *
- * Access Search Page and search by Grantee
+ * Access Search Page and search by Grantor
  * @author menen.Desta
  *
  */
