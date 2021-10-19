@@ -7,3 +7,8 @@
 com.kms.katalon.core.webservice.properties
 com.kms.katalon.integration.analytics.properties
 com.kms.katalon.integration.analytics.properties
+/bin/
+/Libs/
+/.settings/
+/.classpath
+.svn/

@@ -16,37 +16,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
+
 
 
 /**
  *
- * Access the Worksheet Page through My Work tab
- * Verify Associated APN panel exists and update a single APN  
- * Test case is dependent on Add Single APN script to be completed successfully
- * @author michele.jazo
+ * Search results See the Doc Category list from Search page
+ * @author menen.Desta
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE);
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Doc Category Drop-Down'));
 
-//Find Associated APN panel
-WebUI.click(findTestObject('Object Repository/APN Panel/strong_Associated APN Panel'))
 
-WebUI.click(findTestObject('APN Panel/UpdateButton'))
+WebUI.closeBrowser();
 
-WebUI.click(findTestObject('APN Panel/span_Update'))
-
-WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
-
-WebUI.closeBrowser()

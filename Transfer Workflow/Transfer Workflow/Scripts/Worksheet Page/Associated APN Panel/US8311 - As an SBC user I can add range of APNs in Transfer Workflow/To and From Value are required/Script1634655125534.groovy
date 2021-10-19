@@ -20,12 +20,7 @@ import org.openqa.selenium.Keys as Keys
 /**
  *
  * Access the Worksheet Page through My Work tab
- * Verify Associated APN panel exists 
- * This script will add a range of 5 APNs
- 
- *currently a bug exists and only the From and To APN are added. 
- *Five APN values should be added when this works correctly.
- 
+ * Verify To and From values are required when adding an APN Range
  * @author michele.jazo
  *
  */
@@ -35,26 +30,50 @@ WebUI.callTestCase(findTestCase('Worksheet Page/Associated APN Panel/US8310 - As
 
 WebUI.click(findTestObject('APN Panel/p_Add APN'))
 
-WebUI.click(findTestObject('APN Panel/APN Range/input_Add as Range_RadioOption'))
+WebUI.click(findTestObject('Object Repository/APN Panel/APN Range/input_Add as Range_RadioOption'))
 
 WebUI.click(findTestObject('APN Panel/APN Range/input_FromAPN_Range'))
 
 WebUI.setText(findTestObject('APN Panel/APN Range/input_FromAPN_Range'),
-	'1110000000000')
+	'1230000000000')
+
+findTestObject('APN Panel/APN Range/input_ToAPN_Range')
+
+WebUI.click(findTestObject('Object Repository/APN Panel/button_Add APN'))
+
+findTestObject('Object Repository/APN Panel/Max Character Msg')
+
+exceedmsg = WebUI.getText(findTestObject('Object Repository/APN Panel/Max Character Msg'))
+
+System.out.println(exceedmsg)
+
+if (!(exceedmsg.toString().contains('Secondary APN Number'))) {
+	KeywordUtil.markFailed('APN required message does not contain expected text.')
+}
+
+WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
+
+WebUI.click(findTestObject('APN Panel/p_Add APN'))
+
+WebUI.click(findTestObject('Object Repository/APN Panel/APN Range/input_Add as Range_RadioOption'))
 
 WebUI.click(findTestObject('APN Panel/APN Range/input_ToAPN_Range'))
 
 WebUI.setText(findTestObject('APN Panel/APN Range/input_ToAPN_Range'),
-	'1110000000005')
+	'1230000000000')
+
+findTestObject('APN Panel/APN Range/input_FromAPN_Range')
 
 WebUI.click(findTestObject('Object Repository/APN Panel/button_Add APN'))
 
-//WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APN added'))
+findTestObject('Object Repository/APN Panel/Max Character Msg')
 
-WebUI.click(findTestObject('Object Repository/APN Panel/span_Close'))
+exceedmsg = WebUI.getText(findTestObject('Object Repository/APN Panel/Max Character Msg'))
 
-findTestObject('Object Repository/APN Panel/APN Range/td_1110000000000')
+System.out.println(exceedmsg)
 
-findTestObject('Object Repository/APN Panel/APN Range/td_1110000000004')
+if (!(exceedmsg.toString().contains('Secondary APN Number'))) {
+	KeywordUtil.markFailed('APN required message does not contain expected text.')
+}
 
 WebUI.closeBrowser()

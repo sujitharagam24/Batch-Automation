@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>DeleteTrashIconRange</name>
+   <name>Grantor Search Result</name>
    <tag></tag>
-   <elementGuidId>70e4c636-509f-412b-8223-ff7cdd850cab</elementGuidId>
+   <elementGuidId>f9a5234b-4ab3-4ea1-861f-1ad67fc36d87</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//button[@type='button'])[4]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[contains(text(),'1-6')])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

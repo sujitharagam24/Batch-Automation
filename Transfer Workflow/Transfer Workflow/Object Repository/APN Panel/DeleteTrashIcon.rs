@@ -6,11 +6,11 @@
    <elementGuidId>a82be5d8-74eb-4862-b0d5-7c6a92775abb</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[4]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value> (//button[@aria-label='Delete'])//span</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -18,6 +18,14 @@ import static org.junit.Assert.*
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+/**
+ *
+ * Search results Search By Tract Number and Parcel Radio Button
+ * @author menen.Desta
+ *
+ */
+
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 

@@ -43,7 +43,7 @@ WebDriver driver = DriverFactory.getWebDriver();
 //Find Associated APN panel
 WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('APN Panel/UpdateIcon'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('APN Panel/span_Update'))
 
