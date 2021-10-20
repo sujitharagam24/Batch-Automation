@@ -35,10 +35,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Home Page/US0001 - As an SBC User I can login to Transfer Workflow Application/Navigate to SBCounty web site</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>0a96a06b-1415-427a-89c5-2b4c32308caa</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Home Page/US0001 - As an SBC User I can login to Transfer Workflow Application/SampleDBTesting</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>
