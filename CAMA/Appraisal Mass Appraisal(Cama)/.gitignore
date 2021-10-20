@@ -21,5 +21,6 @@ build
 /.classpath
 /.svn/
 /Reports/
+/settings/
 /settings/internal/com.kms.katalon.composer.testcase.properties
 /Appraisal Mass Appraisal(modPIMS).prj
