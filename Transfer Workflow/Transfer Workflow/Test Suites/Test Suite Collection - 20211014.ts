@@ -3,7 +3,7 @@
    <description></description>
    <name>Test Suite Collection - 20211014</name>
    <tag></tag>
-   <executionMode>SEQUENTIAL</executionMode>
+   <executionMode>PARALLEL</executionMode>
    <maxConcurrentInstances>8</maxConcurrentInstances>
    <testSuiteRunConfigurations>
       <TestSuiteRunConfiguration>

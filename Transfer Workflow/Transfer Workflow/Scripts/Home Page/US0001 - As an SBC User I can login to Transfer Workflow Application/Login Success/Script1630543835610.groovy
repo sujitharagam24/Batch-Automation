@@ -37,9 +37,11 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Home Page Objectory/US0001/h5_Hello, San Bernardino'))
+def title = 'Hello, San Bernardino!';
 
-WebUI.click(findTestObject('Home Page Objectory/US0001/img'))
+def actualTitle = WebUI.getText(findTestObject('Home Page Objectory/US0001/h5_Hello, San Bernardino'))
+
+assertTrue(title.equals(actualTitle));
 
 def currentUrl = WebUI.getUrl()
 
