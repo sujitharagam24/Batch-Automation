@@ -50,7 +50,7 @@ WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I
 
 WebUI.click(findTestObject('Object Repository/APN Panel/div_Associated APNs'))
 
-WebUI.click(findTestObject('Object Repository/APN Panel/UpdateIcon'))
+WebUI.click(findTestObject('null'))
 
 WebUI.setText(findTestObject('APN Panel/input_Lead APN'), '123456780000')
 
@@ -58,7 +58,7 @@ WebUI.click(findTestObject('APN Panel/span_Cancel_Update'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/td_1234567891234'))
 
-findTestObject('Object Repository/APN Panel/UpdateIcon')
+findTestObject('null')
 
 findTestObject('Object Repository/APN Panel/DeleteTrashIcon')
 

@@ -6,12 +6,12 @@
    <elementGuidId>8e428a2e-29d8-4b97-9a58-38ee1127496f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='app']/div[2]/div/div/h5</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>h5.mud-typography.mud-typography-h5.mud-primary-text.ml-2</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//h5)[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
