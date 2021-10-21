@@ -54,3 +54,5 @@ WebElement eMsg = driver.findElement(By.xpath("(//button[@type='button'])[2]"));
 Assert.assertTrue(driver.getPageSource().contains(hoverOverMSG1));
 Assert.assertTrue(driver.getPageSource().contains(hoverOverMSG2));
 Assert.assertTrue(driver.getPageSource().contains(hoverOverMSG3));
+
+WebUI.closeBrowser();
