@@ -107,4 +107,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US9130 - Parcel Number View - Insert Dashes/TC9306</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>74e90343-d83e-492b-a3f3-116bd4daa4b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/01 Residential Property Appraisal/02. Queues/US9244 - modPIMS Notes Subject Property-update-Add both grids to remaining tabs/TC9443</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

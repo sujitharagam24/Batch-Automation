@@ -16,37 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- * 
- * Search Criteria page when I click Clear Form button
- * @author bilguun.amarsaikhan
- *
+ * As an Appraisal, I want to see the Subject Property modPIMS Notes in "In Process" tab
+ * @author ellie.mirzaei
  */
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/01 Queue Tabs Elements/In Process Tab'))
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Detail button'))
 
-WebUI.maximizeWindow()
+String notesHeaderExpected = "Parcel Number Note Date Note User" 
 
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
+String notesHeaderActual= WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Detail Dialogo Box/Notes Header'))
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+print("Actual Headers : " + notesHeaderActual + System.lineSeparator() + "Expected Headers : " + notesHeaderExpected)
 
-def title = 'Search Criteria';
+assertEquals(notesHeaderExpected, notesHeaderActual)
 
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Title'));
+WebUI.closeBrowser()
 
-assertTrue(title.equals(existingTitle));
-
-WebUI.closeBrowser();

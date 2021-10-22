@@ -6,11 +6,11 @@
    <elementGuidId>d919d471-e78a-4d05-93da-9371ef216e60</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='mud-nav-link-text'])[3]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>(//div[@class='mud-nav-link-text'])[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

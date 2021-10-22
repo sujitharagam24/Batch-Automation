@@ -16,37 +16,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
-
-/**
- * 
- * Search Criteria page when I click Clear Form button
- * @author bilguun.amarsaikhan
- *
- */
-
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
-
-WebDriver driver = DriverFactory.getWebDriver();
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Search Page Objectory/US8325/Search tab')); 
 
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-def title = 'Search Criteria';
+def recDocNumber = '20070710790'
 
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Title'));
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'),
+	recDocNumber);
 
-assertTrue(title.equals(existingTitle));
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'),
+	'11359')
+
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search APN'),
+	'0308062450000');
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Home button'));
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search tab'));
 
 WebUI.closeBrowser();
+
+
+
