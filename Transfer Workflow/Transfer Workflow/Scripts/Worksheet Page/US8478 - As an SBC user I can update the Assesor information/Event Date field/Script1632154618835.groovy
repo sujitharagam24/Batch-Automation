@@ -50,6 +50,8 @@ WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History P
 
 def eventDate = WebUI.getText(findTestObject('Worksheet Page Objectory/US8478/Event Date'));
 
+System.out.println(eventDate);
+
 // Locate open button and click to open Worksheet Page
 
 WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[114]'))
@@ -65,6 +67,8 @@ WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308
 // def docNumber2 = driver.findElement(By.xpath("(//input[@type='text'])[13]")).getAttribute("value")
 
 def eventDate2 = WebUI.getAttribute(findTestObject('Worksheet Page Objectory/US8478/Event Date on Assessor'), 'value')
+
+System.out.println(eventDate2);
 
 /* Verify Event Dates are matching */
 assertTrue(eventDate.equals(eventDate2))
