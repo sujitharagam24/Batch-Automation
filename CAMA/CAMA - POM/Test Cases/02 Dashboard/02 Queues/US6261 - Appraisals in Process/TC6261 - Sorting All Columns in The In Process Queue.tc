@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC6261 - Sorting All Columns in The In Process Queue</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ce2bc81c-7431-4ffd-b44e-d032dd157658</testCaseGuid>
+</TestCaseEntity>
