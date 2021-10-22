@@ -40,7 +40,7 @@ WebUI.click(findTestObject('APN Panel/APN Range/input_Add as Range_RadioOption')
 WebUI.click(findTestObject('APN Panel/APN Range/input_FromAPN_Range'))
 
 WebUI.setText(findTestObject('APN Panel/APN Range/input_FromAPN_Range'),
-	'1110000000000')
+	'1110000000001')
 
 WebUI.click(findTestObject('APN Panel/APN Range/input_ToAPN_Range'))
 

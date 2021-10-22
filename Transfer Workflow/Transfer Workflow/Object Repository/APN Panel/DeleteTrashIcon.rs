@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@type='button'])[4]</value>
+         <value>(//button[@aria-label='Delete'])</value>
       </entry>
       <entry>
          <key>BASIC</key>
