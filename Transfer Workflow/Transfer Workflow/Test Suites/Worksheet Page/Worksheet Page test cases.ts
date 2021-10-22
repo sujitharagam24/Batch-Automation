@@ -18,16 +18,16 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>03056645-7d0a-4fd6-964e-0cf7e256b754</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - I am not able to update single APNs using invalid characters/Add APN Invalid Characters</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b233f09f-547d-44cc-8d0f-9fd792d25f19</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Add Single APN</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d527079f-b5f1-4f32-be15-1d161c919019</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I can access the Associated APNs and update single APNs/Cancel Update APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2eb757dc-6bf0-4394-b235-335b71b7284b</guid>
@@ -60,16 +60,16 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6865dac4-0d83-4b81-8336-5d79998a325c</guid>
+      <guid>dd3a9d67-bfae-40e6-a826-7541c91e1626</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I cannot add a duplicate APN/Add duplicate APN Validation</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c73986d9-f76d-4958-910c-7c8d89e10e75</guid>
+      <guid>d527079f-b5f1-4f32-be15-1d161c919019</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Associated Doc columns</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I can access the Associated APNs and update single APNs/Cancel Update APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0a88752a-8ab8-4245-8293-d5800834d890</guid>
@@ -90,16 +90,16 @@
       <testCaseId>Test Cases/Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Doc Number Associated Doc Panel</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>dd3a9d67-bfae-40e6-a826-7541c91e1626</guid>
+      <guid>6865dac4-0d83-4b81-8336-5d79998a325c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I cannot add a duplicate APN/Add duplicate APN Validation</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>03056645-7d0a-4fd6-964e-0cf7e256b754</guid>
+      <guid>c73986d9-f76d-4958-910c-7c8d89e10e75</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - I am not able to update single APNs using invalid characters/Add APN Invalid Characters</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Associated Doc columns</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>935f5fdf-64eb-44c5-aeee-359d5eaa5f53</guid>

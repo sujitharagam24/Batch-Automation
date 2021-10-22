@@ -26,11 +26,8 @@ import org.openqa.selenium.Keys as Keys
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'),
+WebUI.callTestCase(findTestCase('Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel'),
 	[:], FailureHandling.STOP_ON_FAILURE)
-
-//Find Associated APN panel
-WebUI.click(findTestObject('Object Repository/APN Panel/strong_Associated APN Panel'))
 
 WebUI.click(findTestObject('Object Repository/APN Panel/DeleteTrashIconRange'))
 
