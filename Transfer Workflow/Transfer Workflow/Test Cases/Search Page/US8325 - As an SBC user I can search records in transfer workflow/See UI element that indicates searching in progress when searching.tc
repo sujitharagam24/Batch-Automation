@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>See UI element that indicates searching in progress when searching</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fa251a55-678f-4591-bd5f-8d237149d881</testCaseGuid>
+</TestCaseEntity>
