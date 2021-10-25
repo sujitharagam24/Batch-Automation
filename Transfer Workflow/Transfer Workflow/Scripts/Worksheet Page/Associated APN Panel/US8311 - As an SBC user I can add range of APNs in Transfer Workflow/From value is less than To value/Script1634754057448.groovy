@@ -20,15 +20,34 @@ import org.openqa.selenium.Keys as Keys
 /**
  *
  * Access the Worksheet Page through My Work tab
- * Verify Associated APN panel exists
+ * Verify From value must be less than To value when adding an APN Range
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel'),
+	[:], FailureHandling.STOP_ON_FAILURE)
 
-//Find Associated APN panel
-WebUI.click(findTestObject('APN Panel/strong_Associated APN Panel'))
+WebUI.click(findTestObject('APN Panel/p_Add APN'))
 
-//div[@class='mud-select']
+WebUI.click(findTestObject('Object Repository/APN Panel/APN Range/input_Add as Range_RadioOption'))
+
+WebUI.click(findTestObject('APN Panel/APN Range/input_FromAPN_Range'))
+
+WebUI.setText(findTestObject('APN Panel/APN Range/input_FromAPN_Range'),
+	'9')
+
+WebUI.setText(findTestObject('APN Panel/APN Range/input_ToAPN_Range'),
+	'1')
+
+WebUI.click(findTestObject('Object Repository/APN Panel/button_Add APN'))
+
+msg = WebUI.getText(findTestObject('Object Repository/APN Panel/div_Associated APN added'))
+
+System.out.println(msg)
+
+if (!(msg.toString().contains('FROM value must be less than TO value.'))) {
+	KeywordUtil.markFailed('APN message does not contain expected text.')
+}
+
+WebUI.closeBrowser()
