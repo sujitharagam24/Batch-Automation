@@ -16,23 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.interactions.Actions
+import org.openqa.selenium.interactions.Action
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.testng.Assert;
 
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-def recDocNumber = '20170526107'
+WebDriver driver = DriverFactory.getWebDriver()
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'),
-	recDocNumber);
+def recDocNumber = '09212020'
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'),
-	'6397')
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), recDocNumber)
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search APN'),
-	'0467231060000');
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
-
-WebUI.waitForPageLoad(10);
+WebUI.verifyElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Spin'))
 
 WebUI.closeBrowser();
