@@ -197,4 +197,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Verify Worksheet Panels</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>f999bdcf-6f94-40c1-8e88-c7772709115e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/US8322 - As an SBC user I can access the Follow Upanel/Follow Up Panel My Work combobox values</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
