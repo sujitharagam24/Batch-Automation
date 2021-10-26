@@ -24,6 +24,14 @@ import org.openqa.selenium.WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.testng.Assert;
 
+/**
+ *
+ * Search results See UI Element that Indicates Searching in Progress when Searching
+ * @author menen.Desta
+ *
+ */
+
+
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
