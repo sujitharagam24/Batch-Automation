@@ -30,13 +30,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
+WebUI.callTestCase(findTestCase('Worksheet Page/US8322 - As an SBC user I can access the Follow up panel/Access the Follow Up panel'), 
     [:], FailureHandling.STOP_ON_FAILURE)
-
-//Find Follow Up panel
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))
-
-WebUI.scrollToPosition(9999999, 9999999)
 
 findTestObject('Object Repository/Follow Up Panel/MyWorkTagDropDown')
 
