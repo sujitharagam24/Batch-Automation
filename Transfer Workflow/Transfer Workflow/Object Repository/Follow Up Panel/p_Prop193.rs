@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Update Button</name>
+   <name>p_Prop193</name>
    <tag></tag>
-   <elementGuidId>45a48e6f-2ae7-466f-a61c-1949f6d13996</elementGuidId>
+   <elementGuidId>0d7bb449-2d07-4965-b9a2-234ded1375ab</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[text()='Prop 193'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='mud-button-label'])[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -16,33 +16,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.interactions.Actions
-import org.openqa.selenium.interactions.Action
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.testng.Assert;
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import static org.junit.Assert.*
+import org.eclipse.core.runtime.Assert as Assert
+import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  *
- * Search results See UI Element that Indicates Searching in Progress when Searching
- * @author menen.Desta
+ * Access the Follow Up panel on the Worksheet page
+ * @author michele.jazo
  *
  */
 
-
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver()
-
-def recDocNumber = '09212020'
-
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), recDocNumber)
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Spin'))
-
-WebUI.closeBrowser();
+//Find Follow Up panel
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Update Button</name>
+   <name>p_Mapping</name>
    <tag></tag>
-   <elementGuidId>45a48e6f-2ae7-466f-a61c-1949f6d13996</elementGuidId>
+   <elementGuidId>70bca7a5-d55e-4817-93a1-bf2093665b4d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[text()='Mapping'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='mud-button-label'])[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

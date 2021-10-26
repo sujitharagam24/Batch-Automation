@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Update Button</name>
+   <name>p_Response</name>
    <tag></tag>
-   <elementGuidId>45a48e6f-2ae7-466f-a61c-1949f6d13996</elementGuidId>
+   <elementGuidId>a91aaa10-27cb-41d0-984b-5406978d694a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[text()='Response'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='mud-button-label'])[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
