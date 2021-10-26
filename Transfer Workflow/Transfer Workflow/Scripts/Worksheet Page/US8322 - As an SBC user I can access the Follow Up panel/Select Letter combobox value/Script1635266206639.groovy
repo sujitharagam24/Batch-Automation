@@ -16,23 +16,32 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
-import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  *
  * Access the Follow Up panel on the Worksheet page
+ * Verify Select Letter/Form Type has expected value
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Worksheet Page/US8322 - As an SBC user I can access the Follow up panel/Access the Follow Up panel'),
+	[:], FailureHandling.STOP_ON_FAILURE)
 
-//Find Follow Up panel
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))
+findTestObject('Object Repository/Follow Up Panel/MyWorkTagDropDown')
 
-WebUI.scrollToPosition(9999999, 9999999)
+expected = "Legal Description"
+
+WebUI.click(findTestObject('Follow Up Panel/SelectLetter'))
+
+findTestObject('Follow Up Panel/SelectLetterNoSelection')
+
+result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/p_LegalDescription'))
+
+System.out.println(result)
+
+if (!(result.toString().contains('Legal Description'))) {
+	KeywordUtil.markFailed('Legal Description selection does not contain expected text.')
+}
+
+WebUI.closeBrowser()

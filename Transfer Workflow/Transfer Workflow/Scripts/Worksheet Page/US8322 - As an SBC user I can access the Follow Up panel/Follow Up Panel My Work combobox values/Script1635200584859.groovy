@@ -182,3 +182,5 @@ result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/p_Prop5
 System.out.println(result)
 
 assertEquals(expected, result)
+
+WebUI.closeBrowser()
