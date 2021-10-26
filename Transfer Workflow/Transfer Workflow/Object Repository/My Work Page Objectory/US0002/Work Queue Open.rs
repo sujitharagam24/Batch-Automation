@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Update Button</name>
+   <name>Work Queue Open</name>
    <tag></tag>
-   <elementGuidId>45a48e6f-2ae7-466f-a61c-1949f6d13996</elementGuidId>
+   <elementGuidId>9b621a74-f5b1-4404-89c0-825b11c6cedc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='mud-button-label'])[1]</value>
+         <value>(//*[@class='mud-icon-root mud-svg-icon mud-inherit-text mud-icon-size-small'])[83]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
