@@ -34,11 +34,15 @@ import java.util.Map;
 
 public class databaseUtility {
 
+	private static String dbUrl = GlobalVariable.dbUrl;
+	private static String dbUserName = GlobalVariable.dbUsername;
+	private static String dbPassword = GlobalVariable.dbPassword;
 	private static Connection conn;
 	private static Statement st;
 	private static ResultSet rs;
 	private static ResultSetMetaData rsMetadata;
 	private static List<Map<String, String>> listData;
+
 
 	/**
 	 * Open and return a connection to database
@@ -47,35 +51,55 @@ public class databaseUtility {
 	 */
 
 	//Establishing a connection to the DataBase
+
 	@Keyword
+
 	def connectDB(){
 		try {
-			conn = DriverManager.getConnection(GlobalVariable.dbUrl, GlobalVariable.dbUsername, GlobalVariable.dbPassword);
+			conn = DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
 		} catch (SQLException e) {
 			e.printStackTrace()
 		}
-		System.out.println("Connected to "+ GlobalVariable.dbUrl + " successfully");
+		System.out.println("Connection Successful");
 	}
 
 	/**
-	 * execute a SQL query on database 
-	 * @param queryString SQL query string 
-	 * @return a reference to returned data collection, an instance of java.sql.ResultSet
+	 * This method stores the data from the DB into a List of Maps
+	 * @param sqlQuery
+	 * @return 
 	 */
 
 	//Executing the constructed Query and Saving results in resultset
 
 	@Keyword
 
-	def executeQuery(String queryString) {
-		st = conn.createStatement()
-		rs = st.executeQuery(queryString)
-		return rs
+	public static List<Map<String, String>> storeDataFromDB(String sqlQuery) {
+
+		try {
+			st = conn.createStatement();
+			rs = st.executeQuery(sqlQuery);
+			rsMetadata = rs.getMetaData();
+			listData = new ArrayList<>();
+
+
+			while(rs.next()) {
+				Map<String, String> mapData = new LinkedHashMap<>();
+				for(int i = 1; i <= rsMetadata.getColumnCount(); i++) {
+					mapData.put(rs.getMetaData().getColumnName(i), rs.getObject(i).toString());
+				}
+				listData.add(mapData);
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace()
+		}
+		return listData;
 	}
 
 	//Closing the connection
 
 	@Keyword
+
 	def closeDatabaseConnection() {
 		try {
 			if (rs != null) {
@@ -87,43 +111,28 @@ public class databaseUtility {
 			if (conn != null) {
 				conn.close();
 			}
+
 		} catch (SQLException e) {
 			e.printStackTrace()
 		}
 	}
 
-	/**	
-	 * Execute non-query (usually INSERT/UPDATE/DELETE/COUNT/SUM...) on database	
+	/**
+	 * Execute non-query (usually INSERT/UPDATE/DELETE/COUNT/SUM...) on database
 	 * @param queryString a SQL statement
 	 * @return single value result of SQL statement
 	 */
 
 	@Keyword
+
 	def execute(String queryString) {
-		Statement stm = conn.createStatement()
-		boolean result = stm.execute(queryString)
-		return result
-	}
 
-	@Keyword
-	public static List<Map<String, String>> storeDataFromDB(String sqlQuery) {
+		Statement stm = conn.createStatement();
 
-		try {
-			Statement stm = conn.createStatement();
-			ResultSet rs = stm.executeQuery(sqlQuery);
-			ResultSetMetaData rsMetadata = rs.getMetaData();
-			listData = new ArrayList<>();
-			while(rs.next()) {
-				Map<String, String> mapData = new LinkedHashMap<>();
-				for(int i = 1; i <= rsMetadata.getColumnCount(); i++) {
-					mapData.put(rs.getMetaData().getColumnName(i), rs.getObject(i).toString());
-				}
-				listData.add(mapData);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace()
-		}
-		return listData;
+		boolean result = stm.execute(queryString);
+
+		return result;
+
 	}
 
 }
