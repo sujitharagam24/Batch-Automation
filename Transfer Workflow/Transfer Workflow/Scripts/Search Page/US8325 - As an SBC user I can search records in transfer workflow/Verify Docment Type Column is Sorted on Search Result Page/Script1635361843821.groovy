@@ -24,6 +24,13 @@ import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 import org.eclipse.core.runtime.Assert as Assert
 import static org.junit.Assert.*
 
+/**
+ *
+ * Search results Verify Document Type Column is Sorted on Search Result Page
+ * @author menen.Desta
+ *
+ */
+
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
