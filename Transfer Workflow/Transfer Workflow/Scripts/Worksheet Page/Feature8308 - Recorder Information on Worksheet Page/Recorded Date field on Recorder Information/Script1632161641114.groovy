@@ -40,7 +40,7 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+//WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
 
 WebUI.waitForPageLoad(10)
 
@@ -52,7 +52,7 @@ def eventDate = WebUI.getText(findTestObject('Worksheet Page Objectory/US8478/Ev
 
 // Locate open button and click to open Worksheet Page
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[114]'))
+WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[84]'))
 
 openButton.click();
 

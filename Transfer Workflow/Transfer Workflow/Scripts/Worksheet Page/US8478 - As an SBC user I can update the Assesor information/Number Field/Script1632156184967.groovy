@@ -38,9 +38,15 @@ WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search tab'))
 
-WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/US8478/Open button'))
+def numberValue = '15295';
+
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Tract Number field'), numberValue)
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Open button for Number Field'))
 
 WebUI.waitForPageLoad(10)
 
@@ -50,9 +56,9 @@ WebUI.click(findTestObject('Workflow History Page/Feature 8308/Test Case8366/Ass
 
 // Get the value of Event Date field 
 
-def numberValue = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/US8478/Number field'), 'value')
+def existingNumberValue = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/US8478/Number field'), 'value')
 
 /* Verify Event Dates are matching */
-assertTrue(numberValue.equals("2550"));
+assertTrue(existingNumberValue.equals(numberValue));
 
 WebUI.closeBrowser()
