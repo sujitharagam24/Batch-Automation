@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=TransferWorkflow_db'</initValue>
+      <initValue>'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=FNdbASRTFControl_Array'</initValue>
       <name>dbUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
