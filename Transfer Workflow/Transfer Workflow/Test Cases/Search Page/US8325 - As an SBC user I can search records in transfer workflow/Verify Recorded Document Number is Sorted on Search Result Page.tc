@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify Recorded Document Number is Sorted on Search Result Page</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ea46f309-3bc5-4135-8196-86588d8177eb</testCaseGuid>
+</TestCaseEntity>
