@@ -37,7 +37,7 @@ import java.util.List;
 
 /**
  *
- * Search results Verify Recorded Document Number Column is Sorted on Search Result Page
+ * Search results Verify Recorded Date Column is Sorted on Search Result Page
  * @author menen.Desta
  *
  */
