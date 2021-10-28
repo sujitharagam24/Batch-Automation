@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Save My Work tag and verify it saved</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>faf8f643-94ac-4158-a554-d584a1ad475e</testCaseGuid>
+</TestCaseEntity>

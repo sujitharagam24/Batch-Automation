@@ -16,6 +16,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
@@ -23,16 +26,29 @@ import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- *
- * Access the Follow Up panel on the Worksheet page
+ * 
+ * Access the My Work Page
+ * Verify six Auto Assign button exists exist on this page
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
-//Find Follow Up panel
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))
+WebDriver driver = DriverFactory.getWebDriver();
 
-WebUI.scrollToPosition(9999999, 9999999)
+WebUI.maximizeWindow()
+
+WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+
+findTestObject('Object Repository/My Work Page Objectory/MyWorkAssign_Allocator')
+
+WebUI.scrollToElement(findTestObject('Object Repository/My Work Page Objectory/MyWorkAssign_DocksTransfer'), 3)
+
+WebUI.scrollToElement(findTestObject('My Work Page Objectory/MyWorkAssign_Exclusions'), 3)
+
+WebUI.scrollToElement(findTestObject('My Work Page Objectory/MyWorkAssign_Sales'), 3)
+
+WebUI.scrollToElement(findTestObject('My Work Page Objectory/MyWorkAssign_TimeShares'), 3)
+
+WebUI.closeBrowser()

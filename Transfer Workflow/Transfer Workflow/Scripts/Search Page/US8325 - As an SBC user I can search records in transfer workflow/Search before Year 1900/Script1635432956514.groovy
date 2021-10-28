@@ -16,6 +16,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
@@ -24,15 +27,23 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  *
- * Access the Follow Up panel on the Worksheet page
+ * Access Search Page 
+ * Verify search before year 1900 is not supported
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-//Find Follow Up panel
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Record Date From Input'), "02011800")
 
-WebUI.scrollToPosition(9999999, 9999999)
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
+
+WebUI.waitForPageLoad(10)
+
+//Not able to verify HTML validation so we will check if focus remains on Search page
+
+WebUI.click(findTestObject('Search Page Objectory/US8325/Record Date From Input'))
+
+WebUI.closeBrowser()
