@@ -32,6 +32,7 @@ import static org.junit.Assert.*
  *
  */
 
+
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
