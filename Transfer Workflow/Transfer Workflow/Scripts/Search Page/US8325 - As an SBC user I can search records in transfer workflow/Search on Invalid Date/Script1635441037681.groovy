@@ -16,6 +16,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
@@ -24,25 +27,24 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  *
- * Access the Follow Up panel on the Worksheet page
- * Verify Select Notice drop-down value can be saved
+ * Access Search Page 
+ * Verify search on invalid input 01/MM/YYYY will not perform the search
  * @author michele.jazo
  *
  */
 
-WebUI.callTestCase(findTestCase('Worksheet Page/US8322 - As an SBC user I can access the Follow up panel/Access the Follow Up panel'), 
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-findTestObject('Object Repository/Follow Up Panel/MyWorkTagDropDown')
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Record Date From Input'), "01MMYYYY")
 
-expected = "Roll Year"
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
 
-WebUI.click(findTestObject('Follow Up Panel/div_Notice'))
+WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Object Repository/Follow Up Panel/p_RollYear'))
+//Not able to verify HTML validation so we will check if focus remains on Search page
 
-WebUI.click(findTestObject('Follow Up Panel/UpdateWS_Button'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Record Date From Input'))
 
-// Katalon is not recognizing the WS button.  
-//Need to update here when automation issue is resolved.
+WebUI.closeBrowser()
 
