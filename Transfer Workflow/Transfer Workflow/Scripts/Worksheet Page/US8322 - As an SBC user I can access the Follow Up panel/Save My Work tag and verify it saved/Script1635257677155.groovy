@@ -41,8 +41,8 @@ WebUI.click(findTestObject('Follow Up Panel/div_Notice'))
 
 WebUI.click(findTestObject('Object Repository/Follow Up Panel/p_RollYear'))
 
-//WebUI.click(findTestObject('Follow Up Panel/SelectPage'))
-
 WebUI.click(findTestObject('Follow Up Panel/UpdateWS_Button'))
 
-// Continue test here and check if value has been saved once this has been implemented
+// Katalon is not recognizing the WS button.  
+//Need to update here when automation issue is resolved.
+
