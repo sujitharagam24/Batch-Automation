@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>8366</name>
+   <name>Access the Workflow History Page through Search Page</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>a9ebcdb1-d238-4b67-9546-9b530e29056a</testCaseGuid>
+   <testCaseGuid>1245aa32-b70e-48a3-bab1-534272b48dca</testCaseGuid>
 </TestCaseEntity>
