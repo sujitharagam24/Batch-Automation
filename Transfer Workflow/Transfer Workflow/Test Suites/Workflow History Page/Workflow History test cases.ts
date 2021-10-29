@@ -18,12 +18,6 @@
       <testCaseId>Test Cases/Workflow History Page/Feature8308/8368 Access the Workflow History Panel through Search Page by History Button</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a5344cdc-e7bf-47df-a457-5fa645a1216f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/Feature8308/8369 Access the Workflow History Panel by searching Recorded Doc number</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>35190679-ef24-4cbd-8bae-5b1da0377ce8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
