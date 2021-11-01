@@ -485,6 +485,46 @@ class CommonMethods {
 		assertTrue(parcelFourth.contains('-'));
 	}
 
+	@Keyword
+	public static void columnSortingVerifier(String element, String columnHeader) {
+
+		WebDriver driver = DriverFactory.getWebDriver();
+
+		/*Locating the table rows' webelements and Initializing an array the size of the rows */
+		List<WebElement> QueueRows = driver.findElements(By.xpath(element));
+		String[] beforeSort_row = new String[QueueRows.size()];
+
+		//Getting the text into the array
+		for (int i = 0; i < QueueRows.size(); i++) {
+			(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
+		}
+
+		/*Printing the unsorted table */
+		CustomKeywords.'com.utility.CommonMethods.print'(beforeSort_row);
+
+		/*Clicking on the column header to sort the queue*/
+		WebElement parcelBtn = driver.findElement(By.xpath(columnHeader));
+		parcelBtn.click();
+
+		/*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
+		QueueRows = driver.findElements(By.xpath(element));
+		String[] afterSortByParcel= new String[QueueRows.size()];
+
+		/*Get the text into the array*/
+		for (int i = 0; i < QueueRows.size(); i++) {
+			(afterSortByParcel[i]) = QueueRows.get(i).getText().trim();
+		}
+
+		/*Printing the sorted table */
+		CustomKeywords.'com.utility.CommonMethods.print'(afterSortByParcel);
+
+		/*Asserting that the column data after clicking on column header
+		 * is not the same as before */
+		assertNotEquals(beforeSort_row, afterSortByParcel);
+	}
+
+
+
 	//	@Keyword
 	//	public static boolean isDateWithinRange(String dateToValidate, String dateFormat) {
 	//
