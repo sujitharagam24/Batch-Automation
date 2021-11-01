@@ -18,12 +18,6 @@
       <testCaseId>Test Cases/Workflow History Page/Feature8308/8368 Access the Workflow History Panel through Search Page by History Button</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a5344cdc-e7bf-47df-a457-5fa645a1216f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/Feature8308/8369 Access the Workflow History Panel by searching Recorded Doc number</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>35190679-ef24-4cbd-8bae-5b1da0377ce8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -70,12 +64,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Workflow History Page/US8319 - As an SBC user I can verify a document in transfer workflow/Verify a document</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b029f85c-96b3-456f-9436-42b7993e878f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/US8760 - I can access the Recorder Information Panel on the Workflow History Page/8366</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>32f9bf0d-3e4f-4b24-8d01-fdafd03b54e8</guid>

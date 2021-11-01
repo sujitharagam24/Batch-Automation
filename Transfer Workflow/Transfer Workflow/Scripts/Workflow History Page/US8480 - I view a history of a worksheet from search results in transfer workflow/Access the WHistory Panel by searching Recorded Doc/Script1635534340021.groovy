@@ -80,13 +80,11 @@ def existingStepName = WebUI.getText(findTestObject('Object Repository/Workflow 
 
 assertTrue(stepName.equals(existingStepName));
 
-// Currently skipping the following step. Existing column name is Reason Key
+def reason = 'Reason';
 
-//def reason = 'Reason';
+def existingReason = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Reason'));
 
-//def existingReason = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Reason'));
-
-//assertTrue(reason.equals(existingReason));
+assertTrue(reason.equals(existingReason));
 
 def completeBy = 'Complete By';
 

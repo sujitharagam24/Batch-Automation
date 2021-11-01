@@ -23,16 +23,18 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
+import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  * 
- * Access the Recorder Information Panel on the Workflow History Page through Search Page  by History Button
+ * Access the Workflow History Page 
  * @author bilguun.amarsaikhan
  *
  */
+
 WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver()
+WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
@@ -40,33 +42,14 @@ WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Page_
 
 WebUI.waitForPageLoad(10)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Recorded Date From'), 10);
+WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), 10);
 
-def dateValue = '09212020'
+def dateValue = "09212020";
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), 
-    dateValue)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), dateValue);
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Search Result Text'), 10);
-
-def recordedDocSearch = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorded number on search result'));
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'), 10);
 
 WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'))
-
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
-
-def sectionTitle = 'Recorder Information';
-
-def existingTitle = WebUI.getText(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
-
-assertTrue(existingTitle.contains(sectionTitle))
-
-// IDs will come and there is an unhandled error on the page. Dev will fix it soon. 
-
-def recordedDocWorkflow = WebUI.getAttribute(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorded doc on Workflow'), 'value');
-
-assertTrue(recordedDocSearch.equals(recordedDocWorkflow))
-
-WebUI.closeBrowser()

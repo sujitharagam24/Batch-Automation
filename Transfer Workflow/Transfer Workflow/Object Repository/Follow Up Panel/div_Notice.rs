@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//div[@class='mud-selectl'])[1]
+         <value> (//div[@class='mud-input mud-input-outlined mud-input-adorned-end mud-input-margin-dense mud-select-input'])[1]
 
 </value>
       </entry>
