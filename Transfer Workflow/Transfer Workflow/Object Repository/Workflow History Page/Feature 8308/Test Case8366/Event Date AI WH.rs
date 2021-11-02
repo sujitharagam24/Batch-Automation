@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Assessor Information title</name>
+   <name>Event Date AI WH</name>
    <tag></tag>
-   <elementGuidId>4f1cdd81-6f2e-4df9-83f1-b9168c2bc44c</elementGuidId>
+   <elementGuidId>5a2331d3-4c41-4a33-b7c9-058dc23686f1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='panelAssessorHistory']</value>
+         <value>(//input)[16]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
