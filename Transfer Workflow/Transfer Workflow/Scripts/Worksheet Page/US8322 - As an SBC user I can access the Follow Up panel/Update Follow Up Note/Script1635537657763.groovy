@@ -16,8 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
@@ -25,63 +23,68 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 /**
  *
  * Access the Follow Up panel on the Worksheet page
- * Verify Select Notice drop-down value can be saved
- * Verify tag matches value displayed on My Work page
+ * Update a note
  * @author michele.jazo
  *
  */
 
+for (int i = 0 ; i < 5; i++)
+{
+		
 WebUI.callTestCase(findTestCase('Worksheet Page/US8322 - As an SBC user I can access the Follow up panel/Access the Follow Up panel'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-findTestObject('Object Repository/Follow Up Panel/MyWorkTagDropDown')
+WebUI.click(findTestObject('Follow Up Panel/span_Add a Note'))
 
-expected = "Roll Year"
+WebUI.click(findTestObject('Follow Up Panel/svg_Update'))
 
-WebUI.click(findTestObject('Follow Up Panel/div_Notice'))
+WebUI.setText(findTestObject('Follow Up Panel/textarea_Comment'), 'Here is an edited comment.  Here is some more information that I can include in the update.')
 
-WebUI.click(findTestObject('Object Repository/Follow Up Panel/p_RollYear'))
+WebUI.click(findTestObject('Follow Up Panel/span_Update'))
 
-WebUI.click(findTestObject('Follow Up Panel/UpdateWS_Button'))
+WebUI.click(findTestObject('Follow Up Panel/td_This is an edit'))
 
-WebUI.refresh()
+expected = "edited"
 
-//Find Follow Up panel
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Worksheet Page Panel/div_Follow up'))
+result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/td_This is an edit'))
 
-WebUI.scrollToPosition(9999999, 9999999)
-
-result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/MyWorkTagDropDown'))
-
-System.out.println(result)
+if (result.contains('edited')) {
+       result = 'edited'
+}
 
 assertEquals(expected, result)
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
-
-WebUI.waitForPageLoad(10)
-
-result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/td_Roll Year'))
-
-System.out.println(result)
-
-assertEquals(expected, result)
+}
 
 WebUI.closeBrowser()
 
+for (int i = 0 ; i < 5; i++)
+	{
+		
 WebUI.callTestCase(findTestCase('Worksheet Page/US8322 - As an SBC user I can access the Follow up panel/Access the Follow Up panel'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 
-findTestObject('Object Repository/Follow Up Panel/MyWorkTagDropDown')
+WebUI.click(findTestObject('Follow Up Panel/b_101 Notes Entered'))
 
-WebUI.click(findTestObject('Follow Up Panel/div_Notice'))
+WebUI.click(findTestObject('Follow Up Panel/svg_Update'))
 
-WebUI.click(findTestObject('Object Repository/Follow Up Panel/div_SelectNotice_Empty'))
+WebUI.setText(findTestObject('Follow Up Panel/textarea_Comment'), 'Here is an edited comment.  Here is some more information that I can include in the update.')
 
-WebUI.click(findTestObject('Follow Up Panel/UpdateWS_Button'))
+WebUI.click(findTestObject('Follow Up Panel/span_Update'))
 
-WebUI.refresh()
+WebUI.click(findTestObject('Follow Up Panel/td_This is an edit'))
+
+expected = "edited"
+
+result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/td_This is an edit'))
+
+if (result.contains('edited')) {
+	   result = 'edited'
+}
+
+assertEquals(expected, result)
+
+}
 
 WebUI.closeBrowser()
-
 
