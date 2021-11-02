@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Logout Button</name>
+   <name>Saved Valuation type grid</name>
    <tag></tag>
-   <elementGuidId>f95ebab3-d3e0-43dd-9fc3-db5c4c4892a9</elementGuidId>
+   <elementGuidId>2cf9089d-55fc-4a91-a4bd-1f6d75827754</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[contains(text(), 'Logout')])[3]</value>
+         <value>//tbody[@class='mud-table-body']/tr</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
