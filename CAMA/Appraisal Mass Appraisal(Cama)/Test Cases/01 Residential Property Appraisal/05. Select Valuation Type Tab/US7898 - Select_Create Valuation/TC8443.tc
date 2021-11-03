@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>As an Appraiser, I want the ability to create more than one valuation for a subject property</description>
-   <name>TC8443</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>a729870d-9e6b-4c6d-8483-18d07a62dabb</testCaseGuid>
-</TestCaseEntity>

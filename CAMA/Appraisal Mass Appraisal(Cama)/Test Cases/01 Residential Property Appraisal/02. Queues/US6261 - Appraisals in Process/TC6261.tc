@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>As an Appraiser, I want the ability to sort all columns in the In Process Queue.</description>
-   <name>TC6261</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>d14f8999-3d9c-42ad-9fb1-ba70a7ebe2aa</testCaseGuid>
-</TestCaseEntity>
