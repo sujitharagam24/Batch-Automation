@@ -17,3 +17,38 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+/**As an Appraiser, I want the ability to create more than one valuation for a subject property
+* @author Elian Blanco
+* */
+
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
+
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/In Process Tab'));
+
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Parcel Number'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type Drop Down'));
+
+String selectedValuationType = WebUI.getText(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Market Land'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Market Land'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Save Button Valuation Tab'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Show Other Types switch button'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Valuation Type Drop Down'));
+
+String secondSelectedValuationType = WebUI.getText(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Interim Use'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Interim Use'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Save Button Valuation Tab'));
+
+CommonMethods.tableDataVerifier("//tbody[@class='mud-table-body']/tr", selectedValuationType );
+
+CommonMethods.tableDataVerifier("//tbody[@class='mud-table-body']/tr", secondSelectedValuationType );
+
+WebUI.closeBrowser();
