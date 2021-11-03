@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "F928E7D17F3169C3CD371E507E1EC17A",
+  "keywordFileContentHash": "112B57C8D2A6119A7350B9929006AC51",
   "keywordClasses": [
     {
       "name": "CommonMethods",
@@ -526,6 +526,38 @@
             }
           ],
           "javadoc": "/**\r\n\t * Verifies parcel number contains dashes and it is broken down into 5 parts (4-3-2-1-3)\r\n\t * @param parcelNumber\r\n\t */"
+        },
+        {
+          "name": "columnSortingVerifier",
+          "parameters": [
+            {
+              "name": "element",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "columnHeader",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
         }
       ]
     }

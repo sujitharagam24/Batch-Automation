@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Get Comparables Tab</name>
+   <name>Search Criteria Text</name>
    <tag></tag>
-   <elementGuidId>b1cd68e1-fb5b-490c-9313-fd90102e0b90</elementGuidId>
+   <elementGuidId>ecb41840-fe65-41c9-8c51-c0f9c31a93f6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[contains(text(), 'Get Comparables')]</value>
+         <value>//h6[contains(text(), 'Search')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -485,39 +485,104 @@ class CommonMethods {
 		assertTrue(parcelFourth.contains('-'));
 	}
 
-	//	@Keyword
-	//	public static boolean isDateWithinRange(String dateToValidate, String dateFormat) {
-	//
-	//		SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
-	//		sdf.setLenient(false);
-	//		try {
-	//
-	//			Date currentDate =  Calendar.getInstance().getTime();
-	//
-	//			Date date = sdf.parse(dateToValidate);
-	//
-	//			Calendar monthsBeforeCurrentDate = Calendar.getInstance().
-	//			monthsBeforeCurrentDate.add(Calendar.MONTH, -7);
-	//
-	//			/****************** Verbose *****************************/
-	//			System.out.println("\n\ncurrentdDate : "
-	//					+ currentDate);
-	//			System.out.println("currentDateBeforeXMonths : "
-	//					+ monthsBeforeCurrentDate.getTime());
-	//			System.out.println("dateToValidate : "
-	//					+ dateToValidate);
-	//			/*********************************************************/
-	//
-	//			if (date.before(monthsBeforeCurrentDate.getTime())){
-	//				System.out.println("More than 7 months ");
-	//				return true;
-	//			}else {
-	//				System.out.println("Less than 7 months");
-	//				return false;
-	//			}
-	//		} catch (ParseException e) {
-	//			e.printStackTrace();
-	//			return false;
-	//		}
-	//	}
+	/**
+	 * Verifies the sorting functionality of a table/Grid
+	 * @param element
+	 * @param columnHeader
+	 */
+	@Keyword
+	public static void columnSortingVerifier(String tableElement, String columnHeader) {
+
+		WebDriver driver = DriverFactory.getWebDriver();
+
+		List<WebElement> QueueRows = driver.findElements(By.xpath(tableElement));
+		String[] beforeSort_row = new String[QueueRows.size()];
+
+		for (int i = 0; i < QueueRows.size(); i++) {
+			(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
+		}
+		CommonMethods.print(beforeSort_row)
+
+		WebElement parcelBtn = driver.findElement(By.xpath(columnHeader));
+		parcelBtn.click();
+
+		QueueRows = driver.findElements(By.xpath(tableElement));
+		String[] afterSortByParcel= new String[QueueRows.size()];
+
+		for (int i = 0; i < QueueRows.size(); i++) {
+			(afterSortByParcel[i]) = QueueRows.get(i).getText().trim();
+		}
+
+		CommonMethods.print(afterSortByParcel);
+
+		assertNotEquals(beforeSort_row, afterSortByParcel);
+	}
+	
+	/**
+	 * Verifies input data is in the table/grid
+	 * @param element
+	 * @param dataToFind
+	 */
+	@Keyword
+	public static void tableDataVerifier(String tableElement, String dataToFind) {
+		
+		WebDriver driver = DriverFactory.getWebDriver();
+		List<WebElement> rows = driver.findElements(By.xpath(tableElement));
+		boolean flag = true;
+		
+		while(flag) {
+			for(WebElement row: rows) {
+				String rowText = row.getText();
+				if(rowText.contains(dataToFind)) {
+					flag = false;
+					System.out.println(rowText);
+					System.out.println(dataToFind);
+					assertTrue(rowText.contains(dataToFind));
+					break;
+				}
+			}
+			
+	}
+	
+}
+     
+     /**
+      * Paginates over a table until specified data is found
+      * @param tableElement
+      * @param nextButton
+      */
+     @Keyword
+     public static void tablePagination(String tableElement, String nextButton, String dataToFind) {
+		 
+		 WebDriver driver = DriverFactory.getWebDriver();
+		 
+		 List<WebElement> rows = driver.findElements(By.xpath(tableElement));
+		 
+		 WebElement next = driver.findElement(By.xpath(nextButton));
+		 
+		 boolean flag = true
+		 
+		 while (flag) {
+			 for (WebElement row : rows) {
+				 String rowText = row.getText();
+		 
+				 if (rowText.contains(dataToFind)) {
+					 flag = false;
+		 
+					 System.out.println(rowText);
+		 
+					 System.out.println(dataToFind);
+		 
+					 assertTrue(rowText.contains(dataToFind));
+		 
+					 break;
+				 }
+			 }
+			 
+			 next.click();
+		 
+			 rows = driver.findElements(By.xpath(tableElement));
+		 }
+	 }
+
 }

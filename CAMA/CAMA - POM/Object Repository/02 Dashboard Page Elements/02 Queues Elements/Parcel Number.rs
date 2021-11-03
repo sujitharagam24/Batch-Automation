@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//a[@class='mud-typography mud-link mud-primary-text mud-link-underline-always mud-typography-body1'])[3]</value>
+         <value>(//a[@class='mud-typography mud-link mud-primary-text mud-link-underline-always mud-typography-body1'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

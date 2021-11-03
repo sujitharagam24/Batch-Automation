@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Get Comparables Tab</name>
+   <name>Saved Valuation type grid</name>
    <tag></tag>
-   <elementGuidId>b1cd68e1-fb5b-490c-9313-fd90102e0b90</elementGuidId>
+   <elementGuidId>2cf9089d-55fc-4a91-a4bd-1f6d75827754</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[contains(text(), 'Get Comparables')]</value>
+         <value>//tbody[@class='mud-table-body']/tr</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

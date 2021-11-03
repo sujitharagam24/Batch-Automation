@@ -16,4 +16,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import CustomKeywords.CommonMethods.*
 
+/**As an Appraiser, I want the ability to select a valuation that has been performed and saved on a subject property
+ * @author Elian Blanco
+ * */
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
+
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/In Process Tab'));
+
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Parcel Number'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
+
+WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Actions Button'));
+
+String searchCriteriaText = WebUI.getText(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/03 Get Comparables Tab/Search Criteria Text'));
+
+WebUI.verifyTextPresent(searchCriteriaText, false);
+
+WebUI.closeBrowser();
