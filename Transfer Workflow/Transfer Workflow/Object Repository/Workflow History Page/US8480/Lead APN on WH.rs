@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Assessor Information title</name>
+   <name>Lead APN on WH</name>
    <tag></tag>
-   <elementGuidId>4f1cdd81-6f2e-4df9-83f1-b9168c2bc44c</elementGuidId>
+   <elementGuidId>8c34e8e8-f475-419f-9f9e-be966c23fce6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='panelAssessorHistory']</value>
+         <value>(//input)[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

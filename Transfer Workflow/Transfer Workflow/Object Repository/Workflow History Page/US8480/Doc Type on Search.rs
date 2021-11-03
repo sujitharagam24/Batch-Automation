@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Assessor Information title</name>
+   <name>Doc Type on Search</name>
    <tag></tag>
-   <elementGuidId>4f1cdd81-6f2e-4df9-83f1-b9168c2bc44c</elementGuidId>
+   <elementGuidId>5290645d-36b0-4258-9357-9893ecad2cdf</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='panelAssessorHistory']</value>
+         <value>(//*[text()='Deed'])[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

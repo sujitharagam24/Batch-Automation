@@ -27,8 +27,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
  * 
- * Access the Workflow History Page through My Work tab
- * Verify if No Action radio button is checked by default
+ * Access the Workflow History Page 
  * @author bilguun.amarsaikhan
  *
  */
@@ -37,22 +36,20 @@ WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-WebUI.delay(10)
-
 WebUI.maximizeWindow()
 
-//WebUI.click(findTestObject('Object Repository/Workflow History Page/button_Transfer Workflow'))
-
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
-
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/div_Search'))
 
 WebUI.waitForPageLoad(10)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
+WebUI.waitForElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), 10);
 
-WebElement MyWorkQueue = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[2]'))
+def dateValue = "09212020";
 
-MyWorkQueue.click();
-  
-WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/Open button'));
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), dateValue);
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'), 10);
+
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/History button'))

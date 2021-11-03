@@ -16,43 +16,37 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- * 
- * Access the Workflow History Page through My Work tab
- * Verify if No Action radio button is checked by default
- * @author bilguun.amarsaikhan
+ *
+ * Access the Follow Up panel on the Worksheet page
+ * Update a note and select option to cancel it
+ * @author michele.jazo
  *
  */
+	
+WebUI.callTestCase(findTestCase('Worksheet Page/US8322 - As an SBC user I can access the Follow up panel/Access the Follow Up panel'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Follow Up Panel/span_Add a Note'))
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.click(findTestObject('Follow Up Panel/svg_Delete'))
 
-WebUI.delay(10)
+WebUI.click(findTestObject('Follow Up Panel/span_Cancel_Delete'))
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Follow Up Panel/td_This is an edit'))
 
-//WebUI.click(findTestObject('Object Repository/Workflow History Page/button_Transfer Workflow'))
+expected = "This"
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+result = WebUI.getText(findTestObject('Object Repository/Follow Up Panel/td_This is an edit'))
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+if (result.contains('This')) {
+       result = 'This'
+}
 
-WebUI.waitForPageLoad(10)
+assertEquals(expected, result)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
-
-WebElement MyWorkQueue = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[2]'))
-
-MyWorkQueue.click();
-  
-WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/Open button'));
+WebUI.closeBrowser()

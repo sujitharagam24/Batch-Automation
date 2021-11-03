@@ -8,11 +8,12 @@
       <entry>
          <key>XPATH</key>
          <value>(//span[@class='mud-button-label'])[2]
+
+
 </value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -7,9 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value> (//div[@class='mud-selectl'])[1]
-
-</value>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Select Notice:'])[1]/following::div[6]</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -46,13 +44,6 @@
       <type>Main</type>
       <value>id(&quot;panelFollowUp&quot;)/div[@class=&quot;mud-collapse-container mud-collapse-entered&quot;]/div[@class=&quot;mud-collapse-wrapper&quot;]/div[@class=&quot;mud-collapse-wrapper-inner&quot;]/div[@class=&quot;mud-expand-panel-content&quot;]/div[@class=&quot;mud-container mud-container-maxwidth-xl pa-0&quot;]/div[@class=&quot;mud-paper mud-paper-outlined mud-card pa-0&quot;]/div[@class=&quot;mud-card-content&quot;]/div[@class=&quot;mud-grid mud-grid-spacing-xs-3 mud-grid-justify-xs-flex-start&quot;]/div[@class=&quot;mud-grid-item mud-grid-item-xs-5&quot;]/div[@class=&quot;mud-select&quot;]/div[@class=&quot;mud-input-control mud-input-control-margin-dense mud-select&quot;]/div[@class=&quot;mud-input-control-input-container&quot;]/div[@class=&quot;mud-input mud-input-outlined mud-input-adorned-end mud-input-margin-dense mud-shrink mud-select-input&quot;]/div[@class=&quot;mud-input-slot mud-input-root mud-input-root-outlined mud-input-root-adorned-end mud-input-root-margin-dense mud-select-input&quot;]</value>
    </webElementProperties>
-   <webElementXpaths>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//div[@id='panelFollowUp']/div[2]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/div</value>
-   </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>

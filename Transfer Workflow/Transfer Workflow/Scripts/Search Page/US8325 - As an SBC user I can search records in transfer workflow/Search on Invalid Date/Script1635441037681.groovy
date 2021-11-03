@@ -26,33 +26,25 @@ import org.eclipse.core.runtime.Assert as Assert
 import com.kms.katalon.core.testobject.TestObject as TestObject
 
 /**
- * 
- * Access the Workflow History Page through My Work tab
- * Verify if No Action radio button is checked by default
- * @author bilguun.amarsaikhan
+ *
+ * Access Search Page 
+ * Verify search on invalid input 01/MM/YYYY will not perform the search
+ * @author michele.jazo
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver();
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Record Date From Input'), "01MMYYYY")
 
-WebUI.delay(10)
-
-WebUI.maximizeWindow()
-
-//WebUI.click(findTestObject('Object Repository/Workflow History Page/button_Transfer Workflow'))
-
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
-
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
 
 WebUI.waitForPageLoad(10)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
+//Not able to verify HTML validation so we will check if focus remains on Search page
 
-WebElement MyWorkQueue = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[2]'))
+WebUI.click(findTestObject('Search Page Objectory/US8325/Record Date From Input'))
 
-MyWorkQueue.click();
-  
-WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/Open button'));
+WebUI.closeBrowser()
+
