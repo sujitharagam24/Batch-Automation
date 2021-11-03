@@ -16,44 +16,39 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import static org.junit.Assert.*
+import CustomKeywords.CommonMethods.*
 
-/**As an Appraiser, I want the ability to sort all columns in the In Process Queue.
+/** As an Appraiser, I want the ability to sort all columns in the New Queue - Queues - CAMA
  * @author Elian Blanco
  *  */
-
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
 
 WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/In Process Tab'));
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Parcel Column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Parcel')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Lag column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Lag')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by event date'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Event')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Event column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Event')])[2]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Req type column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Req')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Excl column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Excl')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Use column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Use')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Resp column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Resp')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by Post Key column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Post')])[1]");
 
-WebUI.callTestCase(findTestCase('00 Supporting Scripts/Queues Column sorting TCs/Sorting Queue by District column'),
-	[:], FailureHandling.STOP_ON_FAILURE);
+CommonMethods.columnSortingVerifier("(//table[@class='mud-table-root'])[1]/tbody/tr", "(//span[contains(text(), 'Dist')])[1]" );
 
 WebUI.closeBrowser();
-

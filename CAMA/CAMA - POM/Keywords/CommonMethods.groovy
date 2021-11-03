@@ -491,11 +491,11 @@ class CommonMethods {
 	 * @param columnHeader
 	 */
 	@Keyword
-	public static void columnSortingVerifier(String element, String columnHeader) {
+	public static void columnSortingVerifier(String tableElement, String columnHeader) {
 
 		WebDriver driver = DriverFactory.getWebDriver();
 
-		List<WebElement> QueueRows = driver.findElements(By.xpath(element));
+		List<WebElement> QueueRows = driver.findElements(By.xpath(tableElement));
 		String[] beforeSort_row = new String[QueueRows.size()];
 
 		for (int i = 0; i < QueueRows.size(); i++) {
@@ -506,7 +506,7 @@ class CommonMethods {
 		WebElement parcelBtn = driver.findElement(By.xpath(columnHeader));
 		parcelBtn.click();
 
-		QueueRows = driver.findElements(By.xpath(element));
+		QueueRows = driver.findElements(By.xpath(tableElement));
 		String[] afterSortByParcel= new String[QueueRows.size()];
 
 		for (int i = 0; i < QueueRows.size(); i++) {
