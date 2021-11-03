@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>The application shall allow appraisers to save an appraisal so that they can work on it at a later date.</description>
-   <name>TC8498</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>30d7b992-6682-44db-9374-503f49b29f79</testCaseGuid>
-</TestCaseEntity>

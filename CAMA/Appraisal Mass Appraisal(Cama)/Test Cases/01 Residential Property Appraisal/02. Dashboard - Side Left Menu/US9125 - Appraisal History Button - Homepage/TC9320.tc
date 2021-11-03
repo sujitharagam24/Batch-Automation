@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>User can access Appraisal History page by clicking Appraisal History button from Dashboard page</description>
-   <name>TC9320</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>b938313c-dcae-4dc3-82e0-1d919b59bb77</testCaseGuid>
-</TestCaseEntity>

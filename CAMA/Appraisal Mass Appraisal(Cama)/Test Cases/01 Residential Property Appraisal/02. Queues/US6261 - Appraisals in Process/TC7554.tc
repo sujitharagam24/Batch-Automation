@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>As an Appraiser, I want to see all of the appraisals I have started but not completed under My Work-In Process queue.</description>
-   <name>TC7554</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>e800478a-ac81-43e7-9222-5f427314caf1</testCaseGuid>
-</TestCaseEntity>
