@@ -22,6 +22,6 @@ WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], 
 
 WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Parcel Number'));
 
-def breadcrumSeparator= WebUI.verifyElementPresent(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/Breadcrumb separator'), 20);
+WebUI.verifyElementPresent(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/Breadcrumb separator'), 20);
 
 WebUI.closeBrowser();
