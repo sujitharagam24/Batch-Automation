@@ -37,18 +37,15 @@ WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queu
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-// list of table rows
 List<WebElement> tableRowData= driver.findElements(By.xpath("(//table[@class='mud-table-root'])[1]/tbody/tr"));
 String[] row = new String[tableRowData.size()];
 
-// iterating over rows in the table and getting the text
 for(int i=0; i < tableRowData.size(); i++) {
 	row[i] =  tableRowData.get(i).getText().trim();
 }
 
 CustomKeywords.'CommonMethods.print'(row);
 
-// Asserting table rows are not empty
 Assert.isNotNull(row);
 
 WebUI.closeBrowser();
