@@ -485,6 +485,11 @@ class CommonMethods {
 		assertTrue(parcelFourth.contains('-'));
 	}
 
+	/**
+	 * Verifies the sorting functionality of a table/Grid
+	 * @param element
+	 * @param columnHeader
+	 */
 	@Keyword
 	public static void columnSortingVerifier(String element, String columnHeader) {
 
@@ -513,12 +518,16 @@ class CommonMethods {
 		assertNotEquals(beforeSort_row, afterSortByParcel);
 	}
 	
-	
+	/**
+	 * Verifies input data is in the table/grid
+	 * @param element
+	 * @param dataToFind
+	 */
 	@Keyword
-	public static void tableDataVerifier(String element, String dataToFind) {
+	public static void tableDataVerifier(String tableElement, String dataToFind) {
 		
 		WebDriver driver = DriverFactory.getWebDriver();
-		List<WebElement> rows = driver.findElements(By.xpath(element));
+		List<WebElement> rows = driver.findElements(By.xpath(tableElement));
 		boolean flag = true;
 		
 		while(flag) {
@@ -536,5 +545,44 @@ class CommonMethods {
 	}
 	
 }
+     
+     /**
+      * Paginates over a table until specified data is found
+      * @param tableElement
+      * @param nextButton
+      */
+     @Keyword
+     public static void tablePagination(String tableElement, String nextButton, String dataToFind) {
+		 
+		 WebDriver driver = DriverFactory.getWebDriver();
+		 
+		 List<WebElement> rows = driver.findElements(By.xpath(tableElement));
+		 
+		 WebElement next = driver.findElement(By.xpath(nextButton));
+		 
+		 boolean flag = true
+		 
+		 while (flag) {
+			 for (WebElement row : rows) {
+				 String rowText = row.getText();
+		 
+				 if (rowText.contains(dataToFind)) {
+					 flag = false;
+		 
+					 System.out.println(rowText);
+		 
+					 System.out.println(dataToFind);
+		 
+					 assertTrue(rowText.contains(dataToFind));
+		 
+					 break;
+				 }
+			 }
+			 
+			 next.click();
+		 
+			 rows = driver.findElements(By.xpath(tableElement));
+		 }
+	 }
 
 }

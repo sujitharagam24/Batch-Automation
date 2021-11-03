@@ -1,5 +1,3 @@
-import org.junit.After
-
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -18,32 +16,22 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import static org.junit.Assert.*
-import org.eclipse.core.runtime.Assert as Assert
 
 /**
- * As an Appraiser, I should to be able to Save an appraisal so that I can work on it at a later date - Appraisal Details - CAMA
- * @author elian.blanco
- *
+ * As an Appraisal, I want to see the Subject Property modPIMS Notes in "New" tab
+ * @author ellie.mirzaei
  */
-
-
 WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/New Tab'));
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Detail button'));
 
-WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Parcel Number'));
+String notesHeaderExpected = "Parcel Number Note Date Note User";
 
-WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'));
+String notesHeaderActual= WebUI.getText(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/01 Parcel Detail Dialog Box Elements/Notes Grid Column Headers'));
 
-//Being able to click on the select valuation tab verifies the tab is clickable
-WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
+print("Actual Headers : " + notesHeaderActual + System.lineSeparator() + "Expected Headers : " + notesHeaderExpected);
+
+assertEquals(notesHeaderExpected, notesHeaderActual);
 
 WebUI.closeBrowser();
-
-
