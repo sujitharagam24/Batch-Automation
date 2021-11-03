@@ -25,11 +25,11 @@ import static org.junit.Assert.*
 
 WebUI.callTestCase(findTestCase('00 Supporting Scripts/Dashboard Script'), [:], FailureHandling.STOP_ON_FAILURE);
 
-WebUI.click(findTestObject('Object Repository/01 Residential Property Appraisal/02 Dashboard Page Elements/02 Queue Grid Column Elements/Parcel Number'));
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Parcel Number'));
 
 String expectedName = "Event Date";
 
-String actualName = WebUI.getText(findTestObject('Object Repository/01 Residential Property Appraisal/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Event Date Field Header'));
+String actualName = WebUI.getText(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Event Date Field Header'));
 
 assertEquals(expectedName, actualName);
 

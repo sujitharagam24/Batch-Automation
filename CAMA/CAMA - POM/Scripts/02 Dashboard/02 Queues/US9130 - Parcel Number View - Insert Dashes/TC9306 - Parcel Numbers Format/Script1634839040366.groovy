@@ -36,7 +36,7 @@ String parcelNumber = WebUI.getText(findTestObject('Object Repository/02 Dashboa
 
 System.out.println(parcelNumber);
 
-CommonMethods.print(parcelNumber)
+CommonMethods.parcelNumberFormatVerifier(parcelNumber);
 
 WebUI.closeBrowser();
 

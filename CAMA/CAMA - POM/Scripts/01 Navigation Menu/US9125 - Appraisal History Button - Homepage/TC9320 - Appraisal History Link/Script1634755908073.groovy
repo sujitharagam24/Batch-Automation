@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import static org.junit.Assert.*
 
 /**
  * User can access Appraisal History page by clicking Appraisal History button from Dashboard page
@@ -28,6 +29,10 @@ WebUI.click(findTestObject('Object Repository/01 Navigation Page Elements/Dashbo
 WebUI.verifyElementNotPresent(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/Appraisal History Grid') , 20);
 
 WebUI.click(findTestObject('Object Repository/01 Navigation Page Elements/Appraisal History Button'));
+
+String appraisalHistoryTitle = WebUI.getText(findTestObject('Object Repository/04 Appraisal History Page Elements/Appraisal History Title'));
+
+assertEquals(appraisalHistoryTitle, "Appraisal History");
 
 WebUI.closeBrowser();
 

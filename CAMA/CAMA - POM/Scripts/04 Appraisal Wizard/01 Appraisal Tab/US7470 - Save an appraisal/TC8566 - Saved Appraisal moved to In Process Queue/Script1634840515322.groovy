@@ -41,39 +41,17 @@ WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queu
 
 WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/01 Appraisal Tab/Save and Next Button'));
 
+WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/01 ToolBar Elements/Hamburger button'));
+
 WebUI.click(findTestObject('Object Repository/01 Navigation Page Elements/Dashboard Button'));
 
 WebUI.click(findTestObject('Object Repository/02 Dashboard Page Elements/02 Queues Elements/In Process Tab'));
 
-WebDriver driver = DriverFactory.getWebDriver();
+String tableElement = "//tbody[@class='mud-table-body']/tr";
 
-List<WebElement> rows = driver.findElements(By.xpath('//tbody[@class=\'mud-table-body\']/tr'));
+String nextButton = "(//span[@class='mud-icon-button-label'])[5]";
 
-WebElement next = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[5]'));
-
-boolean flag = true
-
-while (flag) {
-	for (WebElement row : rows) {
-		String rowText = row.getText();
-
-		if (rowText.contains(selectedNewParcelNumber)) {
-			flag = false;
-
-			System.out.println(rowText);
-
-			System.out.println(selectedNewParcelNumber);
-
-			assertTrue(rowText.contains(selectedNewParcelNumber));
-
-			break;
-		}
-	}
-	
-	next.click();
-
-	rows = driver.findElements(By.xpath('//tbody[@class=\'mud-table-body\']/tr'));
-}
+CommonMethods.tablePagination(tableElement, nextButton, selectedNewParcelNumber);
 
 WebUI.closeBrowser();
 

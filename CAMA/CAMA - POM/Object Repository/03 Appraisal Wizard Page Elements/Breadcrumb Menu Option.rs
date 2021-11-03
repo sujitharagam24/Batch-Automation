@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Get Comparables Tab</name>
+   <name>Breadcrumb Menu Option</name>
    <tag></tag>
-   <elementGuidId>b1cd68e1-fb5b-490c-9313-fd90102e0b90</elementGuidId>
+   <elementGuidId>e13d0b1c-b8a7-4bd2-87d6-2298c63b5aa7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[contains(text(), 'Get Comparables')]</value>
+         <value>//ul[@class='mud-breadcrumbs mud-typography-body1']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

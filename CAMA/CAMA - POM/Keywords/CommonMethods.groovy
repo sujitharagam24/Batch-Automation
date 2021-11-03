@@ -485,79 +485,104 @@ class CommonMethods {
 		assertTrue(parcelFourth.contains('-'));
 	}
 
+	/**
+	 * Verifies the sorting functionality of a table/Grid
+	 * @param element
+	 * @param columnHeader
+	 */
 	@Keyword
-	public static void columnSortingVerifier(String element, String columnHeader) {
+	public static void columnSortingVerifier(String tableElement, String columnHeader) {
 
 		WebDriver driver = DriverFactory.getWebDriver();
 
-		/*Locating the table rows' webelements and Initializing an array the size of the rows */
-		List<WebElement> QueueRows = driver.findElements(By.xpath(element));
+		List<WebElement> QueueRows = driver.findElements(By.xpath(tableElement));
 		String[] beforeSort_row = new String[QueueRows.size()];
 
-		//Getting the text into the array
 		for (int i = 0; i < QueueRows.size(); i++) {
 			(beforeSort_row[i]) = QueueRows.get(i).getText().trim();
 		}
+		CommonMethods.print(beforeSort_row)
 
-		/*Printing the unsorted table */
-		CustomKeywords.'com.utility.CommonMethods.print'(beforeSort_row);
-
-		/*Clicking on the column header to sort the queue*/
 		WebElement parcelBtn = driver.findElement(By.xpath(columnHeader));
 		parcelBtn.click();
 
-		/*locating the table rows' webelement after sorting and initializing another array the size of the rows*/
-		QueueRows = driver.findElements(By.xpath(element));
+		QueueRows = driver.findElements(By.xpath(tableElement));
 		String[] afterSortByParcel= new String[QueueRows.size()];
 
-		/*Get the text into the array*/
 		for (int i = 0; i < QueueRows.size(); i++) {
 			(afterSortByParcel[i]) = QueueRows.get(i).getText().trim();
 		}
 
-		/*Printing the sorted table */
-		CustomKeywords.'com.utility.CommonMethods.print'(afterSortByParcel);
+		CommonMethods.print(afterSortByParcel);
 
-		/*Asserting that the column data after clicking on column header
-		 * is not the same as before */
 		assertNotEquals(beforeSort_row, afterSortByParcel);
 	}
+	
+	/**
+	 * Verifies input data is in the table/grid
+	 * @param element
+	 * @param dataToFind
+	 */
+	@Keyword
+	public static void tableDataVerifier(String tableElement, String dataToFind) {
+		
+		WebDriver driver = DriverFactory.getWebDriver();
+		List<WebElement> rows = driver.findElements(By.xpath(tableElement));
+		boolean flag = true;
+		
+		while(flag) {
+			for(WebElement row: rows) {
+				String rowText = row.getText();
+				if(rowText.contains(dataToFind)) {
+					flag = false;
+					System.out.println(rowText);
+					System.out.println(dataToFind);
+					assertTrue(rowText.contains(dataToFind));
+					break;
+				}
+			}
+			
+	}
+	
+}
+     
+     /**
+      * Paginates over a table until specified data is found
+      * @param tableElement
+      * @param nextButton
+      */
+     @Keyword
+     public static void tablePagination(String tableElement, String nextButton, String dataToFind) {
+		 
+		 WebDriver driver = DriverFactory.getWebDriver();
+		 
+		 List<WebElement> rows = driver.findElements(By.xpath(tableElement));
+		 
+		 WebElement next = driver.findElement(By.xpath(nextButton));
+		 
+		 boolean flag = true
+		 
+		 while (flag) {
+			 for (WebElement row : rows) {
+				 String rowText = row.getText();
+		 
+				 if (rowText.contains(dataToFind)) {
+					 flag = false;
+		 
+					 System.out.println(rowText);
+		 
+					 System.out.println(dataToFind);
+		 
+					 assertTrue(rowText.contains(dataToFind));
+		 
+					 break;
+				 }
+			 }
+			 
+			 next.click();
+		 
+			 rows = driver.findElements(By.xpath(tableElement));
+		 }
+	 }
 
-
-
-	//	@Keyword
-	//	public static boolean isDateWithinRange(String dateToValidate, String dateFormat) {
-	//
-	//		SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
-	//		sdf.setLenient(false);
-	//		try {
-	//
-	//			Date currentDate =  Calendar.getInstance().getTime();
-	//
-	//			Date date = sdf.parse(dateToValidate);
-	//
-	//			Calendar monthsBeforeCurrentDate = Calendar.getInstance().
-	//			monthsBeforeCurrentDate.add(Calendar.MONTH, -7);
-	//
-	//			/****************** Verbose *****************************/
-	//			System.out.println("\n\ncurrentdDate : "
-	//					+ currentDate);
-	//			System.out.println("currentDateBeforeXMonths : "
-	//					+ monthsBeforeCurrentDate.getTime());
-	//			System.out.println("dateToValidate : "
-	//					+ dateToValidate);
-	//			/*********************************************************/
-	//
-	//			if (date.before(monthsBeforeCurrentDate.getTime())){
-	//				System.out.println("More than 7 months ");
-	//				return true;
-	//			}else {
-	//				System.out.println("Less than 7 months");
-	//				return false;
-	//			}
-	//		} catch (ParseException e) {
-	//			e.printStackTrace();
-	//			return false;
-	//		}
-	//	}
 }

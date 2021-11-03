@@ -44,7 +44,6 @@ WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/
 //Being able to click on the select valuation tab verifies the tab is clickable
 WebUI.click(findTestObject('Object Repository/03 Appraisal Wizard Page Elements/02 Select Valuation Tab/Select Valuation Tab'));
 
-
 WebUI.closeBrowser();
 
 

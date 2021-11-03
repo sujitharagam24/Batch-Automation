@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Get Comparables Tab</name>
+   <name>Hamburger button</name>
    <tag></tag>
-   <elementGuidId>b1cd68e1-fb5b-490c-9313-fd90102e0b90</elementGuidId>
+   <elementGuidId>a6a2a516-cbfb-480e-af59-9f88e21e754b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[contains(text(), 'Get Comparables')]</value>
+         <value>(//span[@class='mud-icon-button-label'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

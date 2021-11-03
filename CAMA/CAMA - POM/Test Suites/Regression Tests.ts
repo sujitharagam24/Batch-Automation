@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Failed Test Scripts</name>
+   <name>Regression Tests</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,23 +10,23 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>ce0ee412-3d52-43c9-a30c-ca93bf5c2a38</testSuiteGuid>
+   <testSuiteGuid>fb9d7158-4408-4301-9d5d-0a9aa8ea31bc</testSuiteGuid>
    <testCaseLink>
-      <guid>5770a291-9a46-4a95-9abc-c792d0c462c8</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/04 Appraisal Wizard/01 Appraisal Tab/US9128 - Rename valuation date to event date/TC9305 - Event Date</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>cf01174f-3360-4a53-a115-d0eeff503f5a</guid>
+      <guid>7bca0ab4-d407-4f9c-895f-2f20f565668b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/04 Appraisal Wizard/02 Select Valuation Tab/US7898 - Select Create Valuation/TC8442 - Select valuation</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1651269f-bcaf-4b40-b70e-d3988e2b36e1</guid>
+      <guid>dcee2e2a-4f30-45a4-a261-f074d3efab27</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/04 Appraisal Wizard/US9430 - Breadcrumb Style menu/TC10261 - Menu Options in Breadcrumbs Style</testCaseId>
+      <testCaseId>Test Cases/04 Appraisal Wizard/02 Select Valuation Tab/US7898 - Select Create Valuation/TC8443 - Create more than one valuation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1b9987f2-4829-44d1-9c9b-eb0ab09aea69</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/04 Appraisal Wizard/02 Select Valuation Tab/US7898 - Select Create Valuation/TC8444 - Select performed valuation tab</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
