@@ -62,7 +62,7 @@ WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308
 
 // Click on Read Only option
 
-WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
+//WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
 
 // Get the value of Event Date field 
 
@@ -71,12 +71,14 @@ WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature83
 def recordedDate = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Recorded Date'), 'value')
 
 /* Verify Event Dates are matching */
-
+println('recordedDate: '+recordedDate)
+println('eventDate: '+eventDate)
 if(!recordedDate.isEmpty()) {
 	assertTrue(eventDate.equals(recordedDate))
 }else {
 	WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Assessor Information title'))
 	recordedDate = WebUI.getAttribute(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Recorded Date on Assessor'), 'value')
+	println('recordedDate: '+recordedDate)
 	assertTrue(eventDate.equals(recordedDate))
 }
 

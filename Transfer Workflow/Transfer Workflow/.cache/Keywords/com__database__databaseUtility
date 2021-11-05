@@ -6,7 +6,8 @@
       "keywordMethods": [
         {
           "name": "connectDB",
-          "parameters": []
+          "parameters": [],
+          "javadoc": ""
         },
         {
           "name": "storeDataFromDB",
@@ -24,11 +25,13 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         },
         {
           "name": "closeDatabaseConnection",
-          "parameters": []
+          "parameters": [],
+          "javadoc": ""
         },
         {
           "name": "execute",
@@ -46,10 +49,11 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": "/**\r\n\t * Execute non-query (usually INSERT/UPDATE/DELETE/COUNT/SUM...) on database\r\n\t * @param queryString a SQL statement\r\n\t * @return single value result of SQL statement\r\n\t */"
         }
       ]
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

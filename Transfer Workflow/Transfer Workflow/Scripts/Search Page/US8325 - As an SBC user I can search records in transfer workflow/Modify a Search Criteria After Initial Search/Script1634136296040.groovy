@@ -54,12 +54,3 @@ def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Obje
 assertTrue(actualMsg.contains(expectedMsg));
 
 WebUI.closeBrowser();
-
-
-
-
-
-
-
-
-

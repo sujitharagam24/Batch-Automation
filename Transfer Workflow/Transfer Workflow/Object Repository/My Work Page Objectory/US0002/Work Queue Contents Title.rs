@@ -6,12 +6,11 @@
    <elementGuidId>d0b362ef-5e70-421b-97e4-4daf324c2771</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//p[@class='mud-typography mud-typography-body1 mud-primary-text ml-1'])</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//h6)[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

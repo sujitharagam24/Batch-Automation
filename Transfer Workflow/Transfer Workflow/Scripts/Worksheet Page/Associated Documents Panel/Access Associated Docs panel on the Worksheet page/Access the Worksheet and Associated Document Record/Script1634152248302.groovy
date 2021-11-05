@@ -32,7 +32,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE);
 
 WebDriver driver = DriverFactory.getWebDriver();
 
@@ -48,7 +48,7 @@ WebElement openButton1 = driver.findElement(By.xpath('(//span[@class=\'mud-icon-
 
 openButton1.click();
 
-WebUI.delay(30)
+WebUI.delay(10)
 
 WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
 

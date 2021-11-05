@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='panelAssessorHistory']</value>
+         <value>//*[@id='panelAssessorInformation']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

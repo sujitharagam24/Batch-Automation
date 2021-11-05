@@ -40,7 +40,7 @@ WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Rec
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
-def expectedMsg = '1-4';
+def expectedMsg = '1-8';
 
 def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Range Search Result Message'));
 

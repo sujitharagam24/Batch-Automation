@@ -6,12 +6,11 @@
    <elementGuidId>e4a2644a-f964-420c-b4ac-20a259b75411</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//p[@class='mud-typography mud-typography-body1 mud-primary-text'])</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[text()='Work Queues']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -54,8 +54,8 @@ for (WebElement we : dateList) {
 	//System.out.println(we.getText());
 }
 
-Collections.sort(obtainedList, new Comparator<String>() {
-	DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+Collections.sort(obtainedList, new Comparator<M>() {
+	DateFormat format = new SimpleDateFormat();
 	@Override
 	public int compare(String o1, String o2) {
 	try {

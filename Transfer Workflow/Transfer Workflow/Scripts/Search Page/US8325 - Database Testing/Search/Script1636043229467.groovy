@@ -40,42 +40,46 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
+import java.util.ArrayList;
 /**
  * @author Bilguun Amarsaikhan
  */
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
-String query = '\nSELECT COUNT(*)\nFROM [dbo].[tASRIndex]\nWHERE [RecordedDocNumber]=\'20190254823\'\n'
+//'\nSELECT COUNT(*)\nFROM [dbo].[tASRIndex]\nWHERE [RecordedDocNumber]=\'20190254823\'\n'
 
+//String query = '\nDECLARE	@return_value int\nEXEC	@return_value = [dbo].[sto_searchtASRIndex]\n@recordeddocnumber = N\'20190254823\',\n@recordeddocnumberhi = N\'20190254833\',\n@assessordocnumber = NULL,\n@assessordocnumberhi = NULL,\n@recordeddate = NULL,\n@recordeddatehi = NULL,\n@eventdate = NULL,\n@eventdatehi = NULL,\n@grantee_owner = NULL,\n@grantorname = NULL,\n@formid = NULL,\n@tractnumber = NULL,\n@parcelmapnumber = NULL,\n@tractparcelind = NULL,\n@apn = NULL,\n@rowlimit = 100,\n@sortcolumn = 1,\n@sortdirection = 1,\n@activecompleteboth = 1,\n@pagenumber = 1\nSELECT	\'Return Value\' = @return_value\nGO'
+String query = '''
+DECLARE	@ROWCOUNT int
+
+EXEC	@ROWCOUNT = [dbo].[sto_searchtASRIndex]
+		@recordeddocnumber = N'20190254823',
+		@recordeddocnumberhi = N'20190254833',
+		@assessordocnumber = NULL,
+		@assessordocnumberhi = NULL,
+		@recordeddate = NULL,
+		@recordeddatehi = NULL,
+		@eventdate = NULL,
+		@eventdatehi = NULL,
+		@grantee_owner = NULL,
+		@grantorname = NULL,
+		@formid = NULL,
+		@tractnumber = NULL,
+		@parcelmapnumber = NULL,
+		@tractparcelind = NULL,
+		@apn = NULL,
+		@rowlimit = 100,
+		@sortcolumn = 1,
+		@sortdirection = 1,
+		@activecompleteboth = 1,
+		@pagenumber = 1
+
+SELECT	@@ROWCOUNT
+GO
+
+
+'''
 def resultSet = CustomKeywords.'com.database.databaseUtility.storeDataFromDB'(query)
 
 System.out.println(resultSet + ' ')
 
-WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
-    [:], FailureHandling.STOP_ON_FAILURE)
-
-def recordedDocNumber = '20190254823';
-
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), recordedDocNumber)
-
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
-
-def resultMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 1 msg'))
-
-def result = resultMsg.substring(resultMsg.lastIndexOf(' '))
-
-System.out.println(result)
-
-List<Map<String, String>> listData = new ArrayList<>();
-
-Map<String, String> mapData = new LinkedHashMap<>();
-
-mapData.put('', result); 
-
-listData.add(mapData)
-
-WebUI.closeBrowser();
-
-assertEquals(resultSet, listData);
-
-CustomKeywords.'com.database.databaseUtility.closeDatabaseConnection'()

@@ -54,13 +54,13 @@ System.out.println(eventDate);
 
 // Locate open button and click to open Worksheet Page
 
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[114]'))
+WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[84]'))
 
 openButton.click();
 
 // Click on Assessor Information Title to open the section
 
-WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Recorder Information title'))
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308/Test Case8366/Assessor Information title'))
 
 // Get the value of Event Date field 
 

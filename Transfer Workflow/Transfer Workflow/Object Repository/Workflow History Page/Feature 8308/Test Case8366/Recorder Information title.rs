@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[div=' Recorder Information '])[1]</value>
+         <value>(//*[@id='panelRecorderInformation'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

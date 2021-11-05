@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='mud-tab mud-ripple'])</value>
+         <value>(//div[@class='mud-tab mud-tab-active mud-ripple'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
