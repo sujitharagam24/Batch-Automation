@@ -55,15 +55,20 @@ for (WebElement we : dateList) {
 }
 
 Collections.sort(obtainedList, new Comparator<String>() {
-	DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
-	@Override
-	public int compare(String o1, String o2) {
-	try {
-	  return format.parse(o1).compareTo(format.parse(o2));
-		} catch (ParseException e) {
-		  throw new IllegalArgumentException(e);
-		}
+	public String getTimeStamp(String pattern) {
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		return sdf.format(date);
 	}
+	//	DateFormat format = new SimpleDateFormat();
+//	@Override
+//	public int compare(String o1, String o2) {
+//	try {
+//	  return format.parse(o1).compareTo(format.parse(o2));
+//		} catch (ParseException e) {
+//		  throw new IllegalArgumentException(e);
+//		}
+//	}
 	});
 
 /* Click on Name Column to sort the items */

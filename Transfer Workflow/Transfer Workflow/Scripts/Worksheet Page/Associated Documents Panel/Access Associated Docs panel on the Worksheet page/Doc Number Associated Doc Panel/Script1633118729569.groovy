@@ -37,7 +37,7 @@ docnumber = WebUI.getText(findTestObject('Object Repository/Associated Documents
 
 System.out.println(docnumber)
 
-compare = "20170197765"
+compare = "20200481944"
 
 WebUI.verifyMatch(docnumber, compare, false)
 

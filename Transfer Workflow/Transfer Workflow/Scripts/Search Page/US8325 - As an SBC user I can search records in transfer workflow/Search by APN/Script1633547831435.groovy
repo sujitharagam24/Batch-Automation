@@ -27,8 +27,10 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
+def apnNumber = '0333032190000';
+
 WebUI.setText(findTestObject('Search Page Objectory/US8325/Search APN'), 
-    '0333032190000')
+   apnNumber)
 
 WebUI.click(findTestObject('Search Page Objectory/US8325/Search Button'))
 
@@ -50,9 +52,11 @@ compare = "20200268028"
 
 WebUI.verifyMatch(RecordedDoc2, compare, false)
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
+def existingApnNumber = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/td_0333-032-19-0000'))
+existingApnNumber = existingApnNumber.replaceAll('-', '');
+
+WebUI.verifyMatch(apnNumber, existingApnNumber, false)
 
 WebUI.closeBrowser()
 
