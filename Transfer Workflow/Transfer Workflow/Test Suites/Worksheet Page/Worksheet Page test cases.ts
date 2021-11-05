@@ -12,6 +12,18 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>d6ceaaea-c11d-4695-a57f-eeda487eeef5</testSuiteGuid>
    <testCaseLink>
+      <guid>6865dac4-0d83-4b81-8336-5d79998a325c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>03056645-7d0a-4fd6-964e-0cf7e256b754</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - I am not able to update single APNs using invalid characters/Add APN Invalid Characters</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>1e04d9f9-cc7e-4989-b704-b24e1cc3d05e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -54,16 +66,22 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 5 APN Range</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>dd3a9d67-bfae-40e6-a826-7541c91e1626</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I cannot add a duplicate APN/Add duplicate APN Validation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>948ff3d0-a167-4152-bb05-aaae6e3d7b4e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - As an SBC user I can add single APN in Transfer Workflow/Access the Worksheet and APN Panel</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6865dac4-0d83-4b81-8336-5d79998a325c</guid>
+      <guid>d8030d0e-e8e1-43c5-9c28-2783f0e17cad</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - I cannot update APN more than the maximum characters allowed/Add APN maximum characters</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Verify Worksheet Panels</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c73986d9-f76d-4958-910c-7c8d89e10e75</guid>
@@ -88,18 +106,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/Associated Documents Panel/Access Associated Docs panel on the Worksheet page/Doc Number Associated Doc Panel</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>dd3a9d67-bfae-40e6-a826-7541c91e1626</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8313 - As an SBC user I cannot add a duplicate APN/Add duplicate APN Validation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>03056645-7d0a-4fd6-964e-0cf7e256b754</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8310 - I am not able to update single APNs using invalid characters/Add APN Invalid Characters</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>935f5fdf-64eb-44c5-aeee-359d5eaa5f53</guid>
@@ -170,7 +176,7 @@
    <testCaseLink>
       <guid>c5fb15d2-a93a-4180-b1fa-d226e2afec92</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Worksheet Page/US8478 - As an SBC user I can update the Assesor information/Event Date field</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -188,13 +194,7 @@
    <testCaseLink>
       <guid>e37dd95d-8755-4fa0-a4a5-de0b4c82c18c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Worksheet Page/US8478 - As an SBC user I can update the Assesor information/Recorded Document field</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d8030d0e-e8e1-43c5-9c28-2783f0e17cad</guid>
-      <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Verify Worksheet Panels</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/US8478 - As an SBC user I can update the Assesor information/Recorded Document field</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
