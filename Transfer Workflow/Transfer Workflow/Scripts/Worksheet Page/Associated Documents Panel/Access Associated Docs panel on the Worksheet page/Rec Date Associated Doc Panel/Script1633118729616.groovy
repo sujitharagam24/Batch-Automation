@@ -42,3 +42,4 @@ compare = "11/30/2020"
 WebUI.verifyMatch(recdate, compare, false)
 
 WebUI.closeBrowser()
+

@@ -42,3 +42,4 @@ compare = "20200481944"
 WebUI.verifyMatch(docnumber, compare, false)
 
 WebUI.closeBrowser()
+

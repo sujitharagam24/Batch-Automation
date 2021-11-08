@@ -42,3 +42,4 @@ compare = "0001"
 WebUI.verifyMatch(doctype, compare, false)
 
 WebUI.closeBrowser()
+

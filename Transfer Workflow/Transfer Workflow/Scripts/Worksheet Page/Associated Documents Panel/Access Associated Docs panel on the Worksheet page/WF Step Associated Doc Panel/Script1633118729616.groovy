@@ -42,3 +42,4 @@ compare = "Active"
 WebUI.verifyMatch(wfstep, compare, false)
 
 WebUI.closeBrowser()
+
