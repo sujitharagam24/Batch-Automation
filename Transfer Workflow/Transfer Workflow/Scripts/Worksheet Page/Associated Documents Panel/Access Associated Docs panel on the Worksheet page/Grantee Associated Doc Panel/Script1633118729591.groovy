@@ -37,7 +37,7 @@ grantee = WebUI.getText(findTestObject('Object Repository/Associated Documents/A
 
 System.out.println(grantee)
 
-compare = ""
+compare = "LOYD KELLEY D,LOYD KEVAN K"
 
 WebUI.verifyMatch(grantee, compare, false)
 

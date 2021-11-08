@@ -32,30 +32,19 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE);
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver();
+def recDocNumber = '20200481944'
 
-WebUI.maximizeWindow()
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), 
+    recDocNumber)
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+def to = '20200481944'
 
-WebUI.waitForPageLoad(10)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'), to)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
 
-WebElement openButton1 = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[10]'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Open button for Number Field'))
 
-openButton1.click();
-
-WebUI.delay(10)
-
-WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
-
-WebUI.findWebElements(findTestObject('Object Repository/My Work Page Objectory/US8761/Document Number Column Items'), 5)
-
-WebUI.delay(5)
-
-WebElement openButton2 = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[87]'))
-
-openButton2.click();
