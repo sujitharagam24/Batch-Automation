@@ -72,12 +72,6 @@
       <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search By Tract Number</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>bfa65210-936f-4a70-841b-b3e984d107ef</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Search Page/US8325 - As an SBC user I can search records in transfer workflow/Search Results Navigation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>94036024-d341-40bb-b7c1-f870e7129a46</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

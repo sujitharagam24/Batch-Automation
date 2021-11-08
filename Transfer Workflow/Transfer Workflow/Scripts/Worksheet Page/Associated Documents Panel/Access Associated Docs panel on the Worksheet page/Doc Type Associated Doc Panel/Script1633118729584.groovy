@@ -37,8 +37,9 @@ doctype = WebUI.getText(findTestObject('Object Repository/Associated Documents/A
 
 System.out.println(doctype)
 
-compare = "NP0250"
+compare = "0001"
 
 WebUI.verifyMatch(doctype, compare, false)
 
 WebUI.closeBrowser()
+

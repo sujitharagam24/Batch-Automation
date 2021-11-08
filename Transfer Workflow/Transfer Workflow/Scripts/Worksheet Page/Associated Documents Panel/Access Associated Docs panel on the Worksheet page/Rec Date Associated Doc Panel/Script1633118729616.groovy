@@ -37,8 +37,9 @@ recdate = WebUI.getText(findTestObject('Object Repository/Associated Documents/A
 
 System.out.println(recdate)
 
-compare = "5/15/2017"
+compare = "11/30/2020"
 
 WebUI.verifyMatch(recdate, compare, false)
 
 WebUI.closeBrowser()
+

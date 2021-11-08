@@ -37,8 +37,9 @@ leadapn = WebUI.getText(findTestObject('Object Repository/Associated Documents/A
 
 System.out.println(leadapn)
 
-compare = "0170-342-15-0000"
+compare = "0472-441-15-0000"
 
 WebUI.verifyMatch(leadapn, compare, false)
 
 WebUI.closeBrowser()
+

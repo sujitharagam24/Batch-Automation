@@ -37,8 +37,9 @@ wfstep = WebUI.getText(findTestObject('Object Repository/Associated Documents/As
 
 System.out.println(wfstep)
 
-compare = "Sales CPT with Sale"
+compare = "Active"
 
 WebUI.verifyMatch(wfstep, compare, false)
 
 WebUI.closeBrowser()
+

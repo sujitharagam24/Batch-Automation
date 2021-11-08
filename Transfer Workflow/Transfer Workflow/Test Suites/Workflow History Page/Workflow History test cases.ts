@@ -12,12 +12,6 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>01f0d87a-1e33-4692-bdb4-2c34d5e0091c</testSuiteGuid>
    <testCaseLink>
-      <guid>2980986e-c35d-45aa-94d7-259a359b81fb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Workflow History Page/Feature8308/8368 Access the Workflow History Panel through Search Page by History Button</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>35190679-ef24-4cbd-8bae-5b1da0377ce8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
