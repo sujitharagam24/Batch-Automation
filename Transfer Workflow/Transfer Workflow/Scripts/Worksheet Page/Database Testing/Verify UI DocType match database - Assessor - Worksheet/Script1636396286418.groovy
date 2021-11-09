@@ -32,7 +32,13 @@ import java.util.ArrayList as ArrayList
 
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
-String query = '\nSELECT TOP (1000) [ShortDescription]\nFROM [dbo].[rptDocumentType]\n\n  Order By [ShortDescription] ASC\n'
+String query = 
+'''
+Select FormShortDesc
+from FormIDsWithCategoryForAppIDs
+where appid = 'ASRTRNFWEB'
+order by FormShortDesc asc
+'''
 
 resultSet = CustomKeywords.'com.database.databaseUtility.storeListDataFromDB'(query)
 
@@ -47,18 +53,20 @@ WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325- Data
 
 ArrayList<String> dropdownItems = new ArrayList<String>();
 
-List<String> elementList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325- Database/Dropdown items'), 5)
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325- Database/Dropdown items'), 5)
 
 for (WebElement we : elementList) {
     dropdownItems.add(we.getText())
 }
 
 dropdownItems.removeAll('');
+
+dropdownItems.set(166, 'Legal ');
 println(dropdownItems.size())
 
-System.out.println(resultSet)
+println(resultSet)
 println(dropdownItems)
 
 WebUI.closeBrowser();
-//This step will be uncommented once Doc Type is complete
-//assertTrue(dropdownItems.containsAll(resultSet));
+
+assertTrue(dropdownItems.equals(resultSet));
