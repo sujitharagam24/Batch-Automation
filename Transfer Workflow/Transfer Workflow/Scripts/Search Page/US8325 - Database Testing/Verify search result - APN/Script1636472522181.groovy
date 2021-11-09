@@ -93,7 +93,7 @@ WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Searc
 
 def txt = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325- Database/ResultMsg'));
 
-def actualMsg = txt.substring(txt.lastIndexOf(' '));
+def actualMsg = txt.substring(txt.lastIndexOf(' ')+1);
 
 assertTrue(actualMsg.equals(recordNum));
 
