@@ -44,13 +44,12 @@ import java.util.ArrayList;
 
 /**
  *
- * Database and UI - Range Search by ASR Document Number
+ * Database and UI - Search by Grantee name
  * @author bilguun.amarsaikhan
  *
  */
 
-def asrFromValue = '20190254803';
-def asrToValue = '20190254813';
+def granteeName = 'CASEY PATRICK E';
 
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
@@ -60,13 +59,13 @@ DECLARE	@recordeddocnumber int
 EXEC	@recordeddocnumber = [dbo].[sto_searchtASRIndex]
 		@recordeddocnumber = NULL,
 		@recordeddocnumberhi = NULL,
-		@assessordocnumber = 20190254803,
-		@assessordocnumberhi = 20190254813,
+		@assessordocnumber = NULL,
+		@assessordocnumberhi = NULL,
 		@recordeddate = NULL,
 		@recordeddatehi = NULL,
 		@eventdate = NULL,
 		@eventdatehi = NULL,
-		@grantee_owner = NULL,
+		@grantee_owner = 'CASEY PATRICK E',
 		@grantorname = NULL,
 		@formid = NULL,
 		@tractnumber = NULL,
@@ -90,9 +89,7 @@ String recordNum = String.valueOf(CustomKeywords.'com.database.databaseUtility.s
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Asr Doc number From field'), asrFromValue)
-
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Asr Doc number To field'), asrToValue)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Grantee field'), granteeName)
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
