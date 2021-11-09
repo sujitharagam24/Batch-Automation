@@ -52,23 +52,21 @@ import org.openqa.selenium.Keys as Keys
  *
  */
 
-WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
+    [:], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver();
+def recDocNumber = '19940160674'
 
-WebUI.maximizeWindow()
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Page_Transfer Workflow/Record Doc number From field'), 
+    recDocNumber)
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/My Work Tab'))
+def to = '19940160674'
 
-WebUI.click(findTestObject('Workflow History Page/US8314/Access the Workflow History Page/svg_List'))
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Doc Number To Field'), to)
 
-WebUI.waitForPageLoad(10)
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Workflow History Page/US8314/Access the Workflow History Page/text'), 10);
-
-WebElement openButton = driver.findElement(By.xpath('(//span[@class=\'mud-icon-button-label\'])[80]'))
-
-openButton.click();
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Open button for Number Field'))
 
 WebUI.click(findTestObject('Object Repository/Associated Documents/div_Associated Documents'))
 
@@ -81,3 +79,4 @@ compare = "No Associated Documents"
 WebUI.verifyMatch(nodata, compare, false)
 
 WebUI.closeBrowser()
+
