@@ -44,12 +44,12 @@ import java.util.ArrayList;
 
 /**
  *
- * Database and UI - Search by Grantee name
+ * Database and UI - Search by Event Date
  * @author bilguun.amarsaikhan
  *
  */
 
-def granteeName = 'CASEY PATRICK E';
+def fromDate = '01202020';
 
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
@@ -63,9 +63,9 @@ EXEC	@recordeddocnumber = [dbo].[sto_searchtASRIndex]
 		@assessordocnumberhi = NULL,
 		@recordeddate = NULL,
 		@recordeddatehi = NULL,
-		@eventdate = NULL,
+		@eventdate = '2020-01-20',
 		@eventdatehi = NULL,
-		@grantee_owner = 'CASEY PATRICK E',
+		@grantee_owner = NULL,
 		@grantorname = NULL,
 		@formid = NULL,
 		@tractnumber = NULL,
@@ -89,7 +89,7 @@ String recordNum = String.valueOf(CustomKeywords.'com.database.databaseUtility.s
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Grantee field'), granteeName)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325- Database/Event Date From'), fromDate)
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 

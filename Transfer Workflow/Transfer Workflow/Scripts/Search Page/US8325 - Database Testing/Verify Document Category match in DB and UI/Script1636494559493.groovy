@@ -44,61 +44,40 @@ import java.util.ArrayList;
 
 /**
  *
- * Database and UI - Search by Grantee name
+ * Database and UI - Document Category on Search Page
  * @author bilguun.amarsaikhan
  *
  */
 
-def granteeName = 'CASEY PATRICK E';
-
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
 String query = '''
-DECLARE	@recordeddocnumber int
-
-EXEC	@recordeddocnumber = [dbo].[sto_searchtASRIndex]
-		@recordeddocnumber = NULL,
-		@recordeddocnumberhi = NULL,
-		@assessordocnumber = NULL,
-		@assessordocnumberhi = NULL,
-		@recordeddate = NULL,
-		@recordeddatehi = NULL,
-		@eventdate = NULL,
-		@eventdatehi = NULL,
-		@grantee_owner = 'CASEY PATRICK E',
-		@grantorname = NULL,
-		@formid = NULL,
-		@tractnumber = NULL,
-		@parcelmapnumber = NULL,
-		@tractparcelind = NULL,
-		@apn = NULL,
-		@rowlimit = 100,
-		@sortcolumn = 1,
-		@sortdirection = 1,
-		@activecompleteboth = 1,
-		@pagenumber = 1
-		
-SELECT @@ROWCOUNT
-
-Go
+SELECT distinct [FormCatDesc]
+FROM [FormIDsWithCategoryForAppIDs]
+WHERE AppID = 'ASRTRNFWEB'
+ORDER BY [FormCatDesc] ASC
 '''
-def resultSet = CustomKeywords.'com.database.databaseUtility.storeDataFromDB'(query)
+def resultSet = CustomKeywords.'com.database.databaseUtility.storeListDataFromDB'(query)
 
 String recordNum = String.valueOf(CustomKeywords.'com.database.databaseUtility.size'())
 
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Grantee field'), granteeName)
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Doc Category Drop-Down'))
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
+ArrayList<String> dropdownItems = new ArrayList<String>();
 
-def txt = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325- Database/ResultMsg'));
+List<WebElement> elementList = WebUI.findWebElements(findTestObject('Object Repository/Search Page Objectory/US8325- Database/Dropdown items'), 5)
 
-def actualMsg = txt.substring(txt.lastIndexOf(' ')+1);
+for (WebElement we : elementList) {
+	dropdownItems.add(we.getText())
+}
 
-println(actualMsg)
+dropdownItems.removeAll('');
 
-assertTrue(actualMsg.equals(recordNum));
+dropdownItems.remove('All')
 
-WebUI.closeBrowser()
+WebUI.closeBrowser();
+
+assertTrue(dropdownItems.equals(resultSet));
