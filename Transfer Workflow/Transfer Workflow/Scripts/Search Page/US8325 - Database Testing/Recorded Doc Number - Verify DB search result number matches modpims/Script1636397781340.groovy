@@ -41,6 +41,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 /**
+ * Verify search result number when search with Recorded Doc Number on UI and Database.
  * @author Bilguun Amarsaikhan
  */
 CustomKeywords.'com.database.databaseUtility.connectDB'()
@@ -62,7 +63,7 @@ WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Searc
 
 def resultMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Result 1 msg'))
 
-def result = resultMsg.substring(resultMsg.lastIndexOf(' '))
+def result = resultMsg.substring(resultMsg.lastIndexOf(' ')).trim();
 
 System.out.println(result)
 
@@ -70,7 +71,7 @@ List<Map<String, String>> listData = new ArrayList<>();
 
 Map<String, String> mapData = new LinkedHashMap<>();
 
-mapData.put('', result); 
+mapData.put('',result); 
 
 listData.add(mapData)
 

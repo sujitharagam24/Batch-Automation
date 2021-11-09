@@ -1,13 +1,12 @@
 {
-  "keywordFileContentHash": "67F983FDF8FBD659AF89B65A3CD08C3C",
+  "keywordFileContentHash": "4F5B631F2BB2A7D6F282D109F35BEF07",
   "keywordClasses": [
     {
       "name": "com.database.databaseUtility",
       "keywordMethods": [
         {
           "name": "connectDB",
-          "parameters": [],
-          "javadoc": ""
+          "parameters": []
         },
         {
           "name": "storeDataFromDB",
@@ -25,13 +24,15 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": ""
+          ]
+        },
+        {
+          "name": "size",
+          "parameters": []
         },
         {
           "name": "closeDatabaseConnection",
-          "parameters": [],
-          "javadoc": ""
+          "parameters": []
         },
         {
           "name": "execute",
@@ -49,11 +50,10 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\r\n\t * Execute non-query (usually INSERT/UPDATE/DELETE/COUNT/SUM...) on database\r\n\t * @param queryString a SQL statement\r\n\t * @return single value result of SQL statement\r\n\t */"
+          ]
         }
       ]
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

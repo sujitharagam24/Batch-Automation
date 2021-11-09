@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Result 1 msg</name>
+   <name>Dropdown items</name>
    <tag></tag>
-   <elementGuidId>29612bde-0aa4-4d2f-b687-0b8039202bd5</elementGuidId>
+   <elementGuidId>1f507801-a48a-47a9-ade1-47998144df8b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()='1-2 of 2']</value>
+         <value>(//p[@class='mud-typography mud-typography-body1 mud-inherit-text'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

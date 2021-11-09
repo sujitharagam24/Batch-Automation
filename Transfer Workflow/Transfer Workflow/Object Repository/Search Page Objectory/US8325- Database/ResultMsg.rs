@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Result 1 msg</name>
+   <name>ResultMsg</name>
    <tag></tag>
-   <elementGuidId>29612bde-0aa4-4d2f-b687-0b8039202bd5</elementGuidId>
+   <elementGuidId>f163456b-9536-41a6-8d09-3445d7ebef37</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()='1-2 of 2']</value>
+         <value>(//p[@class='mud-typography mud-typography-body2 mud-inherit-text mud-table-pagination-caption'])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

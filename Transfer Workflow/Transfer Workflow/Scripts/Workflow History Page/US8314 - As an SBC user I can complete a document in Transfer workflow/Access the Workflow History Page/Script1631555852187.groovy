@@ -37,9 +37,9 @@ WebUI.openBrowser(GlobalVariable.baseURL, FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver();
 
-WebUI.delay(10)
-
 WebUI.maximizeWindow()
+
+WebUI.delay(10)
 
 //WebUI.click(findTestObject('Object Repository/Workflow History Page/button_Transfer Workflow'))
 
