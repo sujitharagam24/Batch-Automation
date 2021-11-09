@@ -62,7 +62,7 @@ WebUI.click(findTestObject('Object Repository/Workflow History Page/Feature 8308
 
 //Click on Read Only option
 
-WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
+//WebUI.click(findTestObject('Object Repository/Worksheet Page Objectory/Feature8308 - Recorded Information on Worksheet Page/Read Only'))
 
 // Get the value of Recorded Number field 
 
