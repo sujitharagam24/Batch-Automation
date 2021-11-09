@@ -41,20 +41,22 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import java.util.ArrayList;
+
 /**
+ * Verify APN Search Record number match between UI and DB
  * @author Bilguun Amarsaikhan
  */
+
+def apnValue = '0333032190000';
+
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
-//'\nSELECT COUNT(*)\nFROM [dbo].[tASRIndex]\nWHERE [RecordedDocNumber]=\'20190254823\'\n'
-
-//String query = '\nDECLARE	@return_value int\nEXEC	@return_value = [dbo].[sto_searchtASRIndex]\n@recordeddocnumber = N\'20190254823\',\n@recordeddocnumberhi = N\'20190254833\',\n@assessordocnumber = NULL,\n@assessordocnumberhi = NULL,\n@recordeddate = NULL,\n@recordeddatehi = NULL,\n@eventdate = NULL,\n@eventdatehi = NULL,\n@grantee_owner = NULL,\n@grantorname = NULL,\n@formid = NULL,\n@tractnumber = NULL,\n@parcelmapnumber = NULL,\n@tractparcelind = NULL,\n@apn = NULL,\n@rowlimit = 100,\n@sortcolumn = 1,\n@sortdirection = 1,\n@activecompleteboth = 1,\n@pagenumber = 1\nSELECT	\'Return Value\' = @return_value\nGO'
 String query = '''
-DECLARE	@ROWCOUNT int
+DECLARE	@recordeddocnumber int
 
-EXEC	@ROWCOUNT = [dbo].[sto_searchtASRIndex]
-		@recordeddocnumber = N'20190254823',
-		@recordeddocnumberhi = N'20190254833',
+EXEC	@recordeddocnumber = [dbo].[sto_searchtASRIndex]
+		@recordeddocnumber = NULL,
+		@recordeddocnumberhi = NULL,
 		@assessordocnumber = NULL,
 		@assessordocnumberhi = NULL,
 		@recordeddate = NULL,
@@ -67,19 +69,32 @@ EXEC	@ROWCOUNT = [dbo].[sto_searchtASRIndex]
 		@tractnumber = NULL,
 		@parcelmapnumber = NULL,
 		@tractparcelind = NULL,
-		@apn = NULL,
+		@apn = '0333032190000',
 		@rowlimit = 100,
 		@sortcolumn = 1,
 		@sortdirection = 1,
 		@activecompleteboth = 1,
 		@pagenumber = 1
+		
+SELECT @@ROWCOUNT
 
-SELECT	@@ROWCOUNT
-GO
-
-
+Go
 '''
 def resultSet = CustomKeywords.'com.database.databaseUtility.storeDataFromDB'(query)
 
-System.out.println(resultSet + ' ')
+String recordNum = String.valueOf(CustomKeywords.'com.database.databaseUtility.size'())
 
+WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
+	[:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.setText(findTestObject('Search Page Objectory/US8325/Search APN'), apnValue)
+
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
+
+def txt = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325- Database/ResultMsg'));
+
+def actualMsg = txt.substring(txt.lastIndexOf(' '));
+
+assertTrue(actualMsg.equals(recordNum));
+
+WebUI.closeBrowser()

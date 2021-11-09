@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Recorded Doc Number - Verify DB search result number matches modpims</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>254d5245-7232-4281-b9eb-5236685e2a53</testCaseGuid>
+</TestCaseEntity>

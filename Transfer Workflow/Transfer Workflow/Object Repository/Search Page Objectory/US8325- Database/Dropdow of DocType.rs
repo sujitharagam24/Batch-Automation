@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search Result 1 msg</name>
+   <name>Dropdow of DocType</name>
    <tag></tag>
-   <elementGuidId>29612bde-0aa4-4d2f-b687-0b8039202bd5</elementGuidId>
+   <elementGuidId>44f1435d-cb7c-4315-96ac-912e53bdb639</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()='1-2 of 2']</value>
+         <value>(//div[@class='mud-input mud-input-outlined mud-input-adorned-end mud-input-margin-dense mud-shrink mud-select-input'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

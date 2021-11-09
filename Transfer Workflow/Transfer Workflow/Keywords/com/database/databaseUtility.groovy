@@ -42,6 +42,7 @@ public class databaseUtility {
 	private static ResultSet rs;
 	private static ResultSetMetaData rsMetadata;
 	private static List<Map<String, String>> listData;
+	private static int recordNum;
 
 
 	/**
@@ -68,33 +69,60 @@ public class databaseUtility {
 	 * @param sqlQuery
 	 * @return 
 	 */
-
-	//Executing the constructed Query and Saving results in resultset
-
+	
+	//Executing the constructed Query and Saving results in resultSet
+	
 	@Keyword
-
-	public static List<Map<String, String>> storeDataFromDB(String sqlQuery) {
-
+	public static ArrayList<Map<String, String>> storeDataFromDB(String sqlQuery) {
+		
 		try {
 			st = conn.createStatement();
 			rs = st.executeQuery(sqlQuery);
 			rsMetadata = rs.getMetaData();
 			listData = new ArrayList<>();
-
-
 			while(rs.next()) {
 				Map<String, String> mapData = new LinkedHashMap<>();
 				for(int i = 1; i <= rsMetadata.getColumnCount(); i++) {
 					mapData.put(rs.getMetaData().getColumnName(i), rs.getObject(i).toString());
 				}
 				listData.add(mapData);
-			}
+							}
 		} catch (SQLException e) {
-
 			e.printStackTrace()
 		}
+		println(listData.size())
+		recordNum = listData.size();
 		return listData;
+		
 	}
+	
+	@Keyword
+	public static int size() {
+		return recordNum;
+	}
+	
+	
+	
+	
+	public static List<String> storeListDataFromDB(String sqlQuery) {
+		
+				try {
+					st = conn.createStatement();
+					rs = st.executeQuery(sqlQuery);
+					rsMetadata = rs.getMetaData();
+					listData = new ArrayList<>();
+		
+					while(rs.next()) {
+						for(int i = 1; i <= rsMetadata.getColumnCount(); i++) {
+							listData.add(rs.getObject(i).toString());
+						}						
+					}
+					println(listData.size());
+				} catch (SQLException e) {		
+					e.printStackTrace()
+				}
+				return listData;
+			}
 
 	//Closing the connection
 

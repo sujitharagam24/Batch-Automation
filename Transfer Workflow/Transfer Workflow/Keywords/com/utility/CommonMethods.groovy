@@ -91,14 +91,13 @@ class CommonMethods {
 			System.out.println(ar[i]);
 		}
 	}
-	
+
 	@Keyword
 	public static long digits() {
-    while (true) {
-        long numb = (long)(Math.random() * 100000000 * 1000000); 
-        if (String.valueOf(numb).length() == 13)
-            return numb;
-    }
-}
-	
+		while (true) {
+			long numb = (long)(Math.random() * 100000000 * 1000000);
+			if (String.valueOf(numb).length() == 13)
+				return numb;
+		}
+	}
 }
