@@ -49,7 +49,7 @@ import java.util.ArrayList;
  *
  */
 
-def tractNumber = '0296363180000';
+def apnNumber = '0296363180000';
 
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
@@ -68,10 +68,10 @@ EXEC	@recordeddocnumber = [dbo].[sto_searchtASRIndex]
 		@grantee_owner = NULL,
 		@grantorname = NULL,
 		@formid = NULL,
-		@tractnumber = '0296363180000',
+		@tractnumber = NULL,
 		@parcelmapnumber = NULL,
 		@tractparcelind = NULL,
-		@apn = NULL,
+		@apn = '0296363180000',
 		@rowlimit = 100,
 		@sortcolumn = 1,
 		@sortdirection = 1,
@@ -89,7 +89,7 @@ String recordNum = String.valueOf(CustomKeywords.'com.database.databaseUtility.s
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'),
 	[:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Tract Number field'), tractNumber)
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search APN'), apnNumber)
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
