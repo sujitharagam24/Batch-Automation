@@ -44,12 +44,12 @@ import java.util.ArrayList;
 
 /**
  *
- * Database and UI - Search by Tract number
+ * Database and UI - Search by APN number
  * @author bilguun.amarsaikhan
  *
  */
 
-def tractNumber = '16582';
+def tractNumber = '0296363180000';
 
 CustomKeywords.'com.database.databaseUtility.connectDB'()
 
@@ -68,7 +68,7 @@ EXEC	@recordeddocnumber = [dbo].[sto_searchtASRIndex]
 		@grantee_owner = NULL,
 		@grantorname = NULL,
 		@formid = NULL,
-		@tractnumber = '16582',
+		@tractnumber = '0296363180000',
 		@parcelmapnumber = NULL,
 		@tractparcelind = NULL,
 		@apn = NULL,
