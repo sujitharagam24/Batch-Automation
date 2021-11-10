@@ -39,7 +39,7 @@ WebDriver driver = DriverFactory.getWebDriver();
 
 WebUI.maximizeWindow()
 
-WebUI.delay(10)
+WebUI.waitForPageLoad(10)
 
 //WebUI.click(findTestObject('Object Repository/Workflow History Page/button_Transfer Workflow'))
 
