@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Dropdow of DocType</name>
+   <name>Doc Type items</name>
    <tag></tag>
-   <elementGuidId>44f1435d-cb7c-4315-96ac-912e53bdb639</elementGuidId>
+   <elementGuidId>c7856452-05cc-45c6-9c0f-df2939002344</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@type='text'])[8]</value>
+         <value>(//p[@class='mud-typography mud-typography-body1 mud-inherit-text'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
