@@ -69,12 +69,12 @@ public class databaseUtility {
 	 * @param sqlQuery
 	 * @return 
 	 */
-	
+
 	//Executing the constructed Query and Saving results in resultSet
-	
+
 	@Keyword
 	public static ArrayList<Map<String, String>> storeDataFromDB(String sqlQuery) {
-		
+
 		try {
 			st = conn.createStatement();
 			rs = st.executeQuery(sqlQuery);
@@ -86,44 +86,65 @@ public class databaseUtility {
 					mapData.put(rs.getMetaData().getColumnName(i), rs.getObject(i).toString());
 				}
 				listData.add(mapData);
-							}
+			}
 		} catch (SQLException e) {
 			e.printStackTrace()
 		}
 		println(listData.size())
 		recordNum = listData.size();
 		return listData;
-		
+
 	}
-	
+
 	@Keyword
 	public static int size() {
 		return recordNum;
 	}
-	
-	
-	
-	
-	public static List<String> storeListDataFromDB(String sqlQuery) {
-		
-				try {
-					st = conn.createStatement();
-					rs = st.executeQuery(sqlQuery);
-					rsMetadata = rs.getMetaData();
-					listData = new ArrayList<>();
-		
-					while(rs.next()) {
-						for(int i = 1; i <= rsMetadata.getColumnCount(); i++) {
-							listData.add(rs.getObject(i).toString());
-						}						
-					}
-					println(listData.size());
-				} catch (SQLException e) {		
-					e.printStackTrace()
-				}
-				return listData;
-			}
 
+
+
+	@Keyword
+	public static List<String> storeListDataFromDB(String sqlQuery) {
+
+		try {
+			st = conn.createStatement();
+			rs = st.executeQuery(sqlQuery);
+			rsMetadata = rs.getMetaData();
+			listData = new ArrayList<>();
+
+			while(rs.next()) {
+				for(int i = 1; i <= rsMetadata.getColumnCount(); i++) {
+					listData.add(rs.getObject(i).toString());
+				}
+			}
+			println(listData.size());
+		} catch (SQLException e) {
+			e.printStackTrace()
+		}
+		return listData;
+	}
+
+	@Keyword
+	public static List<String> storeListDataDocTypeSearch(String sqlQuery) {
+
+		try {
+			st = conn.createStatement();
+			rs = st.executeQuery(sqlQuery);
+			rsMetadata = rs.getMetaData();
+			listData = new ArrayList<>();
+
+			while(rs.next()) {
+				for(int i = 1; i <= rsMetadata.getColumnCount(); i+=2) {
+					listData.add(rs.getObject(i).toString() + ' - ' +rs.getObject(i+1).toString());
+				}
+			}
+			println(listData.size());
+		} catch (SQLException e) {
+			e.printStackTrace()
+		}
+		return listData;
+	}
+	
 	//Closing the connection
 
 	@Keyword
