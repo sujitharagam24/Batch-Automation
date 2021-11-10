@@ -60,10 +60,34 @@
       <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8311 - As an SBC user I can add range of APNs in Transfer Workflow/Add APN by 5 Range</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>860e1226-edb4-4faa-ab19-fca576b7781b</guid>
+      <guid>1d3b8372-75c6-4613-a222-14a4bc12ac1d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete 5 APN Range</testCaseId>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c74c949b-74f6-42ad-ace1-60d9d095ec7b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5a833803-f674-4071-974c-9e7d4fa3d1a3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ad85c28b-86e1-49af-9045-1d4f2d3efd52</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>662841fd-270e-4040-9fdc-5a6d418045d0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Worksheet Page/Associated APN Panel/US8312 - As an SBC user I can delete an APN in Transfer Workflow/Delete Single APN</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dd3a9d67-bfae-40e6-a826-7541c91e1626</guid>

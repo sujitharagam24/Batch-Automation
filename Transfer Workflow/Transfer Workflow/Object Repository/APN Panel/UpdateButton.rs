@@ -6,12 +6,11 @@
    <elementGuidId>1d170c52-9759-483e-a1c4-dd606d1ea74f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//button[@type='button'])[5]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//button[@aria-label='Update'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
