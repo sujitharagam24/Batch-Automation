@@ -73,6 +73,7 @@ public class databaseUtility {
 	//Executing the constructed Query and Saving results in resultSet
 
 	@Keyword
+	
 	public static ArrayList<Map<String, String>> storeDataFromDB(String sqlQuery) {
 
 		try {
