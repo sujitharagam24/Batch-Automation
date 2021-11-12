@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[contains(text(),'1-6')])</value>
+         <value>(//*[contains(text(),'1-10')])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

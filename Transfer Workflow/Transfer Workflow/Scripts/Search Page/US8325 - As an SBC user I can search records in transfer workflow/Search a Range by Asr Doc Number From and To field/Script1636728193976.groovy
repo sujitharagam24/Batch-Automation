@@ -9,6 +9,7 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import static org.junit.Assert.*
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -16,33 +17,33 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.interactions.Actions
-import org.openqa.selenium.interactions.Action
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.testng.Assert;
 
 /**
  *
- * Search results See UI Element that Indicates Searching in Progress when Searching
+ * Search results Search by a range Asr Doc # From and To field
  * @author menen.Desta
  *
  */
 
-
 WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can search records in transfer workflow/Access the Search Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver()
+def asrDocNumber = '20190254823'
 
-def recDate = '09212020'
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Asr Doc number From field'),
+	asrDocNumber);
 
-WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Record Date From Input'), recDate)
+def to = '20190254833'
 
-WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'))
+WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Asr Doc number To field'),
+	to);
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Search Page Objectory/US8325/Spin'))
+WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
-WebUI.closeBrowser();
+def expectedMsg = '1-8';
+
+def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Range Search Result Message'));
+
+assertTrue(actualMsg.contains(expectedMsg));
+
+WebUI.closeBrowser()

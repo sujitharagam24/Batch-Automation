@@ -30,11 +30,11 @@ WebUI.callTestCase(findTestCase('Search Page/US8325 - As an SBC user I can searc
 
 
 WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Grantor'),
-	'CASEY PATRICK E');
+	'CASEY PATRICK');
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/button_Search'))
 
-def expectedMsg = '1-6';
+def expectedMsg = '1-10';
 
 def actualMsg = WebUI.getText(findTestObject('Object Repository/Search Page Objectory/US8325/Grantor Search Result'));
 
