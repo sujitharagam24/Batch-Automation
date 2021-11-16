@@ -40,6 +40,8 @@ WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Rec
 
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Button'));
 
+WebUI.delay(5)
+
 WebUI.click(findTestObject('Object Repository/Search Page Objectory/US8325/Search Criteria'));
 
 WebUI.setText(findTestObject('Object Repository/Search Page Objectory/US8325/Search Trac Number'),

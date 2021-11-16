@@ -6,11 +6,11 @@
    <elementGuidId>42b77450-7095-4dc9-affe-ba4dec74e7a8</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//div[@class='mud-tab mud-ripple'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='mud-tab mud-tab-active mud-ripple'])</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
