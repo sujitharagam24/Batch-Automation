@@ -18,6 +18,10 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 /**
  * Click on Route Radio button to route a document on Workflow section
@@ -28,16 +32,38 @@ import org.eclipse.core.runtime.Assert as Assert
 WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
-/* Check Route Radio button */
+WebDriver driver = DriverFactory.getWebDriver();
 
+/* Click on Workflow panel to expand*/
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Workflow Panel'))
+
+/* Check Route Radio button */
 WebUI.click(findTestObject('Workflow History Page/US8314/Workflow Section/Route radio button'))
 
 def clickedText = WebUI.getText(findTestObject('Workflow History Page/US8314/Workflow Section/Radio button text'))
 
-def selectedText = WebUI.getText(findTestObject('Object Repository/Workflow History Page/US8314/Workflow Section/Selected Option text'))
+def selectedText = 'Route'
 
 /* Verify checked option is selected */
 
 assertTrue(selectedText.contains(clickedText));
+
+/* Click on Route To dropdown and select an option*/
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Route To dropdown'))
+
+WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Workflow Section/Allocator'))
+
+/* Click on Reason dropdown and select an option*/
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Reason drop down'))
+
+WebUI.click(findTestObject('Object Repository/Workflow History Page/US8314/Workflow Section/Address Error Typo'))
+
+/*Verify buttons are enabled*/
+
+WebElement wRUSH = driver.findElement(By.xpath('(//*[text()=\'Update WS w/RUSH\'])'))
+assertTrue(wRUSH.isEnabled());
+
+WebElement updateWS = driver.findElement(By.xpath('(//*[text()=\'Update WS\'])'))
+assertTrue(updateWS.isEnabled());
 
 WebUI.closeBrowser()

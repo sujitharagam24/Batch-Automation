@@ -18,6 +18,10 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import static org.junit.Assert.*
 import org.eclipse.core.runtime.Assert as Assert
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 /**
  * Click on No Action Radio button on Workflow section
@@ -27,15 +31,20 @@ import org.eclipse.core.runtime.Assert as Assert
 WebUI.callTestCase(findTestCase('Workflow History Page/US8314 - As an SBC user I can complete a document in Transfer workflow/Access the Workflow History Page'), 
     [:], FailureHandling.STOP_ON_FAILURE)
 
+WebDriver driver = DriverFactory.getWebDriver();
+
+/* Click on Workflow panel to expand*/
+WebUI.click(findTestObject('Object Repository/Workflow History Page/Workflow Panel'))
+
 /* Check No Action Radio button */
 WebUI.click(findTestObject('Workflow History Page/US8314/Workflow Section/No action radio button'))
 
 def clickedText = WebUI.getText(findTestObject('Workflow History Page/US8314/Workflow Section/Radio button text'))
 
-def selectedText = WebUI.getText(findTestObject('Object Repository/Workflow History Page/US8314/Workflow Section/Selected Option text'))
+def selectedText = 'No Action'
 
 /* Verify checked option is selected */
-//assertTrue(selectedText.contains(clickedText))
+assertTrue(selectedText.contains(clickedText))
 
 WebUI.closeBrowser()
 
