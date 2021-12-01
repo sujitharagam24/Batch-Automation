@@ -77,4 +77,16 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/My Work Page/US8761 - As a SBC user I can sort items in my work queue/Work Queue Contents Column Names</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>f834f831-6e38-4a6d-8a21-3dd7c02c2c62</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/Epic4458 - Work queue contents navigation/Work queue without navigation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>78407066-17d2-406f-9caa-6871ed816928</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/My Work Page/Epic4458 - Work queue contents navigation/Work queue with navigation</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
