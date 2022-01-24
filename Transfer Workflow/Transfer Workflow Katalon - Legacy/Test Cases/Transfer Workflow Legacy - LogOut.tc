@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Logout of legacy Transfer Workflow browser app</description>
-   <name>Transfer Workflow Legacy - LogOut</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>b4e15e67-2058-4fe3-a03d-1145b586ce0c</testCaseGuid>
-</TestCaseEntity>

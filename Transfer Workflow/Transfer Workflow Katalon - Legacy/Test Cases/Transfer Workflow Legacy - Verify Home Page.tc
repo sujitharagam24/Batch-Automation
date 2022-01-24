@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Verify the user is at the Transfer Workflow Home page</description>
-   <name>Transfer Workflow Legacy - Verify Home Page</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>abec5e2b-bcc5-47ce-9f1b-eaabd2218dde</testCaseGuid>
-</TestCaseEntity>
