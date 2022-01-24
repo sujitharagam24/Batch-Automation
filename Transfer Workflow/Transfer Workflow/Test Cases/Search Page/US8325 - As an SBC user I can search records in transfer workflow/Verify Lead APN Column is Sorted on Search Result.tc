@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Lead APN Column is Sorted on Search Result</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>657cac2f-8afd-47de-9625-2bcef04bb2a1</testCaseGuid>
-</TestCaseEntity>

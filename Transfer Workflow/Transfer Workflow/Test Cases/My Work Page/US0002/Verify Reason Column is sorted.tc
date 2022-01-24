@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Reason Column is sorted</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>5e645a6e-dd47-424a-aca1-1dd719eba2f3</testCaseGuid>
-</TestCaseEntity>

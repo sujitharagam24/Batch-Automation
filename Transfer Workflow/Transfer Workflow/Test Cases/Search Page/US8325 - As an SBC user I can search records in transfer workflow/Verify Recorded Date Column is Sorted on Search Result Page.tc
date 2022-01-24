@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Recorded Date Column is Sorted on Search Result Page</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>611714b4-e084-476d-bcb8-7b3c4baf618a</testCaseGuid>
-</TestCaseEntity>

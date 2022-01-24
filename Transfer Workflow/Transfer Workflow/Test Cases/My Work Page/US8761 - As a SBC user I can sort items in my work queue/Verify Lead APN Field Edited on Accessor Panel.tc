@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Lead APN Field Edited on Accessor Panel</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>5ad1c254-8e50-4c2f-9119-335daa1b6b0d</testCaseGuid>
-</TestCaseEntity>

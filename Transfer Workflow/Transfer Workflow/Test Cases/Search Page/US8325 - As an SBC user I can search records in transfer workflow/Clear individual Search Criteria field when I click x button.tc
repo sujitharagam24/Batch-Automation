@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Clear individual Search Criteria field when I click x button</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>bf52321e-be13-4a72-ab40-05718e14cc12</testCaseGuid>
-</TestCaseEntity>

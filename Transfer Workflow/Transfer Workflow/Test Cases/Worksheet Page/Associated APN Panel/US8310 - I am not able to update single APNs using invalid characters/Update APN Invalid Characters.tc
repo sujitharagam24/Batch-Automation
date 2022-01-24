@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Update APN Invalid Characters</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>cd2d8db4-3997-426c-acb5-c301d73929f9</testCaseGuid>
-</TestCaseEntity>

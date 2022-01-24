@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Document Category match in DB and UI</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>be4eb8b0-9906-4c47-86c2-7722f60bd30d</testCaseGuid>
-</TestCaseEntity>

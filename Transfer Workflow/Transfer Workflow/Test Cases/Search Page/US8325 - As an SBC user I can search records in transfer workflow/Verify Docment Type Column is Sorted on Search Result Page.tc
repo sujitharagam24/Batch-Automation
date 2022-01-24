@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify Docment Type Column is Sorted on Search Result Page</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>ad9b3244-c7c9-4369-a87c-d149ede5a89b</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Search by Grantee name - DB an UI</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>c92ac10c-26fd-433b-8ce3-1427661a7db9</testCaseGuid>
-</TestCaseEntity>
