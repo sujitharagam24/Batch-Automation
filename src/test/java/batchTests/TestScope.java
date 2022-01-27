@@ -1,9 +1,10 @@
 package batchTests;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.*;
 
-import java.sql.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -13,17 +14,17 @@ import java.util.concurrent.TimeUnit;
 import Utilities.DBUtility;
 
 import static io.restassured.RestAssured.given;
-
-public class Single_JobRun {
+public class TestScope {
     /**
-     *   1. Change the following scope name, Scope name and SystemDate
-     *   2. Open configuration.properties file and make sure ssms_URL is 'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database= + scopeOfWork'
-     *   Ex: If you are running DW1, ssmsDB_url should be 'jdbc:sqlserver://srv-array-sql01.database.windows.net;Database=modPIMS-DW1'
+     * The following 3 variables should be updated depending on each job and scope
+     * Job needs to run by order
+     * Scope needs to static
+     * System dates should be updated depending on each job
      */
-    private static String job = "NPP210";
-    public static String scopeOfWork = "DW2";
-    private static String systemDate = "05/27/2021";
-
+    private static String job = "";
+    private static String scopeOfWork = "";
+    private static String systemDate = "";
+    private static String path = "DW2";
     /**
      * The following variables are final (don't need to change)
      */
@@ -39,21 +40,38 @@ public class Single_JobRun {
      * Connect to the Database
      * Run SQL before each job run
      */
-    @BeforeAll
-    public static void setup() throws SQLException {
-        String sql = "delete from NP.NPTTABL1 where TABL_ID = 'SYSDTE';\n" +
-                "insert into NP.NPTTABL1 (TABL_ID, TABL_SEQ, TABL_DATA, TABL_POST_KEY, TABL_POST_USERID) values ('SYSDTE', '', '" + systemDate + "', sysDateTime(), '');";
-        DBUtility.establishConnection();
-        DBUtility.runSQLQuery(sql);
 
-        RestAssured.baseURI = "https://func-batch-containers.azurewebsites.net/api";
+    public static void main(String[] args) throws InterruptedException {
+        String line = "";
+        try(BufferedReader read = new BufferedReader(new FileReader("src/test/resources/"+path+".csv"))){
+            while ((line = read.readLine()) != null) {
+                String[] jobs = line.split(",");
+                scopeOfWork = jobs[0];
+                job = jobs[1];
+                systemDate = jobs[2];
+                //if(DBUtility.)
+
+                String sql = "delete from NP.NPTTABL1 where TABL_ID = 'SYSDTE';\n" +
+                        "insert into NP.NPTTABL1 (TABL_ID, TABL_SEQ, TABL_DATA, TABL_POST_KEY, TABL_POST_USERID) values ('SYSDTE', '', '" + systemDate + "', sysDateTime(), '');";
+                DBUtility.establishConnection();
+                DBUtility.runSQLQuery(sql);
+
+                RestAssured.baseURI = "https://func-batch-containers.azurewebsites.net/api";
+
+                createJobRequestID();
+                monitorJob();
+                DBUtility.closeConnections();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     /**
      * Hello Function
      */
-    @Test
-    public void helloFunction(){
+
+    public static void helloFunction(){
         given().
                 queryParam("code",param).
                 when().get("/HelloFunction").
@@ -65,8 +83,7 @@ public class Single_JobRun {
      * Parse through response body
      * Get jobRequestID
      */
-    @Test
-    public void createJobRequestID(){
+    public static void createJobRequestID(){
         given().
                 queryParam("code",param).
                 queryParam("job", job).
@@ -87,8 +104,7 @@ public class Single_JobRun {
     /**
      * Monitor a Job
      */
-    @Test
-    public void monitorJob() throws InterruptedException {
+    public static void monitorJob() throws InterruptedException {
         Response response;
         String jobID = "";
         String batchContainerStatus = "";

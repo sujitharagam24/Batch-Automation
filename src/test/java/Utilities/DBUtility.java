@@ -1,10 +1,12 @@
 package Utilities;
 
+import batchTests.Scope_Run;
+
 import java.sql.*;
 
 public class DBUtility {
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(ConfigurationReader.getProperty("ssmsDB_url"),
+        return DriverManager.getConnection(ConfigurationReader.getProperty("ssmsDB_url")+Scope_Run.scopeOfWork,
                 ConfigurationReader.getProperty("ssmsDB_UserName"),
                 ConfigurationReader.getProperty("ssmsDB_Password"));
     }
@@ -14,10 +16,12 @@ public class DBUtility {
     private static ResultSet resultSet;
 
     public static void establishConnection(){
+        System.out.println("Database URL: "+ ConfigurationReader.getProperty("ssmsDB_url")+Scope_Run.database);
         try{
-            connection = DriverManager.getConnection(ConfigurationReader.getProperty("ssmsDB_url"),
+            connection = DriverManager.getConnection(ConfigurationReader.getProperty("ssmsDB_url")+Scope_Run.database,
                     ConfigurationReader.getProperty("ssmsDB_UserName"),
                     ConfigurationReader.getProperty("ssmsDB_Password"));
+           System.out.println("Database URL: "+ ConfigurationReader.getProperty("ssmsDB_url")+Scope_Run.database);
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
@@ -45,7 +49,7 @@ public class DBUtility {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
             }
-            System.out.println("Database connection has been disconnected");
+            System.out.println("Run has been completed !!! Database connection has been disconnected");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
